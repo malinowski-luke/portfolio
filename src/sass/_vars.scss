@@ -1,0 +1,20 @@
+// colors
+$gray: #212529;
+$blue-gray: #1c3348;
+$red: #c13719;
+$white: #ffffff;
+
+// fonts
+$header-font: Brush Script MT, Brush Script Std, cursive;
+
+// breakpoint
+$mobile: 768px;
+$desktop: 1000px;
+
+//mixin
+@mixin flex-box($dir: row, $just: space-evenly, $align: center) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $just;
+  align-items: $align;
+}

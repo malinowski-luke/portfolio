@@ -1,0 +1,21 @@
+@import '../../sass/vars';
+.Home {
+  width: 100%;
+  height: 100vh;
+  background: url('../../assets/code.jpg');
+  background-position: center;
+}
+
+.gray-overlay {
+  width: 100%;
+  height: 100vh;
+  background: $blue-gray;
+  opacity: 0.96;
+  @include flex-box(row, center, center);
+}
+
+.text {
+  color: $red;
+  font-size: 2rem;
+  margin-left: 1vw;
+}
