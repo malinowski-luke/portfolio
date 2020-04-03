@@ -51,13 +51,20 @@ nav {
   visibility:hidden;
 }
 
-#mobile-menu li a{
+#mobile-menu li {
+  width:100%;
+  height:auto;
+  border: 2px solid $teal;
+}
+
+#mobile-menu a{
+  width: 100vw;
   color: $white;
   text-transform: uppercase;
   font-size: 1.2rem;
 }
 
-#mobile-menu li a:hover{
+#mobile-menu a:hover{
   color: $white;
   text-decoration: none; 
 }

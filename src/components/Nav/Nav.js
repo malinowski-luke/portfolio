@@ -38,21 +38,11 @@ export default function Nav() {
             className='mobile-menu mobile-menu-hide hide-menu-collapse'
             onClick={showHideMobileMenu}
           >
-            <li>
-              <a href='#home'>home</a>
-            </li>
-            <li>
-              <a href='#about'>about</a>
-            </li>
-            <li>
-              <a href='#skills'>skills</a>
-            </li>
-            <li>
-              <a href='#projects'>projects</a>
-            </li>
-            <li>
-              <a href='#contact'>contact</a>
-            </li>
+            <a href='#home'><li>home</li></a>
+            <a href='#about'><li>about</li></a>
+            <a href='#skills'><li>skills</li></a>
+            <a href='#projects'><li>projects</li></a>
+            <a href='#contact'><li>contact</li></a>
           </ul>
           <ul id='desktop-menu' className='desktop-menu'>
             <li>
