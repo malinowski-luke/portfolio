@@ -1,0 +1,70 @@
+@import '../../../sass/vars';
+
+.portfolio-img {
+  width: inherit;
+  height: inherit;
+}
+
+.overlay {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  width: inherit;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: black;
+  @include flex-box(column, center, center);
+}
+
+.overlay:hover {
+  opacity: 0.9;
+}
+
+.overlay a {
+  color: $white;
+}
+
+.overlay a:hover {
+  @include link-hover($teal);
+}
+
+.project-card {
+  opacity: 0.98;
+}
+
+@media (max-width: 768px) {
+  #desktop-projects {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .carousel {
+    width: 55vw;
+  }
+  .card-text {
+    font-size: 0.8rem;
+  }
+  .overlay {
+    height: 20vh;
+  }
+  .project-card {
+    height: 15vh;
+  }
+}
+
+@media (min-width: 1400px) {
+  .carousel {
+    width: 60vw;
+  }
+  .card-text {
+    font-size: 1rem;
+  }
+  .overlay {
+    height: 15vh;
+  }
+  .project-card {
+    max-width: 70vw;
+    height: 10vh;
+  }
+}

@@ -9,6 +9,12 @@ $teal: #19c191;
 $header-font: Brush Script MT, Brush Script Std, cursive;
 
 //mixin
+
+@mixin link-hover($color: $white) {
+  color: $color;
+  text-decoration: none;
+}
+
 @mixin flex-box($dir: row, $just: space-evenly, $align: center) {
   display: flex;
   flex-direction: $dir;
