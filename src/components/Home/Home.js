@@ -4,7 +4,7 @@ import './Home.scss'
 
 export default function Home() {
   return (
-    <div className='Home'>
+    <div id='home' className='Home'>
       <div className='gray-overlay'>
         <Card
           border='danger'

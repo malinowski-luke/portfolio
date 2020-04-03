@@ -1,6 +1,10 @@
 import React from 'react'
-import './Projects.css'
+import './Projects.scss'
 
 export default function Projects() {
-  return <div className='Projects'>projects.js</div>
+  return (
+    <div id='projects' className='Projects'>
+      projects.js
+    </div>
+  )
 }

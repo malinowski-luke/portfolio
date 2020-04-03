@@ -7,7 +7,7 @@ import './About.scss'
 
 export default function About() {
   return (
-    <div className='About'>
+    <div className='About' id='about'>
       <Row
         style={{ width: '80vw', color: 'white' }}
         className='align-items-center'
