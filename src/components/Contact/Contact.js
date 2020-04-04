@@ -12,18 +12,23 @@ export default function Contact() {
   return (
     <>
       <div id='contact' className='Contact-bar'>
-        <a href='https://github.com/malinowskil123' target='_blank'>
+        <a
+          href='https://github.com/malinowskil123'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
           <Image src={github} className='contact-logo' fluid />
           <h3>Github</h3>
         </a>
         <a
           href='https://www.linkedin.com/in/luke-malinowski-50328/'
           target='_blank'
+          rel='noopener noreferrer'
         >
           <Image src={linkedin} className='contact-logo' fluid />
           <h3>Linkedin</h3>
         </a>
-        <a href={resume} target='_blank'>
+        <a href={resume} target='_blank' rel='noopener noreferrer'>
           <Image src={pdf} className='contact-logo' fluid />
           <h3>Resume</h3>
         </a>

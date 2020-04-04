@@ -26,9 +26,6 @@
   @include flex-box(row, center, center);
 }
 
-.contact-info-container {
-}
-
 .info {
   @include flex-box(row, space-around, center);
 }

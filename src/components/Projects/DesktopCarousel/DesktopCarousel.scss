@@ -30,6 +30,11 @@
 
 .project-card {
   opacity: 0.98;
+  z-index: -300;
+}
+
+.carousel {
+  z-index: 0;
 }
 
 @media (max-width: 768px) {
@@ -49,7 +54,7 @@
     height: 20vh;
   }
   .project-card {
-    height: 15vh;
+    height: 10vh;
   }
 }
 

@@ -13,10 +13,10 @@ export default function Nav() {
   useEffect(() => {
     window.addEventListener('scroll', () => {
       const navbar = document.getElementById('nav-bar')
-      if (window.pageYOffset > 60 && window.innerWidth >= 760) {
+      if (window.pageYOffset > 60 && window.innerWidth >= 767) {
         navbar.classList.add('nav-scroll')
         navbar.classList.remove('nav-static')
-      } else if (window.pageYOffset < 60 && window.innerWidth >= 760) {
+      } else if (window.pageYOffset < 60 && window.innerWidth >= 767) {
         navbar.classList.remove('nav-scroll')
         navbar.classList.add('nav-static')
       }
@@ -38,11 +38,21 @@ export default function Nav() {
             className='mobile-menu mobile-menu-hide hide-menu-collapse'
             onClick={showHideMobileMenu}
           >
-            <a href='#home'><li>home</li></a>
-            <a href='#about'><li>about</li></a>
-            <a href='#skills'><li>skills</li></a>
-            <a href='#projects'><li>projects</li></a>
-            <a href='#contact'><li>contact</li></a>
+            <a href='#home'>
+              <li>home</li>
+            </a>
+            <a href='#about'>
+              <li>about</li>
+            </a>
+            <a href='#skills'>
+              <li>skills</li>
+            </a>
+            <a href='#projects'>
+              <li>projects</li>
+            </a>
+            <a href='#contact'>
+              <li>contact</li>
+            </a>
           </ul>
           <ul id='desktop-menu' className='desktop-menu'>
             <li>

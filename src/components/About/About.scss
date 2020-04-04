@@ -12,9 +12,9 @@
   box-shadow: 8px 8px 8px #000000;
 }
 
-@media screen and (max-width: 767px) {
-  .About {
-    font-size: 0.9em;
+@media (max-width: 564px) {
+  .about-text {
+    font-size: 0.8rem;
   }
   .about-img {
     width: 30vh;
@@ -22,8 +22,8 @@
 }
 
 @media (min-width: 768px) {
-  .About {
-    font-size: 1em;
+  .about-text {
+    font-size: 1rem;
   }
   .about-img {
     width: 40vh;
@@ -31,8 +31,8 @@
 }
 
 @media (min-width: 992px) {
-  .About {
-    font-size: 1em;
+  .about-text {
+    font-size: 1.2rem;
   }
   .about-img {
     width: 60vh;
@@ -40,8 +40,8 @@
 }
 
 @media (min-width: 1200px) {
-  .About {
-    font-size: 1.2em;
+  .about-text {
+    font-size: 1.4rem;
   }
   .about-img {
     width: 50vh;

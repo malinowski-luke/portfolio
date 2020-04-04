@@ -37,36 +37,35 @@ nav {
   position: fixed;
   top: 10vh;
   left: 0;
-  padding-top:1vh;
   background: $gray;
-  transition: .5s;
+  transition: 0.5s;
   overflow: hidden;
 }
 
-#mobile-menu{
-  @include flex-box(column, space-evenly,center)
+#mobile-menu {
+  @include flex-box(column, space-evenly, center);
 }
 
-.hide-menu-collapse{
-  visibility:hidden;
+.hide-menu-collapse {
+  visibility: hidden;
 }
 
 #mobile-menu li {
-  width:100%;
-  height:auto;
+  width: 100%;
+  height: auto;
   border: 2px solid $teal;
 }
 
-#mobile-menu a{
+#mobile-menu a {
   width: 100vw;
   color: $white;
   text-transform: uppercase;
   font-size: 1.2rem;
 }
 
-#mobile-menu a:hover{
+#mobile-menu a:hover {
   color: $white;
-  text-decoration: none; 
+  text-decoration: none;
 }
 
 .mobile-menu-hide {
@@ -81,50 +80,49 @@ nav {
   display: none;
 }
 
-
-@media (min-width: 760px) { 
-  @media(max-width:1000px){
+@media (min-width: 760px) {
+  @media (max-width: 1000px) {
     #desktop-menu {
       width: 45vw;
     }
-    #desktop-menu li a{
-      font-size: .9rem;
+    #desktop-menu li a {
+      font-size: 0.9rem;
     }
   }
   .nav-static {
     height: 10vh;
-    transition: .5s;
+    transition: 0.5s;
   }
-  
+
   .nav-scroll {
     height: 10vh;
     background-color: $gray;
-    transition: .5s;
+    transition: 0.5s;
+    border: 1px solid $gray;
   }
   .nav-static {
-      background-color: transparent;
-      height: 10vh;
-    }
-    .nav-button,
-    .mobile-menu {
-      display: none;
-    }
-    .nav-text {
-      font-size: 2.2rem;
-    }
-    .desktop-menu {
-      width: 40vw;
-      margin-right: 5vw;
-      @include flex-box(row, space-evenly, center);
-    }
-    .desktop-menu li a{
-      color: $white;
-      text-transform: uppercase;
-      font-size: 1.2rem;
-    }
-    .desktop-menu li a:hover {
-      color: $teal;
-      text-decoration: none;
-    }
- }
-
+    background-color: transparent;
+    height: 10vh;
+  }
+  .nav-button,
+  .mobile-menu {
+    display: none;
+  }
+  .nav-text {
+    font-size: 2.2rem;
+  }
+  .desktop-menu {
+    width: 40vw;
+    margin-right: 5vw;
+    @include flex-box(row, space-evenly, center);
+  }
+  .desktop-menu li a {
+    color: $white;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+  }
+  .desktop-menu li a:hover {
+    color: $teal;
+    text-decoration: none;
+  }
+}

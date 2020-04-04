@@ -1,0 +1,46 @@
+@import '../../../sass/vars';
+
+.icon-container {
+  width: 100%;
+  @include flex-box(row, space-around, center);
+}
+
+.carousel-img {
+  width: 100%;
+}
+
+.link-icons {
+  width: 12vw;
+}
+
+.mobile-carousel-size {
+  height: auto;
+}
+.card-padding {
+  padding: 10px;
+}
+
+@media (max-width: 564px) {
+  .mobile-carousel-size {
+    width: 90vw;
+  }
+  .mobile-carousel-text {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile-carousel-size {
+    width: 90vw;
+    height: 70vh;
+  }
+  .mobile-carousel-text {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 769px) {
+  #mobile-carousel {
+    display: none;
+  }
+}
