@@ -4,8 +4,8 @@ body {
   /* removing height fixes chrome nav bar animation */
   overflow-y: auto;
   scroll-behavior: smooth;
-  /* enable smooth scroll on ios and android */
-  -webkit-overflow-scroling: touch; 
+  /* fix mobile smooth scroll */
+  -webkit-overflow-scrolling: touch;
 }
 
 @media (max-width: 767px) {
