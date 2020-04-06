@@ -14,7 +14,7 @@ export default function About() {
       >
         <Col lg={6}>
           <h1>From music to code {'</>'}</h1>
-          <p className='about-text'>
+          <p className='about-text mb-3 mb-md-0'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
             molestie, metus et commodo ullamcorper, tortor ex eleifend est, id
             tristique leo lectus in lacus. Sed sagittis justo eget leo
