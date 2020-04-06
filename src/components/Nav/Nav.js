@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import icon from '../../assets/icon.svg'
-import { Row, Col } from 'react-bootstrap'
+import Col from 'react-bootstrap/Col'
+import Row from 'react-bootstrap/Row'
 import './Nav.scss'
 
 export default function Nav() {
@@ -25,7 +26,7 @@ export default function Nav() {
   return (
     <nav id='nav-bar' className='nav-static'>
       <Row className='align-items-center' style={{ height: '10vh' }}>
-        <Col xs={8} md={6} className='mt-3 mt-md-0'>
+        <Col xs={8} md={6}>
           <h1 className='nav-text'>Luke Malinowski</h1>
         </Col>
         <Col xs={2} md={6}>
