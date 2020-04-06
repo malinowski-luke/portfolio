@@ -1,7 +1,5 @@
 .App {
   text-align: center;
-  /* fix mobile smooth scroll */
-  -webkit-overflow-scrolling: touch;
 }
 /* xs < 768 */
 @media screen and (max-width: 767px) {

@@ -13,7 +13,7 @@ export default function About() {
         className='align-items-center'
       >
         <Col lg={6}>
-          <h1>From music to code {'</>'}</h1>
+          <h1 className='mt-5 mt-md-1'>From music to code {'</>'}</h1>
           <p className='about-text mb-3 mb-md-0'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
             molestie, metus et commodo ullamcorper, tortor ex eleifend est, id
