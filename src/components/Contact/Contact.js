@@ -39,9 +39,7 @@ export default function Contact() {
         <div className='contact-info-container'>
           <h1>You can reach me at...</h1>
           <h5 className='mt-3 mt-md-4'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-            molestie, metus et commodo ullamcorper, tortor ex eleifend est, id
-            tristique leo lectus in lacus.
+            I'd love to connect with fellow developers around the world.
           </h5>
           <div className='mt-4 info'>
             <Row>

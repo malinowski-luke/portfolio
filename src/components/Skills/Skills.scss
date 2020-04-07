@@ -41,33 +41,19 @@
 
 // Small devices (landscape phones, 576px and up)
 @media (max-width: 576px) {
-  .Skills{
+  .Skills {
     height: 200vh;
   }
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
- .skills-img {
+  .skills-img {
     width: 65px;
     height: 65px;
   }
-  
+
   .skills-heading {
     font-size: 3.2rem;
   }
 }
-
-// Large devices (desktops, 992px and up)
-// @media (min-width: 992px) {
-// .skills-img {
-//   width: 65px;
-//   height: 65px;
-// }
-// .skills-heading {
-//   font-size: 3.2rem;
-// }
-// }
-
-// Extra large devices (large desktops, 1200px and up)
-// @media (min-width: 1200px) { ... }

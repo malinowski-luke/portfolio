@@ -15,17 +15,20 @@ export default function About() {
         <Col lg={6}>
           <h1 className='about-header'>From music to code {'</>'}</h1>
           <p className='about-text mb-3 mb-md-0'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-            molestie, metus et commodo ullamcorper, tortor ex eleifend est, id
-            tristique leo lectus in lacus. Sed sagittis justo eget leo
-            efficitur, et pellentesque neque aliquet. Pellentesque et erat et
-            velit tincidunt pulvinar. Fusce nec augue molestie, pharetra mi
-            eget, ullamcorper dolor. Etiam et quam risus. Proin sed elit ut nisi
-            fermentum bibendum. Ut id imperdiet erat, a fringilla nunc.
-            Suspendisse tincidunt lobortis orci, accumsan convallis ex porttitor
-            sollicitudin. Pellentesque congue mattis arcu a pellentesque. Aenean
-            facilisis dui sit amet tellus lobortis auctor. Pellentesque
-            dignissim nisi sed mi cursus dictum vel.
+            Audio Engineer turned Fullstack Web Developer, I found my passion
+            for programming in an unconventional way. In college, I pursued the
+            track of Audio Engineering - a musician at heart, I practiced
+            producing and mixing audio for a variety of uses. Along the way, I
+            found interest in personal projects that lead to the pivot of my
+            career path. I self taught app development, practicing code that
+            focused on UX, UI, and the best practices of programming.(is this
+            how you would say that?)I started with Javascript, jQuery and
+            Bootstrap. After the completion of personal apps and calculators, I
+            moved onto a personal project called Jeep Things - a culmination of
+            my self-taught skills. A full stack web application, Jeep Things
+            solved a problem that was close to home - a site for car lovers and
+            rebuilders to trade, sell, and buy auto parts - something that my
+            family often did.
           </p>
         </Col>
         <Col lg={6}>

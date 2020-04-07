@@ -37,8 +37,7 @@
 }
 
 .info a:hover {
-  color: $blue-gray;
-  text-decoration: none;
+  @include link-hover($blue-gray);
 }
 
 .contact-img {
