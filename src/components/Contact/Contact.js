@@ -44,14 +44,16 @@ export default function Contact() {
           <div className='mt-4 info'>
             <Row>
               <Col md={6} className='mb-4 mb-md-0'>
-                <Image src={phone} fluid className='contact-img' />
-                <br />
-                <a href='tel:631-741-7803'>631-741-7803</a>
+                <a href='tel:631-741-7803'>
+                  <Image src={phone} fluid className='contact-img' />
+                  <br />
+                  631-741-7803
+                </a>
               </Col>
               <Col md={6}>
-                <Image src={email} fluid className='contact-img' />
-                <br />
                 <a href='mailto:malinowski.luke123@gmail.com'>
+                  <Image src={email} fluid className='contact-img' />
+                  <br />
                   malinowski.luke123@gmail.com
                 </a>
               </Col>
