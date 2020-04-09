@@ -29,7 +29,6 @@ export default function Nav() {
     })
   }
   useEffect(() => {
-    console.log('blah')
     navScrollAnimation()
   }, [])
   return (
