@@ -10,8 +10,13 @@ export default function Nav() {
     dropdown.classList.toggle('hide-menu-collapse')
     dropdown.classList.toggle('moblie-menu-show')
     dropdown.classList.toggle('moblie-menu-hide')
+    flipNavIcon()
   }
-  useEffect(() => {
+  const flipNavIcon = () => {
+    const navIcon = document.getElementById('nav-icon')
+    navIcon.classList.toggle('icon-rotate')
+  }
+  const navScrollAnimation = () => {
     window.addEventListener('scroll', () => {
       const navbar = document.getElementById('nav-bar')
       if (window.pageYOffset > 60 && window.innerWidth >= 767) {
@@ -22,6 +27,9 @@ export default function Nav() {
         navbar.classList.add('nav-static')
       }
     })
+  }
+  useEffect(() => {
+    navScrollAnimation()
   }, [])
   return (
     <nav id='nav-bar' className='nav-static'>
@@ -32,7 +40,7 @@ export default function Nav() {
         <Col xs={2} md={6}>
           <button className='nav-button' onClick={showHideMobileMenu}>
             menu
-            <img rel='img' src={icon} alt='icon' className='icon' />
+            <img id='nav-icon' rel='img' src={icon} alt='icon' className='icon' />
           </button>
           <ul
             id='mobile-menu'
