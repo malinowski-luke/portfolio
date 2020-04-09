@@ -32,6 +32,15 @@ nav {
   width: 28%;
 }
 
+.icon {
+  width: 28%;
+  transition: 0.5s;
+}
+
+.icon-rotate {
+  transform: rotate(90deg);
+}
+
 .mobile-menu {
   width: 100%;
   position: fixed;
