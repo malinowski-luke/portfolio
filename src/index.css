@@ -2,7 +2,8 @@ html,
 body {
   width: 100%;
   /* removing height fixes chrome nav bar animation */
-  overflow-y: auto;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
 }
 
