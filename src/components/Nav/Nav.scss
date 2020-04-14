@@ -4,6 +4,7 @@ nav {
   position: fixed;
   top: 0;
   background: $gray;
+  border: 2px solid $red;
   z-index: 1;
 }
 
@@ -42,16 +43,17 @@ nav {
 }
 
 .mobile-menu {
+  margin-top: 4px;
   width: 100%;
+  max-height: 90vh;
   position: fixed;
   top: 10vh;
   left: 0;
   background: $gray;
+  border: 2px solid $gray;
   transition: 0.5s;
   overflow: hidden;
-}
 
-#mobile-menu {
   @include flex-box(column, space-evenly, center);
 }
 
@@ -62,14 +64,14 @@ nav {
 #mobile-menu li {
   width: 100%;
   height: auto;
-  border: 2px solid $teal;
+  // border: 2px solid $teal;
 }
 
 #mobile-menu a {
   width: 100vw;
   color: $white;
   text-transform: uppercase;
-  font-size: 1.2rem;
+  font-size: 2rem;
 }
 
 #mobile-menu a:hover {
@@ -81,7 +83,7 @@ nav {
 }
 
 .moblie-menu-show {
-  height: 24vh;
+  height: 100vh;
 }
 
 .desktop-menu {
