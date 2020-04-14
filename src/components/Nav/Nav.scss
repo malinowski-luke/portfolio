@@ -4,7 +4,7 @@ nav {
   position: fixed;
   top: 0;
   background: $gray;
-  border: 2px solid $red;
+  border: 2px solid $white;
   z-index: 1;
 }
 
@@ -64,7 +64,6 @@ nav {
 #mobile-menu li {
   width: 100%;
   height: auto;
-  // border: 2px solid $teal;
 }
 
 #mobile-menu a {
@@ -91,6 +90,9 @@ nav {
 }
 
 @media (min-width: 760px) {
+  nav {
+    border: none;
+  }
   @media (max-width: 1000px) {
     #desktop-menu {
       width: 45vw;
