@@ -36,11 +36,11 @@ export default function Contact() {
         </a>
       </div>
       <div className='Contact-info'>
-        <div className='contact-info-container'>
+        <div className='container body-content'>
           <h1>You can reach me at...</h1>
-          <h5 className='mt-3 mt-md-4'>
+          <h4 className='mt-3 mt-md-4'>
             I'd love to connect with fellow developers around the world.
-          </h5>
+          </h4>
           <div className='mt-4 info'>
             <Row>
               <Col md={6} className='mb-4 mb-md-0'>
@@ -52,7 +52,7 @@ export default function Contact() {
               </Col>
               <Col md={6}>
                 <a href='mailto:malinowski.luke123@gmail.com'>
-                  <Image src={email} fluid className='contact-img' />
+                  <Image src={email} fluid className='contact-img offset-contact-img'/>
                   <br />
                   malinowski.luke123@gmail.com
                 </a>

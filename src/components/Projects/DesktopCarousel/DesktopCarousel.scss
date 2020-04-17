@@ -3,6 +3,7 @@
 .portfolio-img {
   width: inherit;
   height: inherit;
+  border: 1px solid $white;
 }
 
 .overlay {
@@ -31,13 +32,14 @@
 .project-card {
   opacity: 0.98;
   z-index: -300;
+  overflow-y: scroll;
 }
 
 .carousel {
   z-index: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
   #desktop-projects {
     display: none;
   }

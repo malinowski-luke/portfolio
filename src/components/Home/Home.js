@@ -20,7 +20,11 @@ export default function Home() {
                 Fullstack Developer
               </strong>
             </Card.Title>
-            <Card.Text>Thank you for checking out my portfolio.</Card.Text>
+            <Card.Text>
+              <h5>
+                Thank you for checking out my portfolio.
+              </h5>
+            </Card.Text>
           </Card.Body>
         </Card>
       </div>

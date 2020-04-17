@@ -19,8 +19,8 @@ import jquery from '../../assets/jquery.gif'
 export default function Skills() {
   return (
     <div id='skills'className='Skills'>
-      <h1 className='skills-heading pb-4'>Skills</h1>
-      <Row style={{ overflowX: 'auto' }}>
+      <h1 className='skills-header pb-4'>Skills</h1>
+      <Row style={{ overflowX: 'auto'}}>
         <Col md={4}>
           <Row>
             <Col md={6}>

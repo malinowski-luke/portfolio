@@ -8,9 +8,8 @@ import Contact from './components/Contact/Contact'
 import './App.scss'
 
 function App() {
-  console.log('Shoutout to Gina Hock For Being an Awesome Friend!')
   return (
-    <section className='App'>
+    <section className='text-center'>
       <Nav />
       <Home />
       <About />

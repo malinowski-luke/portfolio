@@ -34,8 +34,8 @@ export default function Nav() {
   return (
     <nav id='nav-bar' className='nav-static'>
       <Row className='align-items-center' style={{ height: '10vh' }}>
-        <Col xs={8} md={6}>
-          <h1 className='nav-text'>Luke Malinowski</h1>
+        <Col xs={8} md={6} className='text-left'>
+          <h1 className='nav-text ml-5 mt-2 mt-md-0'>Luke Malinowski</h1>
         </Col>
         <Col xs={2} md={6}>
           <button className='nav-button' onClick={showHideMobileMenu}>
@@ -63,7 +63,7 @@ export default function Nav() {
               <li>contact</li>
             </a>
           </ul>
-          <ul id='desktop-menu' className='desktop-menu'>
+          <ul id='desktop-menu' className='desktop-menu mt-md-3'>
             <li>
               <a href='#home'>home</a>
             </li>

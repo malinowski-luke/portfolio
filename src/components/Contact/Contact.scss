@@ -41,38 +41,36 @@
 }
 
 .contact-img {
-  width: 75px;
+  width: 10vw;
+}
+.offset-contact-img{
+  margin-left: 4vw;
 }
 
 @media screen and (max-width: 767px) {
   .contact-logo {
     width: 6vh;
   }
+ 
   .contact-info-container {
     width: 90vw;
   }
+ 
   .info a {
     font-size: 0.9rem;
   }
+
   .contact-img {
-    width: 60px;
+    width: 18vw;
+  }
+
+  .offset-contact-img{
+    margin-left: 0;
   }
 }
 
-@media (min-width: 768px) {
-  .contact-info-container {
-    width: 80vw;
-  }
-}
-
-@media (min-width: 992px) {
-  .contact-info-container {
-    width: 55vw;
-  }
-}
-
-@media (min-width: 1200px) {
-  .contact-info-container {
-    width: 40vw;
+@media screen and (min-width: 1025px) {
+  .contact-img {
+    width: 5vw;
   }
 }
