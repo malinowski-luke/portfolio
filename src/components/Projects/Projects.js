@@ -8,7 +8,7 @@ import './Projects.scss'
 export default function Projects() {
   return (
     <div id='projects' className='Projects'>
-      <h1>Examples of My Work</h1>
+      <h1 className='mt-5'>Projects</h1>
       <MobileCarousel jeepthings={jeepthings} notepad={notepad} />
       <DesktopCarousel jeepthings={jeepthings} notepad={notepad} />
     </div>
