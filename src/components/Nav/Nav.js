@@ -63,7 +63,7 @@ export default function Nav() {
               <li>contact</li>
             </a>
           </ul>
-          <ul id='desktop-menu' className='desktop-menu mt-md-3'>
+          <ul id='desktop-menu' className='desktop-menu'>
             <li>
               <a href='#home'>home</a>
             </li>
