@@ -1,7 +1,5 @@
 import React from 'react'
-import Image from 'react-bootstrap/Image'
-import Carousel from 'react-bootstrap/Carousel'
-import Card from 'react-bootstrap/Card'
+import { Image, Card, Carousel } from 'react-bootstrap'
 import './DesktopCarousel.scss'
 
 export default function DesktopCarousel(props) {

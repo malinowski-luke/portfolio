@@ -1,8 +1,6 @@
 import React from 'react'
-import Col from 'react-bootstrap/Col'
-import Row from 'react-bootstrap/Row'
+import { Row, Col, Image } from 'react-bootstrap'
 import './Contact.scss'
-import Image from 'react-bootstrap/Image'
 import linkedin from '../../assets/linkedin.png'
 import github from '../../assets/github.png'
 import pdf from '../../assets/pdf.png'
@@ -52,7 +50,11 @@ export default function Contact() {
               </Col>
               <Col md={6}>
                 <a href='mailto:malinowski.luke123@gmail.com'>
-                  <Image src={email} fluid className='contact-img offset-contact-img'/>
+                  <Image
+                    src={email}
+                    fluid
+                    className='contact-img offset-contact-img'
+                  />
                   <br />
                   malinowski.luke123@gmail.com
                 </a>

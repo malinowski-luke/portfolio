@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import icon from '../../assets/icon.svg'
-import Col from 'react-bootstrap/Col'
-import Row from 'react-bootstrap/Row'
+import { Row, Col } from 'react-bootstrap'
 import './Nav.scss'
 
 export default function Nav() {
@@ -40,7 +39,13 @@ export default function Nav() {
         <Col xs={2} md={6}>
           <button className='nav-button' onClick={showHideMobileMenu}>
             menu
-            <img id='nav-icon' rel='img' src={icon} alt='icon' className='icon' />
+            <img
+              id='nav-icon'
+              rel='img'
+              src={icon}
+              alt='icon'
+              className='icon'
+            />
           </button>
           <ul
             id='mobile-menu'

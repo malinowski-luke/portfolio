@@ -1,8 +1,5 @@
 import React from 'react'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import Image from 'react-bootstrap/Image'
-import './Skills.scss'
+import { Row, Col, Image } from 'react-bootstrap'
 import node from '../../assets/node.png'
 import java from '../../assets/java.png'
 import mssql from '../../assets/mssql.png'
@@ -18,9 +15,9 @@ import jquery from '../../assets/jquery.gif'
 
 export default function Skills() {
   return (
-    <div id='skills'className='Skills'>
+    <div id='skills' className='Skills'>
       <h1 className='skills-header pb-4'>Skills</h1>
-      <Row style={{ overflowX: 'auto'}}>
+      <Row style={{ overflowX: 'auto' }}>
         <Col md={4}>
           <Row>
             <Col md={6}>

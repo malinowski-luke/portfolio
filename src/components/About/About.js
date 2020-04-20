@@ -1,7 +1,5 @@
 import React from 'react'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import Image from 'react-bootstrap/Image'
+import { Row, Col, Image } from 'react-bootstrap'
 import guitar from '../../assets/guitar.JPG'
 import './About.scss'
 
@@ -9,7 +7,7 @@ export default function About() {
   return (
     <div className='About' id='about'>
       <Row
-        style={{ color: 'white', paddingTop:'14vh'}}
+        style={{ color: 'white', paddingTop: '14vh' }}
         className='align-items-center container body-content'
       >
         <Col lg={6}>
@@ -25,11 +23,11 @@ export default function About() {
             personal project called Jeep Things - a culmination of my skills,
             Jeep Things solved a problem that was close to home - a site for car
             lovers and rebuilders to trade, sell, and buy auto parts - something
-            that my family often did. I am currently in New York seeking my
-            next endeavor in web development.
+            that my family often did. I am currently in New York seeking my next
+            endeavor in web development.
           </p>
         </Col>
-        <Col lg={6}  style={{ padding: '0px' }}>
+        <Col lg={6} style={{ padding: '0px' }}>
           <Image src={guitar} className='about-img' fluid />
         </Col>
       </Row>
