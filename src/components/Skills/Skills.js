@@ -12,6 +12,7 @@ import express from '../../assets/express.png'
 import bootstrap from '../../assets/bootstrap.png'
 import react from '../../assets/react.png'
 import jquery from '../../assets/jquery.gif'
+import './Skills.scss'
 
 export default function Skills() {
   return (
