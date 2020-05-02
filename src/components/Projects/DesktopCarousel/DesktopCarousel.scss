@@ -1,9 +1,12 @@
 @import '../../../sass/vars';
 
+.carousel {
+  // border: 1px solid $white;
+}
+
 .portfolio-img {
   width: inherit;
   height: inherit;
-  border: 1px solid $white;
 }
 
 .overlay {
@@ -18,7 +21,7 @@
 }
 
 .overlay:hover {
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
 .overlay a {
@@ -49,9 +52,6 @@
   .carousel {
     width: 55vw;
   }
-  .card-text {
-    font-size: 0.8rem;
-  }
   .overlay {
     height: 20vh;
   }
@@ -63,9 +63,6 @@
 @media (min-width: 1400px) {
   .carousel {
     width: 60vw;
-  }
-  .card-text {
-    font-size: 1rem;
   }
   .overlay {
     height: 15vh;

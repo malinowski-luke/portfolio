@@ -1,11 +1,11 @@
 import React from 'react'
 import { Row, Col, Image } from 'react-bootstrap'
 import './Contact.scss'
-import linkedin from '../../assets/linkedin.png'
-import github from '../../assets/github.png'
-import pdf from '../../assets/pdf.png'
-import phone from '../../assets/phone.png'
-import email from '../../assets/email.png'
+import linkedin from '../../assets/icons/linkedin.png'
+import github from '../../assets/icons/github.png'
+import pdf from '../../assets/icons/pdf.png'
+import phone from '../../assets/icons/phone.png'
+import email from '../../assets/icons/email.png'
 import resume from '../../assets/luke_malinowski_resume.pdf'
 
 export default function Contact() {
