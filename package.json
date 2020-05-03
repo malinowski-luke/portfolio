@@ -17,8 +17,8 @@
   },
   "scripts": {
     "build": "react-scripts build",
-    "start1": "node server/index.js && react-scripts start ",
-    "start": "react-scripts start",
+    "start": "node server/index.js && react-scripts start ",
+    "start1": "react-scripts start",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "heroku-postbuild": "npm install && npm run build"
