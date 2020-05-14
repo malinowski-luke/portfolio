@@ -26,7 +26,7 @@ export default function About() {
             that my family often did. I am currently in New York seeking my next
             endeavor in web development.
           </p>
-          <figure class='mt-2 mt-md-4'>
+          <figure class='mt-2'>
             <figcaption>
               <strong>Check Out My Code Wars Profile</strong>
             </figcaption>
@@ -39,6 +39,7 @@ export default function About() {
                 src='https://www.codewars.com/users/malinowskil123/badges/large'
                 alt='codewars badge'
                 fluid
+                class='mt-1'
               />
             </a>
           </figure>
