@@ -7,6 +7,7 @@ import schoolapp from '../../assets/projects/schoolapp.jpg'
 import notepad from '../../assets/projects/notepad.jpg'
 import junkedup from '../../assets/projects/junkedup.jpg'
 import quoteapp from '../../assets/projects/quoteapp.jpg'
+import helo from '../../assets/projects/helo.jpg'
 import './Projects.scss'
 
 export default function Projects() {
@@ -47,12 +48,17 @@ export default function Projects() {
       github: 'https://github.com/malinowskil123/junked-up',
       text: `The basic idea of this app was to allow users to view stock information and current news related to the stock market.`,
     },
-     {
+    {
       img: quoteapp,
       link: 'https://quote-generator-sw.herokuapp.com/',
       github: 'https://github.com/malinowskil123/quote-generator',
       text: `This app generates radnom quotes from Star Wars. Built using react-typescript on the front-end and express and node on back-end`,
-    }
+    },
+    {
+      img: helo,
+      github: 'https://github.com/malinowskil123/helo',
+      text: `Social media app allows users to create profiles, interact with other users, and create posts with images.`,
+    },
   ]
   return (
     <div id='projects' className='Projects'>
