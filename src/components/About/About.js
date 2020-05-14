@@ -12,7 +12,7 @@ export default function About() {
       >
         <Col lg={6}>
           <h1>From music to code {'</>'}</h1>
-          <p className='about-text mb-3 mb-md-0'>
+          <p className='mb-3 mb-md-0'>
             Audio Engineer turned Fullstack Web Developer, I found my passion
             for programming in an unconventional way. In college, I pursued the
             track of Audio Engineering - a musician at heart, I practiced
@@ -26,6 +26,22 @@ export default function About() {
             that my family often did. I am currently in New York seeking my next
             endeavor in web development.
           </p>
+          <figure class='mt-2 mt-md-4'>
+            <figcaption>
+              <strong>Check Out My Code Wars Profile</strong>
+            </figcaption>
+            <a
+              href='https://www.codewars.com/users/malinowskil123'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <Image
+                src='https://www.codewars.com/users/malinowskil123/badges/large'
+                alt='codewars badge'
+                fluid
+              />
+            </a>
+          </figure>
         </Col>
         <Col lg={6} style={{ padding: '0px' }}>
           <Image src={guitar} className='about-img' fluid />

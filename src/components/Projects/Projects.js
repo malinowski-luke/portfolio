@@ -6,6 +6,7 @@ import calculator from '../../assets/projects/calculator.jpg'
 import schoolapp from '../../assets/projects/schoolapp.jpg'
 import notepad from '../../assets/projects/notepad.jpg'
 import junkedup from '../../assets/projects/junkedup.jpg'
+import quoteapp from '../../assets/projects/quoteapp.jpg'
 import './Projects.scss'
 
 export default function Projects() {
@@ -24,14 +25,13 @@ export default function Projects() {
       github: 'https://github.com/malinowskil123/java-swing-notepad',
       text: `Notepad app written in java, allows users to create, save, and
       edit txt documents. Feautures a status bar for tracking
-      word/sentance count and a fully working edit section with copy,
-      paste, undo and redo functionality.`,
+      word/sentance count and a fully working edit functionality.`,
     },
     {
       img: calculator,
       link: 'https://calculator-js-lm.herokuapp.com/',
       github: 'https://github.com/malinowskil123/calculator',
-      text: ` Simple Javascript calculator application built using jQuery and HTML/CSS. Server
+      text: ` Simple Javascript calculator application built using jQuery and HTML/CSS. Back-end
       was developed using node and express.`,
     },
     {
@@ -45,10 +45,14 @@ export default function Projects() {
       img: junkedup,
       link: 'http://www.junkedupstock.com/#/',
       github: 'https://github.com/malinowskil123/junked-up',
-      text: `This project is a clone of apple stocks in functionality. 
-      The design was influenced by the RobinHood trading app. 
-      The basic idea of this app was to allow users to view stock information and current news related to the stock market. `,
+      text: `The basic idea of this app was to allow users to view stock information and current news related to the stock market.`,
     },
+     {
+      img: quoteapp,
+      link: 'https://quote-generator-sw.herokuapp.com/',
+      github: 'https://github.com/malinowskil123/quote-generator',
+      text: `This app generates radnom quotes from Star Wars. Built using react-typescript on the front-end and express and node on back-end`,
+    }
   ]
   return (
     <div id='projects' className='Projects'>
