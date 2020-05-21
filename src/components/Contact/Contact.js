@@ -28,7 +28,7 @@ export default function Contact() {
           <h3>Linkedin</h3>
         </a>
         <a
-          href='/assets/luke_malinowski_resume.pdf'
+          href='/luke_malinowski_resume.pdf'
           target='_blank'
           rel='noopener noreferrer'
         >
