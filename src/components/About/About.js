@@ -1,6 +1,6 @@
 import React from 'react'
 import { Row, Col, Image } from 'react-bootstrap'
-import guitar from '../../assets/guitar.jpg'
+import guitar from '../../assets/icons/guitar.JPG'
 import './About.scss'
 
 export default function About() {
