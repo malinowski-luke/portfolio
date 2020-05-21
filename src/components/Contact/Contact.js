@@ -6,7 +6,6 @@ import github from '../../assets/icons/github.png'
 import pdf from '../../assets/icons/pdf.png'
 import phone from '../../assets/icons/phone.png'
 import email from '../../assets/icons/email.png'
-import resume from '../../assets/luke_malinowski_resume.pdf'
 
 export default function Contact() {
   return (
@@ -28,7 +27,11 @@ export default function Contact() {
           <Image src={linkedin} className='contact-logo' fluid />
           <h3>Linkedin</h3>
         </a>
-        <a href={resume} target='_blank' rel='noopener noreferrer'>
+        <a
+          href='/assets/luke_malinowski_resume.pdf'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
           <Image src={pdf} className='contact-logo' fluid />
           <h3>Resume</h3>
         </a>

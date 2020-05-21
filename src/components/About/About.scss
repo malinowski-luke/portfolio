@@ -12,6 +12,17 @@
   box-shadow: 8px 8px 8px #000000;
 }
 
+.link {
+  color: $gray;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.link:hover {
+  color: $white;
+  text-decoration: none;
+}
+
 @media (max-width: 564px) {
   .about-img {
     width: 30vh;

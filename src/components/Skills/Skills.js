@@ -17,7 +17,7 @@ import './Skills.scss'
 export default function Skills() {
   return (
     <div id='skills' className='Skills'>
-      <h1 className='skills-header pb-4'>Skills</h1>
+      <h1 className='pb-4'>Skills</h1>
       <Row style={{ overflowX: 'auto' }}>
         <Col md={4}>
           <Row>

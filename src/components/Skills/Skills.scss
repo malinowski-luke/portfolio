@@ -10,10 +10,6 @@
   color: $white;
 }
 
-.skills-header {
-  font-size: 3.5rem;
-}
-
 .hr-color {
   width: 90%;
   border-color: $white;
@@ -59,7 +55,7 @@
 }
 
 @media (min-width: 1000px) {
-  .skills-header{
-    margin-top:15vh;
+  .skills-header {
+    margin-top: 15vh;
   }
 }
