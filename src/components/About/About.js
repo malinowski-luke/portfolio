@@ -29,21 +29,12 @@ export default function About() {
             >
               Jeep Things
             </a>{' '}
-            - a culmination of my skills,{' '}
-            <a
-              href='http://www.jeepthingsapp.com/#/'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='link'
-            >
-              Jeep Things
-            </a>{' '}
-            solved a problem that was close to home - a site for car lovers and
-            rebuilders to trade, sell, and buy auto parts - something that my
-            family often did. I am currently in New York seeking my next
-            endeavor in web development.
+            - a culmination of my skills, JeepThings solved a problem that was
+            close to home - a site for car lovers and rebuilders to trade, sell,
+            and buy auto parts - something that my family often did. I am
+            currently in New York seeking my next endeavor in web development.
           </p>
-          <figure class='mt-2 mt-md-4'>
+          <figure class='mt-2 mt-md-4 mb-4 mb-md-0'>
             <figcaption>
               <h4>Check Out My Code Wars Profile</h4>
             </figcaption>

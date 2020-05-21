@@ -2,7 +2,6 @@ import React from 'react'
 import { Row, Col, Image } from 'react-bootstrap'
 import node from '../../assets/icons/node.png'
 import java from '../../assets/icons/java.png'
-import mssql from '../../assets/icons/mssql.png'
 import postgres from '../../assets/icons/postgres.png'
 import js from '../../assets/icons/js.png'
 import html from '../../assets/icons/html.png'
@@ -12,6 +11,7 @@ import express from '../../assets/icons/express.png'
 import bootstrap from '../../assets/icons/bootstrap.png'
 import react from '../../assets/icons/react.png'
 import jquery from '../../assets/icons/jquery.gif'
+import typescript from '../../assets/icons/typescript.png'
 import './Skills.scss'
 
 export default function Skills() {
@@ -27,17 +27,17 @@ export default function Skills() {
                   <Image src={node} className='skills-img mb-4' />
                 </Col>
                 <Col>
-                  <Image src={java} className='skills-img mb-4' />
+                  <Image src={typescript} className='skills-img mb-4' />
                 </Col>
               </Row>
             </Col>
             <Col md={6}>
               <Row>
                 <Col>
-                  <Image src={postgres} className='skills-img mb-4' />
+                  <Image src={java} className='skills-img mb-4' />
                 </Col>
                 <Col>
-                  <Image src={mssql} className='skills-img mb-4' />
+                  <Image src={postgres} className='skills-img mb-4' />
                 </Col>
               </Row>
             </Col>
