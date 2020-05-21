@@ -1,6 +1,6 @@
 import React from 'react'
 import { Row, Col, Image } from 'react-bootstrap'
-// import guitar from '/assets/guitar.jpg'
+import guitar from '../../assets/guitar.jpg'
 import './About.scss'
 
 export default function About() {
@@ -67,7 +67,7 @@ export default function About() {
             target='_blank'
             rel='noopener noreferrer'
           >
-            <Image src='/assets/guitar.jpg' className='about-img' fluid />
+            <Image src={guitar} className='about-img' fluid />
           </a>
         </Col>
       </Row>
