@@ -14,7 +14,7 @@ export default function Projects() {
   const projectsArr = [
     {
       img: jeepthings,
-      link: 'http://www.jeepthingsapp.com/#/',
+      // link: 'http://www.jeepthingsapp.com/#/',
       github: 'https://github.com/malinowskil123/jeepthings',
       text: `Jepthings is a simple mobile responsive marketplace app which
       allows users to create posts and contact other users to buy,
@@ -30,7 +30,7 @@ export default function Projects() {
     },
     {
       img: calculator,
-      link: 'https://calculator-js-lm.herokuapp.com/',
+      // link: 'https://calculator-js-lm.herokuapp.com/',
       github: 'https://github.com/malinowskil123/calculator',
       text: ` Simple Javascript calculator application built using jQuery and HTML/CSS. Back-end
       was developed using node and express.`,
@@ -44,13 +44,13 @@ export default function Projects() {
     },
     {
       img: junkedup,
-      link: 'http://www.junkedupstock.com/#/',
+      // link: 'http://www.junkedupstock.com/#/',
       github: 'https://github.com/malinowskil123/junked-up',
       text: `The basic idea of this app was to allow users to view stock information and current news related to the stock market.`,
     },
     {
       img: quoteapp,
-      link: 'https://quote-generator-sw.herokuapp.com/',
+      // link: 'https://quote-generator-sw.herokuapp.com/',
       github: 'https://github.com/malinowskil123/quote-generator',
       text: `This app generates radnom quotes from Star Wars. Built using react-typescript on the front-end and express and node on back-end`,
     },
