@@ -14,7 +14,7 @@ export default function Projects() {
   const projectsArr = [
     {
       img: jeepthings,
-      // link: 'http://www.jeepthingsapp.com/#/',
+      link: 'http://www.jeepthingsapp.com/#/',
       github: 'https://github.com/malinowskil123/jeepthings',
       text: `Jepthings is a simple mobile responsive marketplace app which
       allows users to create posts and contact other users to buy,
@@ -30,7 +30,7 @@ export default function Projects() {
     },
     {
       img: calculator,
-      // link: 'https://calculator-js-lm.herokuapp.com/',
+      link: 'https://calculator-js-lm.herokuapp.com/',
       github: 'https://github.com/malinowskil123/calculator',
       text: ` Simple Javascript calculator application built using jQuery and HTML/CSS. Back-end
       was developed using node and express.`,
