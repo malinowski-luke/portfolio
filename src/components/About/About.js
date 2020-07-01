@@ -10,9 +10,18 @@ export default function About() {
         style={{ color: 'white', paddingTop: '14vh' }}
         className='align-items-center container body-content'
       >
+        <Col lg={6} style={{ padding: '0px' }}>
+          <a
+            href='https://www.youtube.com/watch?v=bYB1QKDv7HE'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <Image src={guitar} className='about-img' fluid />
+          </a>
+        </Col>
         <Col lg={6}>
           <h1>From music to code {'</>'}</h1>
-          <p className='mb-3 mb-md-0'>
+          <p className='mb-3 mb-md-0 text-justify about-p'>
             Audio Engineer turned Fullstack Web Developer, I found my passion
             for programming in an unconventional way. In college, I pursued the
             track of Audio Engineering - a musician at heart, I practiced
@@ -27,7 +36,7 @@ export default function About() {
               rel='noopener noreferrer'
               className='link'
             >
-              Jeep Things
+              jeepThings
             </a>{' '}
             - a culmination of my skills, JeepThings solved a problem that was
             close to home - a site for car lovers and rebuilders to trade, sell,
@@ -36,7 +45,7 @@ export default function About() {
           </p>
           <figure class='mt-2 mt-md-4 mb-4 mb-md-0'>
             <figcaption>
-              <h4>Check Out My Code Wars Profile</h4>
+              <h5>Check Out My Code Wars Profile</h5>
             </figcaption>
             <a
               href='https://www.codewars.com/users/malinowskil123'
@@ -51,15 +60,6 @@ export default function About() {
               />
             </a>
           </figure>
-        </Col>
-        <Col lg={6} style={{ padding: '0px' }}>
-          <a
-            href='https://www.youtube.com/watch?v=bYB1QKDv7HE'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <Image src={guitar} className='about-img' fluid />
-          </a>
         </Col>
       </Row>
     </div>
