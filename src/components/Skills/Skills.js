@@ -1,8 +1,8 @@
 import React from 'react'
 import Logo from '../Logo/Logo'
 import node from '../../assets/icons/node.png'
-import java from '../../assets/icons/java.png'
 import postgres from '../../assets/icons/postgres.png'
+import msSql from '../../assets/icons/mssql.png'
 import js from '../../assets/icons/js.png'
 import html from '../../assets/icons/html.png'
 import css from '../../assets/icons/css.png'
@@ -30,6 +30,7 @@ export default function Skills() {
         <Logo img={node} title='Node' />
         <Logo img={express} title='Express' />
         <Logo img={postgres} title='PostgresSql' />
+        <Logo img={msSql} title='SQL Server' />
       </div>
     </div>
   )
