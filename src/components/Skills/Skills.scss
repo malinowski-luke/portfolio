@@ -1,61 +1,38 @@
 @import '../../sass/vars';
 .Skills {
   width: 100%;
-  height: 100vh;
+  height: auto;
   padding-top: 20vh;
-  padding-bottom: 20vh;
-  padding-left: 2vw;
-  padding-right: 2vw; //
-  background: linear-gradient(180deg, $teal 25%, #f69d3c 100%);
   color: $white;
+  background: linear-gradient(180deg, $teal 25%, #f69d3c 100%);
+  padding-left: 2vw;
+  padding-right: 2vw;
+  // padding-bottom: 5vh;
 }
 
-.hr-color {
-  width: 90%;
-  border-color: $white;
+.grid {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-row-gap: 2vw;
+  grid-column-gap: 2vw;
+  grid-auto-rows: auto;
+  grid-auto-columns: auto;
+  grid-template-rows: repeat(4, 1fr);
+  place-items: center center;
 }
 
-.skills-img {
-  width: 75px;
-  height: 75px;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .react-logo {
-    animation: react-logo-spin infinite 20s linear;
+// corresponding media queries in Logo.scss
+@media (max-width: 1025px) {
+  .grid {
+    grid-row-gap: 1.5vw;
+    grid-column-gap: 1.5vw;
   }
 }
 
-@keyframes react-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-// Small devices (landscape phones, 576px and up)
-@media (max-width: 576px) {
-  .Skills {
-    height: 200vh;
-  }
-}
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-  .skills-img {
-    width: 65px;
-    height: 65px;
-  }
-
-  .skills-header {
-    font-size: 3.2rem;
-  }
-}
-
-@media (min-width: 1000px) {
-  .skills-header {
-    margin-top: 15vh;
+@media (max-width: 767px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
