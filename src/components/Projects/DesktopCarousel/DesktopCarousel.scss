@@ -1,8 +1,5 @@
 @import '../../../sass/vars';
 
-.carousel {
-  // border: 1px solid $white;
-}
 
 .portfolio-img {
   width: inherit;
@@ -16,7 +13,7 @@
   width: inherit;
   opacity: 0;
   transition: 0.5s ease;
-  background-color: black;
+  background: $gray;
   @include flex-box(column, center, center);
 }
 
@@ -29,7 +26,7 @@
 }
 
 .overlay a:hover {
-  @include link-hover($teal);
+  @include link-hover($apricot);
 }
 
 .project-card {

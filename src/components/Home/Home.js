@@ -7,7 +7,7 @@ export default function Home() {
     <div id='home' className='Home'>
       <div className='gray-overlay'>
         <Card
-          border='danger'
+          border='white'
           body
           bg='dark'
           text='white'
@@ -15,9 +15,10 @@ export default function Home() {
         >
           <Card.Body style={{ maxWidth: '80vw' }}>
             <Card.Title style={{ fontSize: '2rem' }}>
-              Luke Malinowski{' '}
+              Łukasz <i>"Luke"</i> Malinowski
+              <br/>
               <strong className='text' style={{ fontSize: '2.5rem' }}>
-                Fullstack Developer
+                Full-Stack Developer
               </strong>
             </Card.Title>
             <Card.Text>Thank you for checking out my portfolio.</Card.Text>

@@ -1,6 +1,7 @@
+require
 const express = require('express'),
   app = express(),
-  { PORT } = process.env
+  { PORT } = process.env //heroku
 
 app.use(express.static(`${__dirname}/../build`))
 

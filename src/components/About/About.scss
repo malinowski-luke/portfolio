@@ -3,7 +3,7 @@
   width: 100%;
   height: auto;
   min-height: 100vh;
-  background: $teal;
+  background: $apricot;
   @include flex-box(row, center, center);
 }
 
@@ -11,19 +11,18 @@
   line-height: 1.8rem;
 }
 
-.link {
-  color: $gray;
+.about-link{
+  color: $white;
   font-weight: bold;
   font-style: italic;
+  
 }
-
-.link:hover {
-  color: $white;
-  text-decoration: none;
+.about-link:hover{
+  @include link-hover($blue-gray)
 }
 
 .about-img {
-  border: 3px solid $gray;
+  border: 2px solid $blue-gray;
 }
 
 @media (max-width: 564px) {

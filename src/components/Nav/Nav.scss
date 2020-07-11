@@ -1,40 +1,23 @@
 @import '../../sass/vars';
-nav {
+.nav {
   width: 100%;
+  height: 6vh;
   position: fixed;
   top: 0;
   background: $gray;
-  border: 2px solid $white;
   z-index: 1;
+  @include flex-box(row, space-around);
 }
 
 .nav-text {
-  font-size: 1.7rem;
   color: $white;
   font-family: $header-font;
+  margin:0;
 }
 
-.nav-button {
-  width: 90px;
-  height: 40px;
-  margin-right: 3vw;
-  background-color: $teal;
-  border: none;
-  color: $white;
-  font-size: 1rem;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  border-radius: 5px;
-  text-transform: uppercase;
-}
-
+// Mobile ------------------------------
 .icon {
-  width: 28%;
-}
-
-.icon {
-  width: 28%;
+  width: 8%;
   transition: 0.5s;
 }
 
@@ -43,36 +26,35 @@ nav {
 }
 
 .mobile-menu {
-  margin-top: 4px;
   width: 100%;
-  max-height: 90vh;
+  max-height: 94vh;
   position: fixed;
-  top: 10vh;
+  top: 6vh;
   left: 0;
-  background: $gray;
-  border: 2px solid $gray;
+  background: $apricot;
   transition: 0.5s;
   overflow: hidden;
   @include flex-box(column, space-evenly, center);
+  z-index: 1;
 }
 
 .hide-menu-collapse {
   visibility: hidden;
 }
 
-#mobile-menu li {
+.mobile-menu li {
   width: 100%;
   height: auto;
 }
 
-#mobile-menu a {
+.mobile-menu a {
   width: 100vw;
   color: $white;
   text-transform: uppercase;
   font-size: 2rem;
 }
 
-#mobile-menu a:hover {
+.mobile-menu a:hover {
   @include link-hover($white);
 }
 
@@ -88,50 +70,56 @@ nav {
   display: none;
 }
 
-@media (min-width: 760px) {
-  nav {
-    border: none;
+// desktop -----------------------------
+.desktop-menu {
+  width: 40vw;
+  margin:0;
+  @include flex-box(row, center, center);
+}
+
+.desktop-menu li {
+  margin-left: 2vw;
+}
+
+.desktop-menu li a {
+  color: $white;
+  text-transform: uppercase;
+}
+
+.desktop-menu li a:hover {
+  @include link-hover($apricot);
+}
+
+
+@media(max-width:767px){
+  .desktop-menu{
+    display: none;
   }
-  @media (max-width: 1000px) {
-    #desktop-menu li a {
-      font-size: 0.9rem;
+}
+
+@media (min-width: 768px) {
+  // for larger tablets ipad pro
+  @media (min-width:800px)and( max-width: 1024px) {
+    .desktop-menu  li a {
+      font-size: 1.2rem;
     }
   }
-  .nav-static {
-    height: 10vh;
-    transition: 0.5s;
-  }
 
-  .nav-scroll {
-    height: 10vh;
-    background-color: $gray;
-    transition: 0.5s;
-    border: 1px solid $gray;
-  }
-  .nav-static {
-    background-color: transparent;
-    height: 10vh;
-  }
-  .nav-button,
+  .icon,
   .mobile-menu {
     display: none;
   }
-  .nav-text {
-    font-size: 2.2rem;
+
+  .nav-static {
+    height: 6vh;
+    transition: 0.5s;
+    background: transparent;
   }
-  .desktop-menu {
-    width: 40vw;
-    @include flex-box(row, center, center);
+  
+  .nav-scroll {
+    height: 6vh;
+    background: $gray;
+    transition: 0.5s;
   }
-  .desktop-menu li {
-    margin-left: 3vw;
-  }
-  .desktop-menu li a {
-    color: $white;
-    text-transform: uppercase;
-    font-size: 1.2rem;
-  }
-  .desktop-menu li a:hover {
-    @include link-hover($teal);
-  }
+  
 }

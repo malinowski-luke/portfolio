@@ -32,14 +32,12 @@ export default function Projects() {
       img: calculator,
       link: 'https://calculator-js-lm.herokuapp.com/',
       github: 'https://github.com/malinowskil123/calculator',
-      text: ` Simple Javascript calculator application built using jQuery and HTML/CSS. Back-end
-      was developed using node and express.`,
+      text: ` Simple Javascript calculator built using jQuery and HTML/CSS.`,
     },
     {
       img: schoolapp,
       github: 'https://github.com/malinowskil123/school-management-app',
-      text: `College management application developed using Java and JavaFx
-      GUI. Allows users to create records for keeping track of
+      text: `College management application developed using Java. Allows users to create records for keeping track of
       students, textbooks, courses and classrooms.`,
     },
     {
@@ -52,7 +50,7 @@ export default function Projects() {
       img: quoteapp,
       // link: 'https://quote-generator-sw.herokuapp.com/',
       github: 'https://github.com/malinowskil123/quote-generator',
-      text: `This app generates radnom quotes from Star Wars. Built using react-typescript on the front-end and express and node on back-end`,
+      text: `This app generates radnom quotes from Star Wars. Built using react-typescript on the front-end and express and node on the back-end`,
     },
     {
       img: helo,

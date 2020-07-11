@@ -7,11 +7,10 @@
 
 .carousel-img {
   width: 100%;
-  border: 1px solid $white;
 }
 
 .link-icons {
-  width: 12vw;
+  width: 10vw;
 }
 
 .mobile-carousel-size {
@@ -19,12 +18,12 @@
 }
 
 .card-padding {
-  padding: 10px;
+  padding: 5px;
 }
 
 .mobile-carousel-text {
-  overflow-y:scroll;
-  max-height:15vh;
+  overflow-y: scroll;
+  max-height: 15vh;
 }
 
 @media (max-width: 564px) {

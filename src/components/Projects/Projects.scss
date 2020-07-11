@@ -2,7 +2,7 @@
 .Projects {
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(180deg, #f69d3c 25%, $teal 100%);
+  background:$blue-gray;
   color: $white;
   @include flex-box(column, center, center);
 }

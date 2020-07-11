@@ -1,9 +1,8 @@
 // colors
 $gray: #212529;
 $blue-gray: #1c3348;
-$red: #c13719;
 $white: #ffffff;
-$teal: #19c191;
+$apricot: #e3682a;
 
 // fonts
 $header-font: Brush Script MT, Brush Script Std, cursive;
@@ -12,7 +11,7 @@ $header-font: Brush Script MT, Brush Script Std, cursive;
 
 @mixin link-hover($color: $white) {
   color: $color;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 @mixin flex-box($dir: row, $just: space-evenly, $align: center) {

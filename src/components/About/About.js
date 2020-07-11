@@ -34,7 +34,7 @@ export default function About() {
               href='http://www.jeepthingsapp.com/#/'
               target='_blank'
               rel='noopener noreferrer'
-              className='link'
+              className='about-link'
             >
               jeepThings
             </a>{' '}
@@ -43,7 +43,7 @@ export default function About() {
             and buy auto parts - something that my family often did. I am
             currently in New York seeking my next endeavor in web development.
           </p>
-          <figure class='mt-2 mt-md-4 mb-4 mb-md-0'>
+          <figure className='mt-2 mt-md-4 mb-4 mb-md-0'>
             <figcaption>
               <h5>Check Out My Code Wars Profile</h5>
             </figcaption>
@@ -56,7 +56,7 @@ export default function About() {
                 src='https://www.codewars.com/users/malinowskil123/badges/large'
                 alt='codewars badge'
                 fluid
-                class='mt-2'
+                className='mt-2'
               />
             </a>
           </figure>
