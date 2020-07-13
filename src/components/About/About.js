@@ -1,6 +1,6 @@
 import React from 'react'
 import { Row, Col, Image } from 'react-bootstrap'
-import guitar from '../../assets/guitar.jpg'
+import myImg from '../../assets/me.jpg'
 import './About.scss'
 
 export default function About() {
@@ -15,8 +15,10 @@ export default function About() {
             href='https://www.youtube.com/watch?v=bYB1QKDv7HE'
             target='_blank'
             rel='noopener noreferrer'
+            className='about-img-container about-link'
           >
-            <Image src={guitar} className='about-img' fluid />
+            <Image src={myImg} className='about-img' fluid />
+            <h4>Click Me</h4>
           </a>
         </Col>
         <Col lg={6}>

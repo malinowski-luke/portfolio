@@ -17,6 +17,7 @@
   font-style: italic;
   
 }
+
 .about-link:hover{
   @include link-hover($blue-gray)
 }
@@ -25,26 +26,27 @@
   border: 2px solid $blue-gray;
 }
 
+
 @media (max-width: 564px) {
   .about-img {
-    width: 30vh;
+    width: 65vw;
   }
 }
 
 @media (min-width: 768px) {
   .about-img {
-    width: 40vh;
+    width: 40vw;
   }
 }
 
 @media (min-width: 992px) {
   .about-img {
-    width: 60vh;
+    width: 30vw;
   }
 }
 
 @media (min-width: 1200px) {
   .about-img {
-    width: 50vh;
+    width: 20vw;
   }
 }
