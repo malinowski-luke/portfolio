@@ -5,7 +5,8 @@ $white: #ffffff;
 $apricot: #e3682a;
 
 // fonts
-$header-font: Brush Script MT, Brush Script Std, cursive;
+// important to affect any bootstrap defaults
+$main-font: 'Nunito', sans-serif !important;
 
 //mixin
 

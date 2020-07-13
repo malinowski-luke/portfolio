@@ -60,7 +60,7 @@ export default function Projects() {
   ]
   return (
     <div id='projects' className='Projects'>
-      <h1 className='mt-5'>Projects</h1>
+      <h3 className='mt-5'>Projects</h3>
       <MobileCarousel projectsArr={projectsArr} />
       <DesktopCarousel projectsArr={projectsArr} />
     </div>

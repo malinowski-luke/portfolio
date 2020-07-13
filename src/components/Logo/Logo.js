@@ -12,7 +12,7 @@ export default function Logo(props) {
         className={`skills-img ${title === 'React' ? 'react-logo' : ''}`}
         fluid
       />
-      <h4 className='mt-2'>{title}</h4>
+      <h5 className='mt-2'>{title}</h5>
     </div>
   )
 }

@@ -18,10 +18,10 @@ export default function Nav() {
     console.log('hit')
     window.addEventListener('scroll', () => {
       const navbar = document.getElementById('nav-bar')
-      if (window.pageYOffset > 60 && window.innerWidth >= 767) {
+      if (window.pageYOffset > 60 ) {
         navbar.classList.add('nav-scroll')
         navbar.classList.remove('nav-static')
-      } else if (window.pageYOffset < 60 && window.innerWidth >= 767) {
+      } else if (window.pageYOffset < 60) {
         navbar.classList.remove('nav-scroll')
         navbar.classList.add('nav-static')
       }

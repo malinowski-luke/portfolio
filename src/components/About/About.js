@@ -20,7 +20,7 @@ export default function About() {
           </a>
         </Col>
         <Col lg={6}>
-          <h1>From music to code {'</>'}</h1>
+          <h3 className='mt-3  mt-lg-0'>From music to code {'</>'}</h3>
           <p className='mb-3 mb-md-0 text-justify about-p'>
             Audio Engineer turned Fullstack Web Developer, I found my passion
             for programming in an unconventional way. In college, I pursued the

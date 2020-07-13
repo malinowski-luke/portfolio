@@ -11,8 +11,20 @@
 
 .nav-text {
   color: $white;
-  font-family: $header-font;
-  margin:0;
+  margin: 0;
+}
+
+// show nav bar onscroll----------------
+.nav-static {
+  height: 6vh;
+  transition: 0.5s;
+  background: transparent;
+}
+
+.nav-scroll {
+  height: 6vh;
+  background: $gray;
+  transition: 0.5s;
 }
 
 // Mobile ------------------------------
@@ -73,7 +85,7 @@
 // desktop -----------------------------
 .desktop-menu {
   width: 40vw;
-  margin:0;
+  margin: 0;
   @include flex-box(row, center, center);
 }
 
@@ -90,17 +102,16 @@
   @include link-hover($apricot);
 }
 
-
-@media(max-width:767px){
-  .desktop-menu{
+@media (max-width: 767px) {
+  .desktop-menu {
     display: none;
   }
 }
 
 @media (min-width: 768px) {
   // for larger tablets ipad pro
-  @media (min-width:800px)and( max-width: 1024px) {
-    .desktop-menu  li a {
+  @media (min-width: 800px) and( max-width: 1024px) {
+    .desktop-menu li a {
       font-size: 1.2rem;
     }
   }
@@ -109,17 +120,4 @@
   .mobile-menu {
     display: none;
   }
-
-  .nav-static {
-    height: 6vh;
-    transition: 0.5s;
-    background: transparent;
-  }
-  
-  .nav-scroll {
-    height: 6vh;
-    background: $gray;
-    transition: 0.5s;
-  }
-  
 }
