@@ -1,23 +1,25 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Row, Col, Image } from 'react-bootstrap'
+import slideIn from '../../utils/slideIn'
 import myImg from '../../assets/me.jpg'
 import './About.scss'
 
 export default function About() {
+  useEffect(() => slideIn(), [])
   return (
     <div className='About' id='about'>
       <Row
         style={{ color: 'white', paddingTop: '14vh' }}
-        className='align-items-center container body-content'
+        className='slide-in align-left  align-items-center container body-content'
       >
         <Col lg={6} style={{ padding: '0px' }}>
+          <Image src={myImg} className='about-img' fluid />
           <a
             href='https://www.youtube.com/watch?v=bYB1QKDv7HE'
             target='_blank'
             rel='noopener noreferrer'
             className='about-img-container about-link'
           >
-            <Image src={myImg} className='about-img' fluid />
             <h4>Click Me</h4>
           </a>
         </Col>

@@ -11,21 +11,19 @@
   line-height: 1.8rem;
 }
 
-.about-link{
+.about-link {
   color: $white;
   font-weight: bold;
   font-style: italic;
-  
 }
 
-.about-link:hover{
-  @include link-hover($blue-gray)
+.about-link:hover {
+  @include link-hover($blue-gray);
 }
 
 .about-img {
   border: 2px solid $blue-gray;
 }
-
 
 @media (max-width: 564px) {
   .about-img {
@@ -49,4 +47,22 @@
   .about-img {
     width: 20vw;
   }
+}
+
+// onscroll slideIn -----------------------
+.slide-in {
+  opacity: 0;
+  transition: all 0.5s ease-out;
+}
+.align-left.slide-in {
+  transform: translateX(-100%) scale(0.95);
+}
+
+.align-right.slide-in {
+  transform: translateX(100%) scale(0.95);
+}
+
+.slide-in.active {
+  opacity: 1;
+  transform: translateX(0%) scale(1);
 }

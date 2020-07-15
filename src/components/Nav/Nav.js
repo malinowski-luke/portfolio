@@ -1,50 +1,28 @@
 import React, { useEffect } from 'react'
+import {
+  navScrollAnimation,
+  showHideMobileMenu,
+} from '../../utils/navAnimations'
 import icon from '../../assets/icon.svg'
 import './Nav.scss'
 
 export default function Nav() {
-  const showHideMobileMenu = () => {
-    const dropdown = document.getElementById('mobile-menu')
-    dropdown.classList.toggle('hide-menu-collapse')
-    dropdown.classList.toggle('moblie-menu-show')
-    dropdown.classList.toggle('moblie-menu-hide')
-    flipNavIcon()
-  }
-  const flipNavIcon = () => {
-    const navIcon = document.getElementById('nav-icon')
-    navIcon.classList.toggle('icon-rotate')
-  }
-  const navScrollAnimation = () => {
-    console.log('hit')
-    window.addEventListener('scroll', () => {
-      const navbar = document.getElementById('nav-bar')
-      if (window.pageYOffset > 60 ) {
-        navbar.classList.add('nav-scroll')
-        navbar.classList.remove('nav-static')
-      } else if (window.pageYOffset < 60) {
-        navbar.classList.remove('nav-scroll')
-        navbar.classList.add('nav-static')
-      }
-    })
-  }
-  useEffect(() => {
-    navScrollAnimation()
-  }, [])
+  useEffect(() => navScrollAnimation('nav-bar'), [])
   return (
     <nav id='nav-bar' className='nav nav-static'>
-        <h3 className='nav-text'>Luke Malinowski</h3>
+      <h3 className='nav-text'>Luke Malinowski</h3>
       <img
         id='nav-icon'
         rel='img'
         src={icon}
         alt='icon'
-        onClick={showHideMobileMenu}
+        onClick={() => showHideMobileMenu('mobile-menu', 'nav-icon')}
         className='icon'
       />
       <ul
         id='mobile-menu'
         className='mobile-menu mobile-menu-hide hide-menu-collapse'
-        onClick={showHideMobileMenu}
+        onClick={() => showHideMobileMenu('mobile-menu', 'nav-icon')}
       >
         <a href='#home'>
           <li>home</li>
