@@ -21,11 +21,17 @@ export default function Home() {
                 Łukasz <i>"Luke"</i> Malinowski
               </strong>
             </Card.Title>
-            <Card.Title className='dev-text' style={{ fontSize: '2rem' }}>
+            {/* <Card.Title className='dev-text' style={{ fontSize: '2rem' }}>
               Full-Stack Developer
-              <Image className='logo-img ml-2' src={logo} fluid />
-            </Card.Title>
-            <Card.Text>Thank you for checking out my portfolio.</Card.Text>
+              <span data-src={logo} className='logo-img'></span>
+            </Card.Title> */}
+            <div className='dev-text' style={{ fontSize: '2rem' }}>
+              Full-Stack Developer
+              <Image src={logo} className='logo-img ml-2' fluid />
+            </div>
+            <Card.Text className='mt-2'>
+              Thank you for checking out my portfolio.
+            </Card.Text>
           </Card.Body>
         </Card>
       </div>

@@ -17,9 +17,16 @@
 }
 
 .logo-img {
-  width: 12%;
+  width: 15vw;
 }
 
 .dev-text {
   color: $apricot;
+  @include flex-box(row, center, center);
+}
+
+@media (min-width: 768px) {
+  .logo-img {
+    width: 5vw;
+  }
 }
