@@ -16,6 +16,10 @@
   @include flex-box(row, center, center);
 }
 
+.logo-img {
+  width: 12%;
+}
+
 .dev-text {
   color: $apricot;
 }

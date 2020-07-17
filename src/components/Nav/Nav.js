@@ -3,6 +3,7 @@ import {
   navScrollAnimation,
   showHideMobileMenu,
 } from '../../utils/navAnimations'
+import { Image } from 'react-bootstrap'
 import icon from '../../assets/icon.svg'
 import './Nav.scss'
 
@@ -11,7 +12,7 @@ export default function Nav() {
   return (
     <nav id='nav-bar' className='nav nav-static'>
       <h3 className='nav-text'>Luke Malinowski</h3>
-      <img
+      <Image
         id='nav-icon'
         rel='img'
         src={icon}

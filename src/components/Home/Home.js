@@ -1,5 +1,7 @@
 import React from 'react'
-import Card from 'react-bootstrap/Card'
+import { Card, Image } from 'react-bootstrap'
+import logo from '../../assets/logo192.png'
+
 import './Home.scss'
 
 export default function Home() {
@@ -20,7 +22,8 @@ export default function Home() {
               </strong>
             </Card.Title>
             <Card.Title className='dev-text' style={{ fontSize: '2rem' }}>
-                Full-Stack Developer
+              Full-Stack Developer
+              <Image className='logo-img ml-2' src={logo} fluid />
             </Card.Title>
             <Card.Text>Thank you for checking out my portfolio.</Card.Text>
           </Card.Body>
