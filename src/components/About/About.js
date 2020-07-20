@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { Row, Col, Image } from 'react-bootstrap'
+import Codewars from './Codewars/Codewars'
 import slideIn from '../../utils/slideIn'
 import myImg from '../../assets/me.jpg'
 import './About.scss'
@@ -10,7 +11,8 @@ export default function About() {
     <div className='About' id='about'>
       <Row
         style={{ color: 'white', paddingTop: '14vh' }}
-        className='slide-in align-left  align-items-center container body-content'
+        // slide in css in utils
+        className='slide-in align-left align-items-center container body-content'
       >
         <Col lg={6} style={{ padding: '0px' }}>
           <Image src={myImg} className='about-img' fluid />
@@ -47,23 +49,8 @@ export default function About() {
             and buy auto parts - something that my family often did. I am
             currently in New York seeking my next endeavor in web development.
           </p>
-          <figure className='mt-2 mt-md-4 mb-4 mb-md-0'>
-            <figcaption>
-              <h5>Check Out My Code Wars Profile</h5>
-            </figcaption>
-            <a
-              href='https://www.codewars.com/users/malinowskil123'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <Image
-                src='https://www.codewars.com/users/malinowskil123/badges/large'
-                alt='codewars badge'
-                fluid
-                className='mt-2'
-              />
-            </a>
-          </figure>
+          {/* codewars link */}
+          <Codewars />
         </Col>
       </Row>
     </div>

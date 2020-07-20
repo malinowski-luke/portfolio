@@ -48,21 +48,3 @@
     width: 20vw;
   }
 }
-
-// onscroll slideIn -----------------------
-.slide-in {
-  opacity: 0;
-  transition: all 0.5s ease-out;
-}
-.align-left.slide-in {
-  transform: translateX(-100%) scale(0.95);
-}
-
-.align-right.slide-in {
-  transform: translateX(100%) scale(0.95);
-}
-
-.slide-in.active {
-  opacity: 1;
-  transform: translateX(0%) scale(1);
-}

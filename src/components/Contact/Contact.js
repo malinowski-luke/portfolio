@@ -37,27 +37,27 @@ export default function Contact() {
         </a>
       </div>
       <div className='Contact-info'>
-        <div className='container body-content'>
+        {/* slide in css in utils */}
+        <div className='slide-in align-right container body-content'>
           <h3>You can reach me at...</h3>
           <h5 className='mt-3 mt-md-4'>
             I'd love to connect with fellow developers around the world.
           </h5>
           <div className='mt-4 info'>
             <Row>
-              <Col md={{span:4,offset:2}} className='mb-4 mb-md-0'>
-                <a href='mailto:malinowski.luke123@gmail.com' className='contact-link'>
-                    <Image
-                    src={email}
-                    fluid
-                    className='contact-img'
-                  />
-                    <div>malinowski.luke123@gmail.com</div>
+              <Col md={{ span: 4, offset: 2 }} className='mb-4 mb-md-0'>
+                <a
+                  href='mailto:malinowski.luke123@gmail.com'
+                  className='contact-link'
+                >
+                  <Image src={email} fluid className='contact-img' />
+                  <div>malinowski.luke123@gmail.com</div>
                 </a>
               </Col>
-              <Col md={4} >
+              <Col md={4}>
                 <a href='tel:631-741-7803' className='contact-link'>
-                   <Image src={phone} fluid className='contact-img' />
-                   <div>631-741-7803</div>
+                  <Image src={phone} fluid className='contact-img' />
+                  <div>631-741-7803</div>
                 </a>
               </Col>
             </Row>

@@ -4,6 +4,7 @@ import './reset.css'
 import './index.css'
 import App from './App'
 import 'bootstrap/scss/bootstrap.scss'
+import './utils/slideIn.css'
 import * as serviceWorker from './serviceWorker'
 
 ReactDOM.render(
