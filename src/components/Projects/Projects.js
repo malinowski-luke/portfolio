@@ -8,6 +8,7 @@ import notepad from '../../assets/projects/notepad.jpg'
 import junkedup from '../../assets/projects/junkedup.jpg'
 import quoteapp from '../../assets/projects/quoteapp.jpg'
 import helo from '../../assets/projects/helo.jpg'
+import blog from '../../assets/projects/blog.jpg'
 import './Projects.scss'
 
 export default function Projects() {
@@ -16,23 +17,18 @@ export default function Projects() {
       img: jeepthings,
       link: 'http://www.jeepthingsapp.com/#/',
       github: 'https://github.com/malinowskil123/jeepthings',
-      text: `Jepthings is a simple mobile responsive marketplace app which
-      allows users to create posts and contact other users to buy,
-      trade and, sell jeep parts. Utilizes Amazon S3 for img uploads
-      and Google Maps API.`,
+      text: `A web app for jeep lovers and rebuilders to trade, sell, and buy auto parts.`,
     },
     {
       img: notepad,
       github: 'https://github.com/malinowskil123/java-swing-notepad',
-      text: `Notepad app written in java, allows users to create, save, and
-      edit txt documents. Feautures a status bar for tracking
-      word/sentance count and a fully working edit functionality.`,
+      text: `Notepad desktop app developed using in Java.`,
     },
     {
       img: calculator,
       link: 'https://calculator-js-lm.herokuapp.com/',
       github: 'https://github.com/malinowskil123/calculator',
-      text: ` Simple Javascript calculator built using jQuery and HTML/CSS.`,
+      text: `Javascript calculator built using jQuery and HTML/CSS.`,
     },
     {
       img: schoolapp,
@@ -44,18 +40,23 @@ export default function Projects() {
       img: junkedup,
       // link: 'http://www.junkedupstock.com/#/',
       github: 'https://github.com/malinowskil123/junked-up',
-      text: `The basic idea of this app was to allow users to view stock information and current news related to the stock market.`,
+      text: `Junked Up provides users with stock info and market related news.`,
     },
     {
       img: quoteapp,
       // link: 'https://quote-generator-sw.herokuapp.com/',
       github: 'https://github.com/malinowskil123/quote-generator',
-      text: `This app generates radnom quotes from Star Wars. Built using react-typescript on the front-end and express and node on the back-end`,
+      text: `Random Star Wars quote generator. Connects to twitter's API to allow users to tweet quotes.`,
     },
     {
       img: helo,
       github: 'https://github.com/malinowskil123/helo',
-      text: `Social media app allows users to create profiles, interact with other users, and create posts with images.`,
+      text: `Social media app, users can create profiles, post blogs, and interact with other users.`,
+    },
+    {
+      img: blog,
+      github: 'https://github.com/malinowskil123/blog-layout',
+      text: `Blog page with an animated progress bar.`,
     },
   ]
   return (

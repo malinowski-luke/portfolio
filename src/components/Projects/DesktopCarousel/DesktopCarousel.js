@@ -31,7 +31,7 @@ export default function DesktopCarousel(props) {
             className='project-card'
           >
             <Card.Body style={{ padding: '0', margin: '0' }}>
-              <Card.Text className='card-text'>{elm.text}</Card.Text>
+              <Card.Text>{elm.text}</Card.Text>
             </Card.Body>
           </Card>
         </Carousel.Caption>
