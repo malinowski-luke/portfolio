@@ -33,8 +33,7 @@ export default function Projects() {
     {
       img: schoolapp,
       github: 'https://github.com/malinowskil123/school-management-app',
-      text: `College management app developed using Java. Allows users to create records for keeping track of
-      students, textbooks, courses and classrooms.`,
+      text: `College management app developed using Java. Users can create data records for students, textbooks, courses and classrooms.`,
     },
     {
       img: junkedup,

@@ -10,31 +10,12 @@
 }
 
 .link-icons {
-  width: 10vw;
+  width: 8.5vw;
 }
 
-.mobile-carousel-size {
-  height: auto;
-}
-
-.card-padding {
-  padding: 5px;
-}
-
-.mobile-carousel-text {
-  overflow-y: scroll;
-  max-height: 15vh;
-}
-
-@media (max-width: 564px) {
-  .mobile-carousel-text {
-    font-size: 1rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .mobile-carousel-text {
-    font-size: 1.2rem;
+@media (min-width: 600px) and (max-width: 1024px) {
+  .link-icons {
+    width: 5vw;
   }
 }
 

@@ -11,7 +11,8 @@ export default function MobileCarousel(props) {
     return (
       <Carousel.Item key={index}>
         <Image src={img} className='carousel-img' />
-        <div className='icon-container mt-4'>
+        <p className='mt-2'>{text}</p>
+        <div className='icon-container mt-2'>
           {elm.link ? (
             <div>
               <a href={link} target='_blank' rel='noopener noreferrer'>
@@ -27,18 +28,15 @@ export default function MobileCarousel(props) {
             <p>Github Repo</p>
           </div>
         </div>
-        <p className='mt-4 mb-5 mobile-carousel-text'>{text}</p>
       </Carousel.Item>
     )
   })
   return (
     <div className='container body-content'>
-      <Card
-        id='mobile-carousel'
-        bg='dark'
-        className='mt-2 mt-md-4 card-padding'
-      >
-        <Carousel className='mobile-carousel-size'>{carouselContent}</Carousel>
+      <Card id='mobile-carousel' bg='dark' className='mt-2 mt-md-4'>
+        <Carousel fade indicators={false}>
+          {carouselContent}
+        </Carousel>
       </Card>
     </div>
   )
