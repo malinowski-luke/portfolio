@@ -12,7 +12,7 @@ export default function MobileCarousel(props) {
       <Carousel.Item key={index}>
         <Image src={img} className='carousel-img' />
         <p className='mt-2'>{text}</p>
-        <div className='icon-container mt-2'>
+        <div className='icon-container mt-2 mb-2'>
           {elm.link ? (
             <div>
               <a href={link} target='_blank' rel='noopener noreferrer'>
