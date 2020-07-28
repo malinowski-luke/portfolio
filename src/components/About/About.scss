@@ -25,26 +25,21 @@
   border: 2px solid $blue-gray;
 }
 
-@media (max-width: 564px) {
-  .about-img {
-    width: 65vw;
-  }
-}
-
-@media (min-width: 768px) {
-  .about-img {
-    width: 40vw;
-  }
-}
-
-@media (min-width: 992px) {
+// landscape phones
+@media (min-width: $breakpoint-xs) and (max-height: 411px) {
   .about-img {
     width: 30vw;
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: $breakpoint-lg) {
   .about-img {
-    width: 20vw;
+    width: 30vw;
+  }
+}
+
+@media (min-width: $breakpoint-xl) {
+  .about-img {
+    width: 25vw;
   }
 }

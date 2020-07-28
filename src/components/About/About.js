@@ -11,10 +11,10 @@ export default function About() {
     <div className='About' id='about'>
       <Row
         style={{ color: 'white', paddingTop: '14vh' }}
-        // slide in css in utils
+        // slide-in css in utils
         className='slide-in align-left align-items-center container body-content'
       >
-        <Col lg={6} style={{ padding: '0px' }}>
+        <Col md={6} style={{ padding: '0px' }}>
           <Image src={myImg} className='about-img' fluid />
           <a
             href='https://www.youtube.com/watch?v=bYB1QKDv7HE'
@@ -25,7 +25,7 @@ export default function About() {
             <h4>Click Me</h4>
           </a>
         </Col>
-        <Col lg={6}>
+        <Col md={6}>
           <h3 className='mt-3  mt-lg-0'>From music to code {'</>'}</h3>
           <p className='mb-3 mb-md-0 text-justify about-p'>
             Audio Engineer turned Fullstack Web Developer, I found my passion

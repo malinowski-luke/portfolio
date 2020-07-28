@@ -1,3 +1,4 @@
+@import '../../sass/vars';
 .skills-img {
   width: 5vw;
 }
@@ -18,14 +19,10 @@
 }
 
 // corresponding media queries in Skills.scss
-@media (max-width: 1025px) {
+@media (max-width: $breakpoint-lg) {
   .skills-img {
     width: 15vw;
   }
 }
 
-@media (max-width: 767px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+

@@ -1,7 +1,7 @@
 @import '../../sass/vars';
 .nav {
   width: 100%;
-  height: 6vh;
+  // height: 6vh;
   position: fixed;
   top: 0;
   background: $gray;
@@ -12,6 +12,7 @@
 .nav-text {
   color: $white;
   margin: 0;
+  padding: 0;
 }
 
 // show nav bar onscroll----------------
@@ -103,20 +104,37 @@
   @include link-hover($apricot);
 }
 
-@media (max-width: 767px) {
+@media (min-width: $breakpoint-xs) and (max-width: $breakpoint-sm) {
   .desktop-menu {
     display: none;
   }
 }
 
-@media (min-width: 768px) {
-  // for larger tablets ipad pro
-  @media (min-width: 800px) and( max-width: 1024px) {
-    .desktop-menu li a {
-      font-size: 1.2rem;
-    }
+// phones landscape
+@media (min-width: $breakpoint-xs) and (max-height: 500px) {
+  .nav-static,
+  .nav-scroll {
+    height: 10vh;
   }
+  .desktop-menu {
+    display: none;
+  }
+  .icon {
+    width: 4%;
+  }
+  .mobile-menu {
+    max-height: 90vh;
+    top: 10vh;
+  }
+  .mobile-menu li {
+    margin-bottom: 1vw;
+  }
+  .mobile-menu a {
+    font-size: 1.5rem;
+  }
+}
 
+@media (min-width: $breakpoint-md) and (min-height: 501px) {
   .icon,
   .mobile-menu {
     display: none;
