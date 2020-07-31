@@ -20,13 +20,15 @@
 
 // corresponding media queries in Skills.scss
 @media (max-width: $breakpoint-lg) {
-
+  .skills-img {
+    width: 10vw;
+  }
 }
 
 
 // landscape phones
 @media (min-width: $breakpoint-xs) and (max-height: 500px) {
   .skills-img {
-    width: 5vw;
+    width: 8vw;
   }
 }

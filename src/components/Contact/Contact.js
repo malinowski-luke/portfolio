@@ -51,13 +51,13 @@ export default function Contact() {
                   className='contact-link'
                 >
                   <Image src={email} fluid className='contact-img' />
-                  <div>malinowski.luke123@gmail.com</div>
+                  <p>malinowski.luke123@gmail.com</p>
                 </a>
               </Col>
               <Col sm={4}>
                 <a href='tel:631-741-7803' className='contact-link'>
                   <Image src={phone} fluid className='contact-img' />
-                  <div>631-741-7803</div>
+                  <p>631-741-7803</p>
                 </a>
               </Col>
             </Row>
