@@ -26,7 +26,7 @@ export default function Projects() {
     },
     {
       img: calculator,
-      link: 'https://calculator-js-lm.herokuapp.com/',
+      // link: 'https://calculator-js-lm.herokuapp.com/',
       github: 'https://github.com/malinowskil123/calculator',
       text: `Javascript calculator built using jQuery and HTML/CSS.`,
     },
