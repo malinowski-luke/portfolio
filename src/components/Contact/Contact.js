@@ -45,7 +45,7 @@ export default function Contact() {
           </h5>
           <div className='mt-4 info'>
             <Row>
-              <Col sm={{ span: 5, offset: 1 }} className='mb-4 mb-md-0'>
+              <Col sm={{ span: 5, offset: 1 }} md={{ span: 4, offset: 2 }} className='mb-4 mb-md-0'>
                 <a
                   href='mailto:malinowski.luke123@gmail.com'
                   className='contact-link'
@@ -54,7 +54,7 @@ export default function Contact() {
                   <p>malinowski.luke123@gmail.com</p>
                 </a>
               </Col>
-              <Col sm={5}>
+              <Col sm={5} md={4}>
                 <a href='tel:631-741-7803' className='contact-link'>
                   <Image src={phone} fluid className='contact-img' />
                   <p>631-741-7803</p>
