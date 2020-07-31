@@ -35,31 +35,15 @@
   @include link-hover($blue-gray);
 }
 
-.contact-img {
-  width: 10vw;
-}
-
-@media screen and (max-width: 767px) {
+// landscape phones
+@media (min-width: $breakpoint-xs) and (max-height: 500px) {
+  .Contact-bar {
+    height: 25vh; //adds up to 90
+  }
+  .Contact-info {
+    height: 65vh; //adds up to 90
+  }
   .contact-logo {
-    width: 6vh;
-  }
-
-  .contact-info-container {
-    width: 90vw;
-  }
-
-  .info a {
-    font-size: 0.9rem;
-  }
-
-  .contact-img {
-    width: 18vw;
-  }
-
-}
-
-@media screen and (min-width: 1025px) {
-  .contact-img {
-    width: 5vw;
+    width: 10vh;
   }
 }

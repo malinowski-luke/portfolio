@@ -13,13 +13,27 @@
   width: 8.5vw;
 }
 
-@media (min-width: 600px) and (max-width: 1024px) {
+@media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
   .link-icons {
-    width: 5vw;
+    width: 4vw;
   }
 }
 
-@media (min-width: $breakpoint-lg) {
+// landscape phones
+@media (min-width: $breakpoint-xs)  and (max-height: 500px) {
+  #mobile-carousel {
+    // resizes element
+    width:40vw;
+    // centers elmement  
+    margin:auto;
+    // stops it from touching contact section when in landscape view
+    margin-bottom:5vw !important;
+
+  }
+}
+
+// breakpoint set a ipad pro largest tablet 
+@media (min-width: 1025px) {
   #mobile-carousel {
     display: none;
   }
