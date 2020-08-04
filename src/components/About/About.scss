@@ -33,6 +33,12 @@
   }
 }
 
+@media (min-width: $breakpoint-xs) and (max-width: $breakpoint-sm){
+  .about-img{
+    width:80vw;
+  }
+}
+
 @media (min-width: $breakpoint-lg) {
   .about-img {
     width: 30vw;

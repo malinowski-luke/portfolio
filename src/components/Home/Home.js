@@ -1,10 +1,11 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { Card, Image } from 'react-bootstrap'
 import logo from '../../assets/logo192.png'
-
+import slideIn from '../../utils/slideIn'
 import './Home.scss'
 
 export default function Home() {
+  useEffect(() => slideIn(), [])
   return (
     <div id='home' className='Home'>
       <div className='gray-overlay'>

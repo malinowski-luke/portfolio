@@ -17,8 +17,7 @@ import './Skills.scss'
 export default function Skills() {
   return (
     <div id='skills' className='Skills'>
-      <h3 className='text-center mt-4'>Skills</h3>
-      <div className='grid mt-3'>
+      <div className='grid'>
         <Logo img={js} title='JavaScript' />
         <Logo img={typescript} title='TypeScript' />
         <Logo img={html} title='Html' />

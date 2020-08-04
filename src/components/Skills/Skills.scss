@@ -1,12 +1,13 @@
 @import '../../sass/vars';
 .Skills {
   width: 100%;
-  height: auto;
+  min-height: 100vh;
   color: $white;
-  background: linear-gradient(180deg, $apricot 10%, $blue-gray 95%);
+  background: linear-gradient(180deg, $apricot 5%, $blue-gray 85%);
   padding-left: 2vw;
   padding-right: 2vw;
   padding-top: 8vh;
+  @include flex-box();
 }
 
 .grid {

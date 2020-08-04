@@ -1,12 +1,10 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Row, Col, Image } from 'react-bootstrap'
-import Codewars from './Codewars/Codewars'
-import slideIn from '../../utils/slideIn'
+import Contact from '../Contact/Contact'
 import myImg from '../../assets/me.jpg'
 import './About.scss'
 
 export default function About() {
-  useEffect(() => slideIn(), [])
   return (
     <div className='About' id='about'>
       <Row
@@ -49,8 +47,7 @@ export default function About() {
             and buy auto parts - something that my family often did. I am
             currently in New York seeking my next endeavor in web development.
           </p>
-          {/* codewars link */}
-          <Codewars />
+          <Contact/>
         </Col>
       </Row>
     </div>

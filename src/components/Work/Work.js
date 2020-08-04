@@ -59,10 +59,11 @@ export default function Projects() {
     },
   ]
   return (
-    <div id='projects' className='Projects'>
-      <h3 className='mt-5'>Projects</h3>
-      <MobileCarousel projectsArr={projectsArr} />
-      <DesktopCarousel projectsArr={projectsArr} />
+    <div id='work' className='Projects'>
+      <div className='slide-in align-left'>
+        <MobileCarousel projectsArr={projectsArr} />
+        <DesktopCarousel projectsArr={projectsArr} />
+      </div>
     </div>
   )
 }

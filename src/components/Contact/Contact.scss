@@ -1,8 +1,6 @@
 @import '../../sass/vars';
 .Contact-bar {
   width: 100%;
-  height: 20vh; //adds up to 94
-  background: $apricot;
   @include flex-box(row, space-around, center);
 }
 
@@ -15,44 +13,14 @@
   text-decoration: none;
 }
 
-.Contact-info {
-  width: 100%;
-  height: 74vh; //adds up to 94
-  color: $blue-gray;
-  @include flex-box(row, center, center);
-}
-
-.contact-link  {
-  color: $blue-gray;
-  font-weight: bold;
-}
-
-.contact-link:hover {
-  @include link-hover($blue-gray);
-}
-
-
 @media (min-width: $breakpoint-xs) and (max-width: $breakpoint-lg){
-  .contact-link img, .contact-logo {
+    .contact-logo {
     width: 10vw;
   }  
 }
 
-// landscape phones
-@media (min-width: $breakpoint-xs) and (max-height: 500px) {
-  .Contact-bar {
-    height: 25vh; //adds up to 90
-  }
-  .Contact-info {
-    height: 65vh; //adds up to 90
-  }
-  .contact-link img, .contact-logo {
-    width: 5vw;
-  } 
-}
-
 @media (min-width: $breakpoint-xl) {
-  .contact-link img, .contact-logo {
-    width: 5vw;
+ .contact-logo {
+    width: 4vw;
   }   
 }

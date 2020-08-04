@@ -34,10 +34,10 @@ export default function Nav() {
         <a href='#skills'>
           <li>skills</li>
         </a>
-        <a href='#projects'>
-          <li>projects</li>
+        <a href='#work'>
+          <li>work</li>
         </a>
-        <a href='#contact'>
+        <a href='mailto:malinowski.luke123@gmail.com'>
           <li>contact</li>
         </a>
       </ul>
@@ -52,10 +52,10 @@ export default function Nav() {
           <a href='#skills'>skills</a>
         </li>
         <li>
-          <a href='#projects'>projects</a>
+          <a href='#work'>work</a>
         </li>
         <li>
-          <a href='#contact'>contact</a>
+          <a href='mailto:malinowski.luke123@gmail.com'>contact</a>
         </li>
       </ul>
     </nav>
