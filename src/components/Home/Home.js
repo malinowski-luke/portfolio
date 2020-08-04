@@ -21,10 +21,6 @@ export default function Home() {
                 Łukasz <i>"Luke"</i> Malinowski
               </strong>
             </Card.Title>
-            {/* <Card.Title className='dev-text' style={{ fontSize: '2rem' }}>
-              Full-Stack Developer
-              <span data-src={logo} className='logo-img'></span>
-            </Card.Title> */}
             <div className='dev-text' style={{ fontSize: '2rem' }}>
               Full-Stack Developer
               <Image src={logo} className='logo-img ml-2' fluid />

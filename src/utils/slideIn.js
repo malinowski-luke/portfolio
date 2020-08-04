@@ -2,7 +2,7 @@ import debounce from './debounce'
 
 const checkSlide = () => {
   // don't slide in on landscape phones
-  if (window.innerHeight >= 500) {
+  if (window.innerHeight >= 501) {
     document.querySelectorAll('.slide-in').forEach((elm) => {
       const slideInAt =
           window.scrollY + window.innerHeight - elm.offsetHeight / 2,
