@@ -1,14 +1,14 @@
 import React from 'react'
 import { Image } from 'react-bootstrap'
-import './Contact.scss'
 import linkedin from '../../assets/icons/linkedin.png'
 import github from '../../assets/icons/github.png'
 import pdf from '../../assets/icons/pdf.png'
-
+import './Contact.scss'
 
 export default function Contact() {
   return (
-      <div className='Contact-bar mt-2'>
+    <>
+      <div className='contact-bar mt-4'>
         <a
           href='https://github.com/malinowskil123'
           target='_blank'
@@ -34,5 +34,18 @@ export default function Contact() {
           <h4>Resume</h4>
         </a>
       </div>
+      <a
+        href='https://www.codewars.com/users/malinowskil123'
+        target='_blank'
+        rel='noopener noreferrer'
+        className='mt-4'
+      >
+        <Image
+          src='https://www.codewars.com/users/malinowskil123/badges/large'
+          alt='codewars badge'
+          fluid
+        />
+      </a>
+    </>
   )
 }

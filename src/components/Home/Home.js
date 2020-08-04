@@ -1,37 +1,18 @@
-import React, {useEffect} from 'react'
-import { Card, Image } from 'react-bootstrap'
-import logo from '../../assets/logo192.png'
-import slideIn from '../../utils/slideIn'
+import React, { useEffect } from 'react'
+import { slideIn } from '../../utils/slideIn'
+import { typewriter } from '../../utils/typewriter'
+import homeStrCode from '../../utils/homeStrCode'
+import CodeEditor from '../CodeEditor/CodeEditor'
 import './Home.scss'
 
 export default function Home() {
-  useEffect(() => slideIn(), [])
+  useEffect(() => {
+    typewriter(homeStrCode, 'code', 50)
+    slideIn()
+  }, [])
   return (
     <div id='home' className='Home'>
-      <div className='gray-overlay'>
-        <Card
-          border='white'
-          body
-          bg='dark'
-          text='white'
-          style={{ fontSize: '1.5rem' }}
-        >
-          <Card.Body style={{ maxWidth: '80vw' }}>
-            <Card.Title style={{ fontSize: '2rem' }}>
-              <strong>
-                Łukasz <i>"Luke"</i> Malinowski
-              </strong>
-            </Card.Title>
-            <div className='dev-text' style={{ fontSize: '2rem' }}>
-              Full-Stack Developer
-              <Image src={logo} className='logo-img ml-2' fluid />
-            </div>
-            <Card.Text className='mt-2'>
-              Thank you for checking out my portfolio.
-            </Card.Text>
-          </Card.Body>
-        </Card>
-      </div>
+      <CodeEditor />
     </div>
   )
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import Logo from '../Logo/Logo'
+import Logo from './Logo/Logo'
 import node from '../../assets/icons/node.png'
 import postgres from '../../assets/icons/postgres.png'
 import msSql from '../../assets/icons/mssql.png'

@@ -47,7 +47,7 @@ export default function About() {
             and buy auto parts - something that my family often did. I am
             currently in New York seeking my next endeavor in web development.
           </p>
-          <Contact/>
+          <Contact />
         </Col>
       </Row>
     </div>

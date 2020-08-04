@@ -2,31 +2,6 @@
 .Home {
   width: 100%;
   height: 100vh;
-  background: url('../../assets/code.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.gray-overlay {
-  width: 100%;
-  height: 100vh;
-  background: $blue-gray;
-  opacity: 0.96;
+  background-color: $blue-gray;
   @include flex-box(row, center, center);
-}
-
-.logo-img {
-  width: 15vw;
-}
-
-.dev-text {
-  color: $apricot;
-  @include flex-box(row, center, center);
-}
-
-@media (min-width: 768px) {
-  .logo-img {
-    width: 5vw;
-  }
 }

@@ -1,26 +1,25 @@
 @import '../../sass/vars';
-.Contact-bar {
+.contact-bar {
   width: 100%;
   @include flex-box(row, space-around, center);
 }
 
-.Contact-bar a {
+.contact-bar a {
   color: $white;
 }
 
-.Contact-bar a:hover {
-  color: $white;
-  text-decoration: none;
+.contact-bar a:hover {
+  @include link-hover($white);
 }
 
-@media (min-width: $breakpoint-xs) and (max-width: $breakpoint-lg){
-    .contact-logo {
+@media (min-width: $breakpoint-xs) and (max-width: $breakpoint-lg) {
+  .contact-logo {
     width: 10vw;
-  }  
+  }
 }
 
 @media (min-width: $breakpoint-xl) {
- .contact-logo {
+  .contact-logo {
     width: 4vw;
-  }   
+  }
 }

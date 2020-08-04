@@ -18,13 +18,12 @@
 }
 
 .about-link:hover {
-  @include link-hover($blue-gray);
+  @include link-hover($white);
 }
 
 .about-img {
   border: 2px solid $blue-gray;
 }
-
 
 // landscape phones
 @media (min-width: $breakpoint-xs) and (max-height: 500px) {
@@ -33,9 +32,9 @@
   }
 }
 
-@media (min-width: $breakpoint-xs) and (max-width: $breakpoint-sm){
-  .about-img{
-    width:80vw;
+@media (min-width: $breakpoint-xs) and (max-width: $breakpoint-sm) {
+  .about-img {
+    width: 80vw;
   }
 }
 

@@ -16,4 +16,5 @@ const checkSlide = () => {
 }
 
 // debounce to reduce unecessary scroll event trigger
-export default () => window.addEventListener('scroll', debounce(checkSlide))
+export const slideIn = () =>
+  window.addEventListener('scroll', debounce(checkSlide))
