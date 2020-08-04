@@ -38,7 +38,7 @@ export default function Contact() {
       </div>
       <div className='Contact-info'>
         {/* slide in css in utils */}
-        <div className='slide-in align-right container body-content'>
+        <div className='slide-in align-left container body-content'>
           <h3>You can reach me at...</h3>
           <h5 className='mt-3 mt-md-4'>
             I'd love to connect with fellow developers around the world.
