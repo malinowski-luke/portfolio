@@ -1,12 +1,10 @@
 // img imports
 import jeepthings from '../../assets/projects/jeepthings.jpg'
 import calculator from '../../assets/projects/calculator.jpg'
-// import schoolapp from '../../assets/projects/schoolapp.jpg'
 import notepad from '../../assets/projects/notepad.jpg'
 import junkedup from '../../assets/projects/junkedup.jpg'
 import quoteapp from '../../assets/projects/quoteapp.jpg'
 import helo from '../../assets/projects/helo.jpg'
-import blog from '../../assets/projects/blog.jpg'
 
 export default [
   {
@@ -26,11 +24,6 @@ export default [
     github: 'https://github.com/malinowskil123/calculator',
     text: `Javascript calculator built using jQuery and HTML/CSS.`,
   },
-  // {
-  //   img: schoolapp,
-  //   github: 'https://github.com/malinowskil123/school-management-app',
-  //   text: `College management app developed using Java. Users can create data records for students, textbooks, courses and classrooms.`,
-  // },
   {
     img: junkedup,
     // link: 'http://www.junkedupstock.com/#/',
@@ -47,10 +40,5 @@ export default [
     img: helo,
     github: 'https://github.com/malinowskil123/helo',
     text: `Social media app, users can create profiles, post blogs, and interact with other users.`,
-  },
-  {
-    img: blog,
-    github: 'https://github.com/malinowskil123/blog-layout',
-    text: `Blog page with an animated progress bar.`,
   },
 ]

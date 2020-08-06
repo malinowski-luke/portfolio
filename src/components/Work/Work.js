@@ -5,7 +5,7 @@ import projectsArr from './projectsArr'
 import { slideIn } from '../../utils/slideIn'
 
 export default function Projects() {
-  useEffect(() => slideIn('work'))
+  useEffect(() => slideIn('work'), [])
   return (
     <div id='work' className='slide-in align-left'>
       <MobileCarousel projectsArr={projectsArr} />
