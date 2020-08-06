@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import {
   navScrollAnimation,
   showHideMobileMenu,
@@ -25,38 +26,38 @@ export default function Nav() {
         className='mobile-menu mobile-menu-hide hide-menu-collapse'
         onClick={() => showHideMobileMenu('mobile-menu', 'nav-icon')}
       >
-        <a href='#home'>
+        <Link to='/'>
           <li>home</li>
-        </a>
-        <a href='#about'>
+        </Link>
+        <Link to='/about'>
           <li>about</li>
-        </a>
-        <a href='#skills'>
+        </Link>
+        <Link to='/skills'>
           <li>skills</li>
-        </a>
-        <a href='#work'>
+        </Link>
+        <Link to='/work'>
           <li>work</li>
-        </a>
+        </Link>
         <a href='mailto:malinowski.luke123@gmail.com'>
           <li>contact</li>
         </a>
       </ul>
       <ul id='desktop-menu' className='desktop-menu'>
-        <li>
-          <a href='#home'>home</a>
-        </li>
-        <li>
-          <a href='#about'>about</a>
-        </li>
-        <li>
-          <a href='#skills'>skills</a>
-        </li>
-        <li>
-          <a href='#work'>work</a>
-        </li>
-        <li>
-          <a href='mailto:malinowski.luke123@gmail.com'>contact</a>
-        </li>
+        <Link to='/'>
+          <li>home</li>
+        </Link>
+        <Link to='/about'>
+          <li>about</li>
+        </Link>
+        <Link to='/skills'>
+          <li>skills</li>
+        </Link>
+        <Link to='/work'>
+          <li>work</li>
+        </Link>
+        <a href='mailto:malinowski.luke123@gmail.com'>
+          <li>contact</li>
+        </a>
       </ul>
     </nav>
   )

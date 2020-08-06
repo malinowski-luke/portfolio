@@ -1,8 +1,0 @@
-@import '../../sass/_vars';
-.Projects {
-  width: 100%;
-  min-height: 100vh;
-  background:$blue-gray;
-  color: $white;
-  @include flex-box(column, center, center);
-}

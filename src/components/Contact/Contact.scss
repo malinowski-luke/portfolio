@@ -12,9 +12,15 @@
   @include link-hover($white);
 }
 
-@media (min-width: $breakpoint-xs) and (max-width: $breakpoint-lg) {
+@media (min-width: $breakpoint-xs) and (max-width: $breakpoint-sm - 1px) {
   .contact-logo {
     width: 10vw;
+  }
+}
+
+@media (min-width: $breakpoint-sm) and (max-width: $breakpoint-xl - 1px) {
+  .contact-logo {
+    width: 6vw;
   }
 }
 

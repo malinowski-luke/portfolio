@@ -3,7 +3,6 @@
   width: 100%;
   position: fixed;
   top: 0;
-  background: $gray;
   z-index: 1;
   @include flex-box(row, space-between);
 }
@@ -13,7 +12,7 @@
   margin: 0;
   padding: 0;
   // logo spacing from the left
-  margin-left:2vw;
+  margin-left: 2vw;
 }
 
 // show nav bar onscroll----------------
@@ -34,7 +33,7 @@
   width: 8%;
   transition: 0.5s;
   // icon spacing from the right
-  margin-right:2vw;
+  margin-right: 2vw;
 }
 
 .icon-rotate {
@@ -94,22 +93,19 @@
   @include flex-box(row, center, center);
 }
 
-.desktop-menu li {
+.desktop-menu a {
+  color: $white;
+  text-transform: uppercase;
   margin-left: 2vw;
 }
 
-.desktop-menu li a {
-  color: $white;
-  text-transform: uppercase;
-}
-
-.desktop-menu li a:hover {
+.desktop-menu a:hover {
   @include link-hover($apricot);
 }
 
 // hide mobile menu show desktop menu
-@media (min-width: $breakpoint-lg){
-   .icon,
+@media (min-width: $breakpoint-lg) {
+  .icon,
   .mobile-menu {
     display: none;
   }
@@ -124,11 +120,11 @@
 
 // tablets
 @media (min-width: $breakpoint-md) and (min-height: 501px) {
-  .icon{
+  .icon {
     width: 4%;
   }
-  .desktop-menu{
-    width:50%
+  .desktop-menu {
+    width: 50%;
   }
 }
 

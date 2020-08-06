@@ -4,8 +4,7 @@ export const typewriter = (text, id, speed) => {
   // closure function
   const displayText = () => {
     const code = document.getElementById(id)
-
-    if (index < text.length) {
+    if (code && index < text.length) {
       code.innerText += text.charAt(index++)
       setTimeout(displayText, speed)
     }

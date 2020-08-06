@@ -1,4 +1,4 @@
-export default function (callback, wait = 15, immediate = true) {
+export default function (callback, wait = 25, immediate = true) {
   var timeout
   // can't use arrow func beacuse arguments arr is undefined in ()=>{}
   return function () {

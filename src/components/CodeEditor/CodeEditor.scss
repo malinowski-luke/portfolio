@@ -1,6 +1,10 @@
 @import '../../sass/vars';
 @import '../../sass/vars_code_editor';
 
+.CodeEditor {
+  @include flex-box();
+}
+
 .window {
   width: 50%;
   border-radius: 10px;
@@ -140,12 +144,5 @@
   #code,
   .cursor {
     font-size: 1.4rem;
-  }
-}
-
-/* xl desktop */
-@media (min-width: 1400px) {
-  .window {
-    width: 35%;
   }
 }

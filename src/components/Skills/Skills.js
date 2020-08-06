@@ -1,36 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { slideIn } from '../../utils/slideIn'
+import skilssArr from './skillsArr'
 import Logo from './Logo/Logo'
-import node from '../../assets/icons/node.png'
-import postgres from '../../assets/icons/postgres.png'
-import msSql from '../../assets/icons/mssql.png'
-import js from '../../assets/icons/js.png'
-import html from '../../assets/icons/html.png'
-import css from '../../assets/icons/css.png'
-import scss from '../../assets/icons/scss.png'
-import express from '../../assets/icons/express.png'
-import bootstrap from '../../assets/icons/bootstrap.png'
-import react from '../../assets/icons/react.png'
-import jquery from '../../assets/icons/jquery.gif'
-import typescript from '../../assets/icons/typescript.png'
 import './Skills.scss'
 
 export default function Skills() {
+  useEffect(() => slideIn('skills'), [])
+  const logoArr = skilssArr.map((elm, index) => (
+    <Logo key={index} img={elm.img} title={elm.title} />
+  ))
   return (
-    <div id='skills' className='Skills'>
-      <div className='grid'>
-        <Logo img={js} title='JavaScript' />
-        <Logo img={typescript} title='TypeScript' />
-        <Logo img={html} title='Html' />
-        <Logo img={css} title='Css' />
-        <Logo img={scss} title='Sass' />
-        <Logo img={react} title='React' />
-        <Logo img={bootstrap} title='BootStrap' />
-        <Logo img={jquery} title='jQuery' />
-        <Logo img={node} title='Node' />
-        <Logo img={express} title='Express' />
-        <Logo img={postgres} title='PostgresSql' />
-        <Logo img={msSql} title='SQL Server' />
-      </div>
+    <div id='skills' className='skills-grid slide-in align-left'>
+      {logoArr}
     </div>
   )
 }

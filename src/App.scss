@@ -4,19 +4,11 @@ body {
   font-family: $main-font;
 }
 
-.container {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.text-center {
-  text-align: center !important;
-}
-
-.text-left {
-  text-align: left !important;
-}
-
-.text-right {
-  text-align: right !important;
+.App {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(180deg, $blue-gray 5%, $apricot 85%);
+  @include flex-box(row, center, center);
+  padding-top: 10vh;
+  padding-bottom: 10vh;
 }

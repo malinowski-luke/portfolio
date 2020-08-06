@@ -1,7 +1,0 @@
-@import '../../sass/vars';
-.Home {
-  width: 100%;
-  height: 100vh;
-  background-color: $blue-gray;
-  @include flex-box(row, center, center);
-}

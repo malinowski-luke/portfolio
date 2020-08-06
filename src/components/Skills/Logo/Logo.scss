@@ -1,6 +1,10 @@
 @import '../../../sass/vars';
-.skills-img {
+.logo-img {
   width: 5vw;
+}
+
+.logo-title {
+  color: $white;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -20,14 +24,14 @@
 
 // corresponding media queries in Skills.scss
 @media (max-width: $breakpoint-lg) {
-  .skills-img {
+  .logo-img {
     width: 10vw;
   }
 }
 
 // landscape phones
 @media (min-width: $breakpoint-xs) and (max-height: 500px) {
-  .skills-img {
+  .logo-img {
     width: 8vw;
   }
 }

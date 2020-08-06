@@ -7,8 +7,8 @@ import './Contact.scss'
 
 export default function Contact() {
   return (
-    <>
-      <div className='contact-bar mt-4'>
+    <div>
+      <div className='contact-bar mt-4 mb-4'>
         <a
           href='https://github.com/malinowskil123'
           target='_blank'
@@ -38,7 +38,6 @@ export default function Contact() {
         href='https://www.codewars.com/users/malinowskil123'
         target='_blank'
         rel='noopener noreferrer'
-        className='mt-4'
       >
         <Image
           src='https://www.codewars.com/users/malinowskil123/badges/large'
@@ -46,6 +45,6 @@ export default function Contact() {
           fluid
         />
       </a>
-    </>
+    </div>
   )
 }

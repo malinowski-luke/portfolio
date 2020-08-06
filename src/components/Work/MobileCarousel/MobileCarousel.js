@@ -9,7 +9,7 @@ export default function MobileCarousel(props) {
   const carouselContent = projectsArr.map((elm, index) => {
     const { img, link, github, text } = elm
     return (
-      <Carousel.Item key={index}>
+      <Carousel.Item key={index} style={{color:'#ffffff'}}>
         <Image src={img} className='carousel-img' />
         <p className='mt-2'>{text}</p>
         <div className='icon-container mt-2 mb-2'>

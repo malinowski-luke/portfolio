@@ -1,7 +1,7 @@
 import debounce from './debounce'
 
 export const navScrollAnimation = () => {
-  window.addEventListener('scroll', debounce(toggleNavBackground))
+  window.addEventListener('scroll', debounce(toggleNavBackground,15))
 }
 
 const toggleNavBackground = () => {
@@ -22,6 +22,7 @@ export const showHideMobileMenu = (menuId, iconId) => {
   dropdown.classList.toggle('moblie-menu-hide')
   flipNavIcon(iconId)
 }
+
 // util func
 const flipNavIcon = (iconId) => {
   document.getElementById(iconId).classList.toggle('icon-rotate')

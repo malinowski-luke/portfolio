@@ -1,0 +1,26 @@
+@import '../../sass/vars';
+.Work {
+  @include flex-box();
+}
+
+.work-grid {
+  width: 55%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-row-gap: 1.5vw;
+  grid-auto-rows: auto;
+  grid-auto-columns: auto;
+  place-items: center center;
+}
+
+.work-item {
+  width: 15vw;
+  height: 15vw;
+  background-color: red;
+  transition: transform 0.2s;
+}
+
+.work-item:hover {
+  transform: scale(1.5);
+}
