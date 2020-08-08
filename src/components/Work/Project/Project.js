@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
 import { Row, Col, Image } from 'react-bootstrap'
-import githubLogo from '../../assets/icons/github.png'
-import www from '../../assets/icons/www.png'
-import projectsArr from '../../utils/projectsArr'
-import { slideIn } from '../../utils/slideIn'
+import githubLogo from '../../../assets/icons/github.png'
+import www from '../../../assets/icons/www.png'
+import projectsArr from '../../../utils/projectsArr'
+import { slideIn } from '../../../utils/slideIn'
 import './Project.scss'
 
 export default function Project({ match }) {
@@ -15,11 +15,11 @@ export default function Project({ match }) {
       <Col lg={6}>
         <Image src={image} fluid />
       </Col>
-      <Col lg={6} className='project-info mt-4 mt-lg-0'>
+      <Col lg={6} className='mt-4 mt-lg-0'>
         <h2>
           <strong>{title}</strong>
         </h2>
-        <p className='mt-2'>{text}</p>
+        <p className='mt-2 about-p'>{text}</p>
         <div className='link-container mt-2'>
           {link ? (
             <a href={link} target='_blank' rel='noopener noreferrer'>

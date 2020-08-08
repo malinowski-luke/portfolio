@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import Contact from '../Contact/Contact'
+import Contact from './Contact/Contact'
 import { Row, Col, Image } from 'react-bootstrap'
 import myImg from '../../assets/me.jpg'
 import { slideIn } from '../../utils/slideIn'
@@ -21,10 +21,8 @@ export default function About() {
         </a>
       </Col>
       <Col md={6}>
-        <h3 className='mt-3  mt-lg-0 about-header'>
-          From music to code {'</>'}
-        </h3>
-        <p className='mb-3 mb-md-0 text-justify about-p'>
+        <h3 className='mt-3  mt-lg-0'>From music to code {'</>'}</h3>
+        <p className='mb-3 mb-md-0 text-justify about-text'>
           Audio Engineer turned Fullstack Web Developer, I found my passion for
           programming in an unconventional way. In college, I pursued the track
           of Audio Engineering - a musician at heart, I practiced producing and

@@ -17,7 +17,7 @@ $breakpoint-xl: 1200px;
 
 //mixin
 @mixin link-hover($color: $white) {
-  color: $color;
+  color: $color !important;
   text-decoration: none !important;
 }
 

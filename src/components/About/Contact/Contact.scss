@@ -1,15 +1,7 @@
-@import '../../sass/vars';
+@import '../../../sass/vars';
 .contact-bar {
   width: 100%;
   @include flex-box(row, space-around, center);
-}
-
-.contact-bar a {
-  color: $white;
-}
-
-.contact-bar a:hover {
-  @include link-hover($white);
 }
 
 @media (min-width: $breakpoint-xs) and (max-width: $breakpoint-sm - 1px) {

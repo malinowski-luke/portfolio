@@ -1,22 +1,8 @@
 @import '../../sass/vars';
 
-.about-header,
-.about-p {
-  color: $white;
-}
-
-.about-p {
-  line-height: 1.8rem;
-}
-
 .about-link {
-  color: $white;
   font-weight: bold;
   font-style: italic;
-}
-
-.about-link:hover {
-  @include link-hover($white);
 }
 
 // landscape phones

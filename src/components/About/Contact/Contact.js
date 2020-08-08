@@ -1,8 +1,8 @@
 import React from 'react'
 import { Image } from 'react-bootstrap'
-import linkedin from '../../assets/icons/linkedin.png'
-import github from '../../assets/icons/github.png'
-import pdf from '../../assets/icons/pdf.png'
+import linkedin from '../../../assets/icons/linkedin.png'
+import github from '../../../assets/icons/github.png'
+import pdf from '../../../assets/icons/pdf.png'
 import './Contact.scss'
 
 export default function Contact() {

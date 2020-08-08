@@ -4,7 +4,7 @@ import CodeEditor from './components/CodeEditor/CodeEditor'
 import About from './components/About/About'
 import Skills from './components/Skills/Skills'
 import Work from './components/Work/Work'
-import Project from './components/Project/Project'
+import Project from './components/Work/Project/Project'
 
 export default (
   <Switch>
