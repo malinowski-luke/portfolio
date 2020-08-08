@@ -99,7 +99,8 @@
   margin-left: 2vw;
 }
 
-.desktop-menu a:hover {
+.desktop-menu a:hover,
+.desktop-menu a:focus {
   @include link-hover($apricot);
 }
 

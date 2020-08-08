@@ -1,0 +1,32 @@
+@import '../../sass/vars';
+
+.project-info,
+.project-info a {
+  color: $white;
+  // this reads tabs \t from js str
+}
+
+.link-container {
+  width: 100%;
+  @include flex-box(row, space-evenly);
+}
+
+.link-container a:hover {
+  @include link-hover($white);
+}
+
+.link-icon {
+  width: 2vw;
+}
+
+@media (min-width: $breakpoint-xs) and (max-width: $breakpoint-md) {
+  .link-icon {
+    width: 8vw;
+  }
+}
+
+@media (min-width: $breakpoint-md + 1px) and (max-width: $breakpoint-xl) {
+  .link-icon {
+    width: 4vw;
+  }
+}
