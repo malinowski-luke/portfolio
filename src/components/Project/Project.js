@@ -19,8 +19,8 @@ export default function Project({ match }) {
         <h2>
           <strong>{title}</strong>
         </h2>
-        <p>{text}</p>
-        <div className='link-container'>
+        <p className='mt-2'>{text}</p>
+        <div className='link-container mt-2'>
           {link ? (
             <a href={link} target='_blank' rel='noopener noreferrer'>
               <Image src={www} className='link-icon' fluid />

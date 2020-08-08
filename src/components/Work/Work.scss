@@ -15,8 +15,8 @@
 }
 
 .work-item {
-  width: 10vw;
-  height: 10vw;
+  width: 15vw;
+  height: 15vw;
   position: relative;
 }
 
@@ -35,6 +35,16 @@
   opacity: 0.5;
 }
 
+@media (min-width: $breakpoint-xs) and (max-height: 500px) {
+  .work-item {
+    width: 12vw;
+    height: 12vw;
+  }
+  .work-grid {
+    grid-row-gap: 1vw;
+  }
+}
+
 @media (min-width: $breakpoint-xs) and (max-width: $breakpoint-sm) {
   .work-grid {
     grid-template-columns: repeat(1, 1fr);
@@ -47,9 +57,9 @@
   }
 }
 
-@media (min-width: $breakpoint-sm + 1px) and (max-width: $breakpoint-xl) {
+@media (min-width: $breakpoint-lg) and (max-width: $breakpoint-xl) {
   .work-item {
-    width: 25vw;
-    height: 25vw;
+    width: 20vw;
+    height: 20vw;
   }
 }
