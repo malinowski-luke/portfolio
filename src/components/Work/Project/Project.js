@@ -19,7 +19,7 @@ export default function Project({ match }) {
         <h2>
           <strong>{title}</strong>
         </h2>
-        <p className='mt-2 about-p'>{text}</p>
+        <p className='mt-2 app-text'>{text}</p>
         <div className='link-container mt-2'>
           {link ? (
             <a href={link} target='_blank' rel='noopener noreferrer'>
