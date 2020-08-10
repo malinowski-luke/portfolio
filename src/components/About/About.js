@@ -6,7 +6,11 @@ import { slideIn } from '../../utils/slideIn'
 import './About.scss'
 
 export default function About() {
-  useEffect(() => slideIn('about'), [])
+  useEffect(() => {
+    const container = document.getElementById('about')
+    slideIn(container)
+    return () => slideIn(container)
+  }, [])
   return (
     <Row id='about' className='slide-in align-left align-items-center '>
       <Col md={6} style={{ padding: '0px' }}>

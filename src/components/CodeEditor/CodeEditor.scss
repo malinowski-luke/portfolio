@@ -145,3 +145,10 @@
     font-size: 1.4rem;
   }
 }
+
+// lg desktop portrait
+@media (orientation: portrait) and (min-height: 1200px) {
+  .nav-bar {
+    height: 2vh;
+  }
+}

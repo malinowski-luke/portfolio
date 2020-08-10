@@ -7,9 +7,15 @@ import { slideIn } from '../../../utils/slideIn'
 import './Project.scss'
 
 export default function Project({ match }) {
+  useEffect(() => {
+    const container = document.getElementById('project')
+    slideIn(container)
+    return () => slideIn(container)
+  }, [])
+
   const projectInfo = projectsArr[match.params.index],
     { image, github, link, title, text } = projectInfo
-  useEffect(() => slideIn('project'), [])
+
   return (
     <Row id='project' className='align-left slide-in align-items-center'>
       <Col lg={6}>

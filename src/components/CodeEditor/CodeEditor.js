@@ -6,9 +6,13 @@ import './CodeEditor.scss'
 
 export default function CodeEditor() {
   useEffect(() => {
-    slideIn('code-editor')
-    typewriter(homeStrCode, 'code', 50)
-  },[])
+    slideIn(document.getElementById('code-editor'))
+    typewriter(homeStrCode, document.getElementById('code'), 50)
+    return () => {
+      slideIn(document.getElementById('code-editor'))
+    }
+  }, [])
+
   return (
     <div id='code-editor' className='CodeEditor slide-in align-left'>
       <div className='window text-left'>

@@ -1,7 +1,4 @@
-export const slideIn = (id) => {
-  const elm = document.getElementById(id)
-  if (elm) {
-    if (elm.classList.contains('active')) elm.classList.remove('active')
-    else elm.classList.add('active')
-  }
+export const slideIn = (domElm) => {
+  if (domElm.classList.contains('active')) domElm.classList.remove('active')
+  else domElm.classList.add('active')
 }

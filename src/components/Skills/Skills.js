@@ -5,7 +5,11 @@ import Logo from './Logo/Logo'
 import './Skills.scss'
 
 export default function Skills() {
-  useEffect(() => slideIn('skills'), [])
+  useEffect(() => {
+    const container = document.getElementById('skills')
+    slideIn(container)
+    return () => slideIn(container)
+  }, [])
   const logoArr = skilssArr.map((elm, index) => (
     <Logo key={index} img={elm.img} title={elm.title} />
   ))

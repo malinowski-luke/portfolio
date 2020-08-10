@@ -6,7 +6,11 @@ import projectsArr from '../../utils/projectsArr'
 import './Work.scss'
 
 export default function Work() {
-  useEffect(() => slideIn('work'), [])
+  useEffect(() => {
+    const container = document.getElementById('work')
+    slideIn(container)
+    return () => slideIn(container)
+  }, [])
   const projectsJSX = projectsArr.map((elm, index) => {
     return (
       <Link key={index} to={'/project/' + index}>
