@@ -1,9 +1,10 @@
 import debounce from './debounce'
 
 export const navScrollAnimation = () => {
-  window.addEventListener('scroll', debounce(toggleNavBackground,15))
+  window.addEventListener('scroll', debounce(toggleNavBackground, 15))
 }
 
+// util func
 const toggleNavBackground = () => {
   const navbar = document.getElementById('nav-bar')
   if (window.pageYOffset > 60) {

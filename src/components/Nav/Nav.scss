@@ -7,12 +7,21 @@
   @include flex-box(row, space-between);
 }
 
+.mobile-menu .active {
+  @include link-hover($blue-gray);
+}
+
+.desktop-menu .active {
+  @include link-hover($apricot);
+}
+
 .nav-text {
   color: $white;
   margin: 0;
   padding: 0;
   // logo spacing from the left
   margin-left: 2vw;
+  font-size: 1.5rem;
 }
 
 // show nav bar onscroll----------------
@@ -69,10 +78,6 @@
   font-size: 2rem;
 }
 
-.mobile-menu a:hover {
-  @include link-hover($white);
-}
-
 .mobile-menu-hide {
   height: 0;
 }
@@ -97,8 +102,7 @@
   margin-left: 2vw;
 }
 
-.desktop-menu a:hover,
-.desktop-menu a:focus {
+.desktop-menu a:hover {
   @include link-hover($apricot);
 }
 

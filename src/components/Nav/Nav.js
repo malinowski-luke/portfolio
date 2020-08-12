@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 import {
   navScrollAnimation,
   showHideMobileMenu,
@@ -12,7 +12,13 @@ export default function Nav() {
   useEffect(() => navScrollAnimation('nav-bar'), [])
   return (
     <nav id='nav-bar' className='nav nav-static'>
-      <h3 className='nav-text'>Luke Malinowski</h3>
+      <Link
+        to='/home'
+        className='nav-text'
+        onClick={() => showHideMobileMenu('mobile-menu', 'nav-icon')}
+      >
+        Luke Malinowski
+      </Link>
       <Image
         id='nav-icon'
         rel='img'
@@ -26,35 +32,35 @@ export default function Nav() {
         className='mobile-menu mobile-menu-hide hide-menu-collapse'
         onClick={() => showHideMobileMenu('mobile-menu', 'nav-icon')}
       >
-        <Link to='/'>
+        <NavLink to='/home'>
           <li>home</li>
-        </Link>
-        <Link to='/about'>
+        </NavLink>
+        <NavLink to='/about'>
           <li>about</li>
-        </Link>
-        <Link to='/skills'>
+        </NavLink>
+        <NavLink to='/skills'>
           <li>skills</li>
-        </Link>
-        <Link to='/work'>
+        </NavLink>
+        <NavLink to='/work'>
           <li>work</li>
-        </Link>
+        </NavLink>
         <a href='mailto:malinowski.luke123@gmail.com'>
           <li>contact</li>
         </a>
       </ul>
       <ul id='desktop-menu' className='desktop-menu'>
-        <Link to='/'>
+        <NavLink to='/home'>
           <li>home</li>
-        </Link>
-        <Link to='/about'>
+        </NavLink>
+        <NavLink to='/about'>
           <li>about</li>
-        </Link>
-        <Link to='/skills'>
+        </NavLink>
+        <NavLink to='/skills'>
           <li>skills</li>
-        </Link>
-        <Link to='/work'>
+        </NavLink>
+        <NavLink to='/work'>
           <li>work</li>
-        </Link>
+        </NavLink>
         <a href='mailto:malinowski.luke123@gmail.com'>
           <li>contact</li>
         </a>
