@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react'
-import { Row, Col, Image } from 'react-bootstrap'
+import { Row, Col, Image, Button } from 'react-bootstrap'
 import githubLogo from '../../../assets/icons/github.png'
 import www from '../../../assets/icons/www.png'
 import projectsArr from '../../../utils/projectsArr'
 import { slideIn } from '../../../utils/slideIn'
 import './Project.scss'
 
-export default function Project({ match }) {
+export default function Project({ match, history }) {
   useEffect(() => {
     const container = document.getElementById('project')
     slideIn(container)
@@ -39,6 +39,9 @@ export default function Project({ match }) {
             <br />
             GitHub Repo
           </a>
+          <Button onClick={() => history.goBack()} variant='outline-light'>
+            Back
+          </Button>
         </div>
       </Col>
     </Row>

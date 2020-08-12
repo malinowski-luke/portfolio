@@ -13,7 +13,7 @@ export default function Work() {
   }, [])
   const projectsJSX = projectsArr.map((elm, index) => {
     return (
-      <Link key={index} to={'/project/' + index}>
+      <Link key={index} to={'/work/' + index}>
         <div className='work-item'>
           <div className='work-item-overlay'></div>
           <Image src={elm.coverImage} fluid />

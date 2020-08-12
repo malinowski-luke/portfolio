@@ -18,9 +18,9 @@ export default (
     <Route exact path='/home' component={CodeEditor} />
     <Route path='/about' component={About} />
     <Route path='/skills' component={Skills} />
+    <Route path='/work/:index' component={Project} />
     <Route path='/work' component={Work} />
-    <Route path='/project/:index' component={Project} />
-    <Route path='/not-found' render={() => <NotFound />} />
+    <Route path='/not-found' render={(props) => <NotFound {...props} />} />
     <Redirect exact from='/' to='/home' />
     <Redirect from='/' to='/not-found' />
   </Switch>
