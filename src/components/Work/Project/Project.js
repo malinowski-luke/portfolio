@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Row, Col, Image, Button } from 'react-bootstrap'
 import githubLogo from '../../../assets/icons/github.png'
 import www from '../../../assets/icons/www.png'
@@ -7,17 +7,21 @@ import { slideIn } from '../../../utils/slideIn'
 import './Project.scss'
 
 export default function Project({ match, history }) {
+  const parent = useRef()
+
   useEffect(() => {
-    const container = document.getElementById('project')
-    slideIn(container)
-    return () => slideIn(container)
+    const parentCleanUp = { ...parent }
+    slideIn(parentCleanUp.current)
+    return () => {
+      slideIn(parentCleanUp.current)
+    }
   }, [])
 
   const projectInfo = projectsArr[match.params.index],
     { image, github, link, title, text } = projectInfo
 
   return (
-    <Row id='project' className='align-left slide-in align-items-center'>
+    <Row ref={parent} className='align-left slide-in align-items-center'>
       <Col lg={6}>
         <Image src={image} fluid />
       </Col>

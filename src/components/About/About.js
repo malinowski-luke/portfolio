@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import Contact from './Contact/Contact'
 import { Row, Col, Image } from 'react-bootstrap'
 import myImg from '../../assets/me.jpg'
@@ -6,13 +6,18 @@ import { slideIn } from '../../utils/slideIn'
 import './About.scss'
 
 export default function About() {
+  const parent = useRef()
+
   useEffect(() => {
-    const container = document.getElementById('about')
-    slideIn(container)
-    return () => slideIn(container)
+    const parentCleanUp = { ...parent }
+    slideIn(parentCleanUp.current)
+    return () => {
+      slideIn(parentCleanUp.current)
+    }
   }, [])
+
   return (
-    <Row id='about' className='slide-in align-left align-items-center '>
+    <Row ref={parent} className='slide-in align-left align-items-center '>
       <Col md={6} style={{ padding: '0px' }}>
         <Image src={myImg} className='about-img' fluid />
         <a

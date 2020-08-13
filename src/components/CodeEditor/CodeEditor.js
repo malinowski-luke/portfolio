@@ -1,20 +1,25 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { typewriter } from '../../utils/typewriter'
 import homeStrCode from '../../utils/homeStrCode'
 import { slideIn } from '../../utils/slideIn'
 import './CodeEditor.scss'
 
 export default function CodeEditor() {
+  const parent = useRef(),
+    code = useRef()
+
   useEffect(() => {
-    slideIn(document.getElementById('code-editor'))
-    typewriter(homeStrCode, document.getElementById('code'), 50)
+    const parentCleanUp = { ...parent },
+      codeCleanUp = { ...code }
+    slideIn(parentCleanUp.current)
+    typewriter(homeStrCode, codeCleanUp.current, 50)
     return () => {
-      slideIn(document.getElementById('code-editor'))
+      slideIn(parentCleanUp.current)
     }
   }, [])
 
   return (
-    <div id='code-editor' className='CodeEditor slide-in align-left'>
+    <div ref={parent} className='CodeEditor slide-in align-left'>
       <div className='window text-left'>
         <div className='nav-bar'>
           <div className='nav-bar-icons'>
@@ -25,7 +30,7 @@ export default function CodeEditor() {
           <p>index.js</p>
         </div>
         <div className='code-editor'>
-          <span id='code' className='code'></span>
+          <span ref={code} className='code'></span>
           <span className='cursor'>_</span>
         </div>
       </div>

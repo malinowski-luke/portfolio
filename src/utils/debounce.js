@@ -1,16 +1,11 @@
-export default function (callback, wait = 20, immediate = true) {
-  var timeout
-  // can't use arrow func beacuse arguments arr is undefined in ()=>{}
-  return function () {
-    var context = this,
-      args = arguments
-    var later = () => {
-      timeout = null
-      if (!immediate) callback.apply(context, args)
+export default function (callback, ref, wait = 25) {
+  let timeout
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout)
+      callback(ref)
     }
-    var callNow = immediate && !timeout
     clearTimeout(timeout)
     timeout = setTimeout(later, wait)
-    if (callNow) callback.apply(context, args)
   }
 }

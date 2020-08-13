@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react'
-import { NavLink, Link as h1 } from 'react-router-dom'
+import React, { useEffect, useRef } from 'react'
+import { NavLink } from 'react-router-dom'
 import {
   navScrollAnimation,
   showHideMobileMenu,
@@ -9,24 +9,35 @@ import icon from '../../assets/icon.svg'
 import './Nav.scss'
 
 export default function Nav() {
-  useEffect(() => navScrollAnimation('nav-bar'), [])
+  const navRef = useRef(),
+    mobileMenuRef = useRef(),
+    iconRef = useRef()
+
+  useEffect(() => {
+    const navRefCleanUp = { ...navRef }
+    navScrollAnimation(navRefCleanUp.current)
+    return () => {
+      navScrollAnimation(navRefCleanUp.current)
+    }
+  }, [])
+
   return (
-    <nav id='nav-bar' className='nav nav-static'>
-      <h4 to='/home' className='nav-text'>
-        Luke Malinowski
-      </h4>
+    <nav ref={navRef} className='nav nav-static'>
+      <h4 className='nav-text'>Luke Malinowski</h4>
       <Image
-        id='nav-icon'
-        rel='img'
+        ref={iconRef}
         src={icon}
-        alt='icon'
-        onClick={() => showHideMobileMenu('mobile-menu', 'nav-icon')}
         className='icon'
+        onClick={() => {
+          showHideMobileMenu(mobileMenuRef.current, iconRef.current)
+        }}
       />
       <ul
-        id='mobile-menu'
-        className='mobile-menu mobile-menu-hide hide-menu-collapse'
-        onClick={() => showHideMobileMenu('mobile-menu', 'nav-icon')}
+        ref={mobileMenuRef}
+        className='mobile-menu mobile-menu-hide'
+        onClick={() => {
+          showHideMobileMenu(mobileMenuRef.current, iconRef.current)
+        }}
       >
         <NavLink to='/home'>
           <li>home</li>

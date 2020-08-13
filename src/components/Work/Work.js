@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { Image } from 'react-bootstrap'
 import { slideIn } from '../../utils/slideIn'
@@ -6,11 +6,16 @@ import projectsArr from '../../utils/projectsArr'
 import './Work.scss'
 
 export default function Work() {
+  const parent = useRef()
+
   useEffect(() => {
-    const container = document.getElementById('work')
-    slideIn(container)
-    return () => slideIn(container)
+    const parentCleanUp = { ...parent }
+    slideIn(parentCleanUp.current)
+    return () => {
+      slideIn(parentCleanUp.current)
+    }
   }, [])
+
   const projectsJSX = projectsArr.map((elm, index) => {
     return (
       <Link key={index} to={'/work/' + index}>
@@ -21,8 +26,9 @@ export default function Work() {
       </Link>
     )
   })
+
   return (
-    <div id='work' className='slide-in align-left Work'>
+    <div ref={parent} className='slide-in align-left Work'>
       <div className='work-grid'>{projectsJSX}</div>
     </div>
   )
