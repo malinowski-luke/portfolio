@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { NavLink, Link } from 'react-router-dom'
+import { NavLink, Link as h1 } from 'react-router-dom'
 import {
   navScrollAnimation,
   showHideMobileMenu,
@@ -12,13 +12,9 @@ export default function Nav() {
   useEffect(() => navScrollAnimation('nav-bar'), [])
   return (
     <nav id='nav-bar' className='nav nav-static'>
-      <Link
-        to='/home'
-        className='nav-text'
-        onClick={() => showHideMobileMenu('mobile-menu', 'nav-icon')}
-      >
+      <h4 to='/home' className='nav-text'>
         Luke Malinowski
-      </Link>
+      </h4>
       <Image
         id='nav-icon'
         rel='img'
