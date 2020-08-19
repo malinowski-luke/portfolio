@@ -6,12 +6,7 @@ export default function Logo(props) {
   const { title, img } = props
   return (
     <div>
-      <Image
-        src={img}
-        // added in react-logo class to spin if title === 'React'
-        className={`logo-img ${title === 'React' ? 'react-logo' : ''}`}
-        fluid
-      />
+      <Image src={img} className='logo-img' fluid />
       <h5 className='mt-2 logo-title'>{title}</h5>
     </div>
   )
