@@ -3,25 +3,19 @@ import { Row, Col, Image, Button } from 'react-bootstrap'
 import githubLogo from '../../../assets/icons/github.png'
 import www from '../../../assets/icons/www.png'
 import projectsArr from '../../../utils/projectsArr'
-import { slideIn } from '../../../utils/slideIn'
+import animationCallback from '../../../utils/animationCallback'
 import './Project.scss'
 
 export default function Project({ match, history }) {
-  const parent = useRef()
+  const domElm = useRef()
 
-  useEffect(() => {
-    const parentCleanUp = { ...parent }
-    slideIn(parentCleanUp.current)
-    return () => {
-      slideIn(parentCleanUp.current)
-    }
-  }, [])
+  useEffect(() => animationCallback(domElm), [])
 
   const projectInfo = projectsArr[match.params.index],
     { image, github, link, title, text } = projectInfo
 
   return (
-    <Row ref={parent} className='align-left slide-in align-items-center'>
+    <Row ref={domElm} className='align-left slide-in align-items-center'>
       <Col lg={6}>
         <Image src={image} fluid />
       </Col>
@@ -43,7 +37,7 @@ export default function Project({ match, history }) {
             <br />
             GitHub Repo
           </a>
-          <Button onClick={() => history.goBack()} variant='outline-light'>
+          <Button onClick={() => history.push('/work')} variant='outline-light'>
             Back
           </Button>
         </div>

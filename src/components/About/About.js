@@ -2,22 +2,16 @@ import React, { useEffect, useRef } from 'react'
 import Contact from './Contact/Contact'
 import { Row, Col, Image } from 'react-bootstrap'
 import myImg from '../../assets/me.jpg'
-import { slideIn } from '../../utils/slideIn'
+import animationCallback from '../../utils/animationCallback'
 import './About.scss'
 
 export default function About() {
-  const parent = useRef()
+  const domElm = useRef()
 
-  useEffect(() => {
-    const parentCleanUp = { ...parent }
-    slideIn(parentCleanUp.current)
-    return () => {
-      slideIn(parentCleanUp.current)
-    }
-  }, [])
+  useEffect(() => animationCallback(domElm), [])
 
   return (
-    <Row ref={parent} className='slide-in align-left align-items-center '>
+    <Row ref={domElm} className='slide-in align-left align-items-center '>
       <Col md={6} style={{ padding: '0px' }}>
         <Image src={myImg} className='about-img' fluid />
         <a

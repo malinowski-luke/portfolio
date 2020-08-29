@@ -1,25 +1,20 @@
 import React, { useEffect, useRef } from 'react'
-import { typewriter } from '../../utils/typewriter'
+import typewriter from '../../utils/typewriter'
 import homeStrCode from '../../utils/homeStrCode'
-import { slideIn } from '../../utils/slideIn'
+import animationCallback from '../../utils/animationCallback'
 import './CodeEditor.scss'
 
 export default function CodeEditor() {
-  const parent = useRef(),
-    code = useRef()
+  const domElm = useRef()
+  const code = useRef()
 
   useEffect(() => {
-    const parentCleanUp = { ...parent },
-      codeCleanUp = { ...code }
-    slideIn(parentCleanUp.current)
-    typewriter(homeStrCode, codeCleanUp.current, 50)
-    return () => {
-      slideIn(parentCleanUp.current)
-    }
+    animationCallback(domElm)
+    typewriter(homeStrCode, code.current, 50)
   }, [])
 
   return (
-    <div ref={parent} className='CodeEditor slide-in align-left'>
+    <div ref={domElm} className='CodeEditor slide-in align-left'>
       <div className='window text-left'>
         <div className='nav-bar'>
           <div className='nav-bar-icons'>

@@ -1,26 +1,20 @@
 import React, { useEffect, useRef } from 'react'
-import { slideIn } from '../../utils/slideIn'
+import animationCallback from '../../utils/animationCallback'
 import skilssArr from './skillsArr'
 import Logo from './Logo/Logo'
 import './Skills.scss'
 
 export default function Skills() {
-  const parent = useRef()
+  const domElm = useRef()
 
-  useEffect(() => {
-    const parentCleanUp = { ...parent }
-    slideIn(parentCleanUp.current)
-    return () => {
-      slideIn(parentCleanUp.current)
-    }
-  }, [])
+  useEffect(() => animationCallback(domElm), [])
 
   const logoArr = skilssArr.map((elm, index) => (
     <Logo key={index} img={elm.img} title={elm.title} />
   ))
 
   return (
-    <div ref={parent} className='skills-grid slide-in align-left'>
+    <div ref={domElm} className='skills-grid slide-in align-left'>
       {logoArr}
     </div>
   )

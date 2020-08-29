@@ -1,20 +1,13 @@
 import React, { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { Image } from 'react-bootstrap'
-import { slideIn } from '../../utils/slideIn'
+import animationCallback from '../../utils/animationCallback'
 import projectsArr from '../../utils/projectsArr'
 import './Work.scss'
 
 export default function Work() {
-  const parent = useRef()
-
-  useEffect(() => {
-    const parentCleanUp = { ...parent }
-    slideIn(parentCleanUp.current)
-    return () => {
-      slideIn(parentCleanUp.current)
-    }
-  }, [])
+  const domElm = useRef()
+  useEffect(() => animationCallback(domElm), [])
 
   const projectsJSX = projectsArr.map((elm, index) => {
     return (
@@ -28,7 +21,7 @@ export default function Work() {
   })
 
   return (
-    <div ref={parent} className='slide-in align-left Work'>
+    <div ref={domElm} className='slide-in align-left Work'>
       <div className='work-grid'>{projectsJSX}</div>
     </div>
   )
