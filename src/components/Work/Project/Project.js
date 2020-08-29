@@ -3,7 +3,7 @@ import { Row, Col, Image, Button } from 'react-bootstrap'
 import githubLogo from '../../../assets/icons/github.png'
 import www from '../../../assets/icons/www.png'
 import projectsArr from '../../../utils/projectsArr'
-import animationCallback from '../../../utils/animationCallback'
+import animationCallback, { style } from '../../../utils/animationCallback'
 import './Project.scss'
 
 export default function Project({ match, history }) {
@@ -15,7 +15,7 @@ export default function Project({ match, history }) {
     { image, github, link, title, text } = projectInfo
 
   return (
-    <Row ref={domElm} className='align-left slide-in align-items-center'>
+    <Row ref={domElm} className={`${style} align-items-center`}>
       <Col lg={6}>
         <Image src={image} fluid />
       </Col>

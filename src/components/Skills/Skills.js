@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import animationCallback from '../../utils/animationCallback'
+import animationCallback, { style } from '../../utils/animationCallback'
 import skilssArr from './skillsArr'
 import Logo from './Logo/Logo'
 import './Skills.scss'
@@ -14,7 +14,7 @@ export default function Skills() {
   ))
 
   return (
-    <div ref={domElm} className='skills-grid slide-in align-left'>
+    <div ref={domElm} className={`${style} skills-grid`}>
       {logoArr}
     </div>
   )

@@ -6,3 +6,5 @@ export default (domRef) => {
     slideIn(domRefCleanup.current)
   }
 }
+
+export const style = 'slide-in align-left'

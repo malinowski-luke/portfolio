@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { Image } from 'react-bootstrap'
-import animationCallback from '../../utils/animationCallback'
+import animationCallback, { style } from '../../utils/animationCallback'
 import projectsArr from '../../utils/projectsArr'
 import './Work.scss'
 
@@ -11,7 +11,7 @@ export default function Work() {
 
   const projectsJSX = projectsArr.map((elm, index) => {
     return (
-      <Link key={index} to={'/work/' + index}>
+      <Link key={index} to={`/work/${index}`}>
         <div className='work-item'>
           <div className='work-item-overlay'></div>
           <Image src={elm.coverImage} fluid />
@@ -21,7 +21,7 @@ export default function Work() {
   })
 
   return (
-    <div ref={domElm} className='slide-in align-left Work'>
+    <div ref={domElm} className={`Work ${style}`}>
       <div className='work-grid'>{projectsJSX}</div>
     </div>
   )
