@@ -1,10 +1,8 @@
 require
 const express = require('express'),
   app = express(),
-  { PORT } = process.env //heroku
+  PORT = process.env.PORT || 9000
 
 app.use(express.static(`${__dirname}/../build`))
 
-app.listen(PORT || 4420, () =>
-  console.log(`server running on: ${PORT || 4420}`)
-)
+app.listen(PORT, () => console.log(`server running on: ${PORT}`))
