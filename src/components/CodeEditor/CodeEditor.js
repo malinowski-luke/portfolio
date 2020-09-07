@@ -9,8 +9,12 @@ export default function CodeEditor() {
   const code = useRef()
 
   useEffect(() => {
+    const codeCleanUp = { ...code }
     animationCallback(domElm)
-    typewriter(homeStrCode, code.current, 50)
+    typewriter(homeStrCode, codeCleanUp.current, 50)
+    return () => {
+      typewriter('', codeCleanUp.current, 1)
+    }
   }, [])
 
   return (

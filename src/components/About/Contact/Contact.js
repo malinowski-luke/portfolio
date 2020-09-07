@@ -26,7 +26,7 @@ export default function Contact() {
           <h4>Linkedin</h4>
         </a>
         <a
-          href='https://drive.google.com/file/d/19_DKjgSdiw7zrZvOdlq2Pv3NDtOrkFQw/view?usp=sharing'
+          href='https://drive.google.com/file/d/1dZujMhUkbDsQF4XOw--2oR2RVLZndDNI/view?usp=sharing'
           target='_blank'
           rel='noopener noreferrer'
         >
