@@ -21,7 +21,7 @@ export default [
     link: 'http://www.jeepthingsapp.com/#/',
     github: 'https://github.com/malinowskil123/jeepthings',
     title: 'JeepThings',
-    text: `A marketplace app for jeep lovers and rebuilders to trade, sell, and buy auto parts. Users can filter parts by keywords and sort them by price. This app utilizes google’s map api to show users where a part is located. Users also receive welcome and update emails as well as emails from other users regarding the parts they posted for sale.`,
+    text: `A web app for Jeep lovers and rebuilders to trade, sell, and buy auto parts. Contains a fully working CRUD operations. Users have the ability to filter parts by a keyword and sort them by price. Jeepthings integrates google maps api to show a part's location on a map. Users also receive welcome and update emails as well as emails from other users regarding the parts they posted.`,
   },
   {
     image: devQuiz,
@@ -29,7 +29,7 @@ export default [
     link: 'https://dev-quiz.herokuapp.com/',
     github: 'https://github.com/malinowskil123/dev-quiz',
     title: 'Dev Quiz',
-    text: `Test your JavaScript and Front-End knowledge with Dev Quiz: a web based quiz app, built to test your front-end knowladge. Users are able to pick a quiz from a variety of Front-End focused subjects. Users also have the ability to toggle styling from light mode to dark mode.`,
+    text: `Test your JavaScript and Front-End knowledge with Dev Quiz: a web based quiz app, built to test your front-end skill. Users are able to pick a quiz from a variety of Front-End focused subjects. Users also have the ability to toggle styling from light mode to dark mode.`,
   },
 
   {
