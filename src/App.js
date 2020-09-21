@@ -8,7 +8,7 @@ function App() {
   const clientHeight = useWindowHeight()
 
   useEffect(() => {
-    console.log(clientHeight)
+    // set app height dynamically to clients device
     document.getElementById('app').style.minHeight = `${clientHeight}px`
   }, [clientHeight])
 
