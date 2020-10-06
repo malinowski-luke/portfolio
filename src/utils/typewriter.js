@@ -5,7 +5,7 @@ export default (text, domElm, speed) => {
   const displayText = async () => {
     if (index < text.length) {
       domElm.innerText += text.charAt(index++)
-      setTimeout(displayText, speed)
+      await setTimeout(displayText, speed)
     }
   }
   displayText()

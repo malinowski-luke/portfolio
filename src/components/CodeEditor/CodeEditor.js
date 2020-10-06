@@ -12,9 +12,9 @@ export default function CodeEditor() {
     const codeCleanUp = { ...code }
     animationCallback(domElm)
     typewriter(homeStrCode, codeCleanUp.current, 50)
-    return () => {
-      typewriter('', codeCleanUp.current, 1)
-    }
+    // return () => {
+    //   typewriter('', codeCleanUp.current, 1)
+    // }
   }, [])
 
   return (
