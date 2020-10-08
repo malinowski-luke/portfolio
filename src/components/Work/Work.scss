@@ -15,8 +15,8 @@
 }
 
 .work-item {
-  width: 15vw;
-  height: 15vw;
+  width: 12vw;
+  height: 12vw;
   position: relative;
 }
 
@@ -36,10 +36,6 @@
 }
 
 @media (min-width: $breakpoint-xs) and (max-height: 500px) {
-  .work-item {
-    width: 12vw;
-    height: 12vw;
-  }
   .work-grid {
     grid-row-gap: 1vw;
   }
@@ -54,12 +50,5 @@
   .work-item {
     width: 100%;
     height: fit-content;
-  }
-}
-
-@media (min-width: $breakpoint-lg) and (max-width: $breakpoint-xl) {
-  .work-item {
-    width: 20vw;
-    height: 20vw;
   }
 }

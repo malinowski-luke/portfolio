@@ -152,3 +152,10 @@
     height: 2vh;
   }
 }
+
+// lg desktop landscape
+@media (orientation: landscape) and (min-height: 1200px) {
+  .nav-bar {
+    height: 3vh;
+  }
+}
