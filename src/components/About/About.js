@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import Contact from './Contact/Contact'
 import { Row, Col, Image } from 'react-bootstrap'
-import myImg from '../../assets/me.jpg'
+import headshot from '../../assets/headshot.jpg'
 import animationCallback, { style } from '../../utils/animationCallback'
 import './About.scss'
 
@@ -13,15 +13,7 @@ export default function About() {
   return (
     <Row ref={domElm} className={`${style} align-items-center`}>
       <Col md={6} style={{ padding: '0px' }}>
-        <Image src={myImg} className='about-img' fluid />
-        <a
-          href='https://www.youtube.com/watch?v=bYB1QKDv7HE'
-          target='_blank'
-          rel='noopener noreferrer'
-          className='about-img-container about-link'
-        >
-          <h4>Click Me</h4>
-        </a>
+        <Image src={headshot} className='about-img' fluid />
       </Col>
       <Col md={6}>
         <h3 className='mt-3  mt-lg-0'>From music to code {'</>'}</h3>
