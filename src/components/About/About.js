@@ -13,7 +13,18 @@ export default function About() {
   return (
     <Row ref={domElm} className={`${style} align-items-center`}>
       <Col md={6} style={{ padding: '0px' }}>
-        <Image src={headshot} className='about-img' fluid />
+        <Image src={headshot} className='about-img mb-2' fluid />
+        <a
+          href='https://www.codewars.com/users/malinowskil123'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <Image
+            src='https://www.codewars.com/users/malinowskil123/badges/small'
+            alt='codewars badge'
+            fluid
+          />
+        </a>
       </Col>
       <Col md={6}>
         <h3 className='mt-3  mt-lg-0'>From music to code {'</>'}</h3>
