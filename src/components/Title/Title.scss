@@ -1,0 +1,11 @@
+@import '../../sass/vars';
+.Title {
+  h2 {
+    font-weight: 700;
+    color: $orange;
+  }
+
+  hr {
+    border-top: 2px solid $orange;
+  }
+}

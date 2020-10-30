@@ -5,12 +5,10 @@ import calculator from '../assets/projects/calculator.jpg'
 import calculatorCover from '../assets/projects/calculatorCover.jpg'
 import notepad from '../assets/projects/notepad.jpg'
 import notepadCover from '../assets/projects/notepadCover.jpg'
-import junkedup from '../assets/projects/junkedup.jpg'
-import junkedupCover from '../assets/projects/junkedupCover.jpg'
-import helo from '../assets/projects/helo.jpg'
-import heloCover from '../assets/projects/heloCover.jpg'
-import starWarsQuotes from '../assets/projects/StarWarsQuotes.jpg'
-import starWarsQuotesCover from '../assets/projects/StarWarsQuotesCover.jpg'
+// import helo from '../assets/projects/helo.jpg'
+// import heloCover from '../assets/projects/heloCover.jpg'
+// import starWarsQuotes from '../assets/projects/StarWarsQuotes.jpg'
+// import starWarsQuotesCover from '../assets/projects/StarWarsQuotesCover.jpg'
 import devQuiz from '../assets/projects/devQuiz.gif'
 import devQuizCover from '../assets/projects/devQuizCover.jpg'
 
@@ -40,27 +38,20 @@ export default [
     title: 'Calculator',
     text: `A web-based alternative for a traditional calculator. Users are able to enter and calculate simple mathematical expressions. Entered values are validated and if an error is detected a syntax error pop-up is displayed.`,
   },
-  {
-    image: starWarsQuotes,
-    coverImage: starWarsQuotesCover,
-    github: 'https://github.com/malinowskil123/quote-generator',
-    title: 'Star Wars Quotes Generator',
-    text: `Get random quotes from various Star Wars Heroes and Villains. If you like the quote you get, you can tweet it via twitter's api.`,
-  },
-  {
-    image: junkedup,
-    coverImage: junkedupCover,
-    github: 'https://github.com/malinowskil123/junked-up',
-    title: 'JunkedUp',
-    text: `JunkedUp simplifies the process of keeping track of the news related to stocks that you follow. Now you won't miss any big company press releases related to any of your stocks in your portfolio.`,
-  },
-  {
-    image: helo,
-    coverImage: heloCover,
-    github: 'https://github.com/malinowskil123/helo',
-    title: 'Helo',
-    text: `A simple social media application, which allows users to create profiles, post blogs, and interact with other user’s posts. Users are also able to filter posts by keywords and post id's to find their own posts.`,
-  },
+  // {
+  //   image: starWarsQuotes,
+  //   coverImage: starWarsQuotesCover,
+  //   github: 'https://github.com/malinowskil123/quote-generator',
+  //   title: 'Star Wars Quotes Generator',
+  //   text: `Get random quotes from various Star Wars Heroes and Villains. If you like the quote you get, you can tweet it via twitter's api.`,
+  // },
+  // {
+  //   image: helo,
+  //   coverImage: heloCover,
+  //   github: 'https://github.com/malinowskil123/helo',
+  //   title: 'Helo',
+  //   text: `A simple social media application, which allows users to create profiles, post blogs, and interact with other user’s posts. Users are also able to filter posts by keywords and post id's to find their own posts.`,
+  // },
   {
     image: notepad,
     coverImage: notepadCover,

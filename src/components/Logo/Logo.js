@@ -5,9 +5,9 @@ import './Logo.scss'
 export default function Logo(props) {
   const { title, img } = props
   return (
-    <div>
+    <div className='Logo'>
       <Image src={img} className='logo-img' fluid />
-      <h5 className='mt-2 logo-title'>{title}</h5>
+      <p className='mt-2 logo-title'>{title}</p>
     </div>
   )
 }

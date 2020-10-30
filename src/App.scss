@@ -1,44 +1,21 @@
 @import './sass/vars';
-// affects fonts across the DOM
-body {
-  font-family: $main-font;
-}
-
-// app text default
-h1,
-h2,
-h3,
-h4,
-h5,
-p,
-span,
-div,
-a,
-div a {
-  color: $white;
-}
-
-a:hover {
-  @include link-hover($white);
-}
-
-.app-text {
-  line-height: 1.8rem;
-}
-// app text default
+// .app-text {
+//   line-height: 1.8rem;
+// }
 
 .App {
   width: 100%;
-  background: linear-gradient(-190deg, $teal 30%, $apricot 75%);
+  background-color: $gray;
   @include flex-box(row, center, center);
   padding-top: 10vh;
   padding-bottom: 10vh;
   transition: 0.5s ease-in;
-}
+  font-family: $main-font;
 
-@media (min-width: $breakpoint-xs) and (max-height: 500px) {
-  .App {
-    padding-top: 20vh;
-    padding-bottom: 20vh;
+  @media (min-width: $breakpoint-xs) and (max-height: 500px) {
+    .App {
+      padding-top: 20vh;
+      padding-bottom: 20vh;
+    }
   }
 }

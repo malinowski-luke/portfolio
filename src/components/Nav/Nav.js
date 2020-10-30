@@ -4,8 +4,6 @@ import {
   navScrollAnimation,
   showHideMobileMenu,
 } from '../../utils/navAnimations'
-import { Image } from 'react-bootstrap'
-import icon from '../../assets/icon.svg'
 import './Nav.scss'
 
 export default function Nav() {
@@ -24,14 +22,20 @@ export default function Nav() {
   return (
     <nav ref={navRef} className='nav nav-static'>
       <h4 className='nav-text'>Luke Malinowski</h4>
-      <Image
+      <svg
+        viewBox='0 0 100 80'
+        width='30'
+        height='30'
         ref={iconRef}
-        src={icon}
         className='icon'
         onClick={() => {
           showHideMobileMenu(mobileMenuRef.current, iconRef.current)
         }}
-      />
+      >
+        <rect width='100' height='20' rx='8'></rect>
+        <rect y='30' width='100' height='20' rx='8'></rect>
+        <rect y='60' width='100' height='20' rx='8'></rect>
+      </svg>
       <ul
         ref={mobileMenuRef}
         className='mobile-menu mobile-menu-hide'
@@ -42,8 +46,8 @@ export default function Nav() {
         <NavLink to='/home'>
           <li>home</li>
         </NavLink>
-        <NavLink to='/about'>
-          <li>about</li>
+        <NavLink to='/self'>
+          <li>self</li>
         </NavLink>
         <NavLink to='/skills'>
           <li>skills</li>
@@ -59,8 +63,8 @@ export default function Nav() {
         <NavLink to='/home'>
           <li>home</li>
         </NavLink>
-        <NavLink to='/about'>
-          <li>about</li>
+        <NavLink to='/self'>
+          <li>self</li>
         </NavLink>
         <NavLink to='/skills'>
           <li>skills</li>

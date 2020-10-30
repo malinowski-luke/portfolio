@@ -14,16 +14,16 @@ import vue from '../../assets/icons/vue.png'
 import redis from '../../assets/icons/redis.png'
 
 export default [
-  { img: js, title: 'JavaScript' },
+  { img: js, title: 'JavaScript es6+' },
   { img: typescript, title: 'TypeScript' },
-  { img: htmlCss, title: 'Html/Css' },
+  { img: htmlCss, title: 'HTML5/CSS3' },
   { img: react, title: 'React' },
   { img: redux, title: 'Redux' },
-  { img: vue, title: 'Vue' },
-  { img: bootstrap, title: 'BootStrap' },
+  { img: vue, title: 'Vue/Vuex' },
+  { img: bootstrap, title: 'Bootsrap' },
   { img: node, title: 'Node' },
   { img: express, title: 'Express' },
   { img: redis, title: 'Redis' },
-  { img: postgres, title: 'PostgresSql' },
+  { img: postgres, title: 'Postgres' },
   { img: mongoDb, title: 'MongoDB' },
 ]

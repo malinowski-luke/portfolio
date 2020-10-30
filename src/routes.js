@@ -1,10 +1,11 @@
 import React from 'react'
 import { Switch, Route, Redirect } from 'react-router-dom'
-import CodeEditor from './components/CodeEditor/CodeEditor'
-import About from './components/About/About'
-import Skills from './components/Skills/Skills'
-import Work from './components/Work/Work'
-import Project from './components/Work/Project/Project'
+// views
+import Home from './views/Home/Home'
+import Self from './views/Self/Self'
+import Skills from './views/Skills/Skills'
+import Work from './views/Work/Work'
+import Project from './components/Project/Project'
 
 const NotFound = () => (
   <div>
@@ -15,8 +16,8 @@ const NotFound = () => (
 
 export default (
   <Switch>
-    <Route exact path='/home' component={CodeEditor} />
-    <Route path='/about' component={About} />
+    <Route exact path='/home' component={Home} />
+    <Route path='/self' component={Self} />
     <Route path='/skills' component={Skills} />
     <Route path='/work/:index' component={Project} />
     <Route path='/work' component={Work} />

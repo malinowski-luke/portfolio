@@ -1,38 +1,6 @@
 @import '../../sass/vars';
-.nav {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  z-index: 1;
-  @include flex-box(row, space-between);
-}
 
-.mobile-menu .active {
-  @include link-hover($teal);
-}
-
-.desktop-menu .active {
-  @include link-hover($apricot);
-  animation: active-nav-item 0.5s ease-in forwards;
-}
-
-@keyframes active-nav-item {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.2);
-  }
-}
-
-.nav-text {
-  color: $white;
-  margin: 0;
-  padding: 0;
-  // logo spacing from the left
-  margin-left: 4vw;
-}
-
+// don't scope
 // show nav bar onscroll----------------
 .nav-static {
   height: 6vh;
@@ -46,116 +14,142 @@
   transition: 0.5s;
 }
 
-// Mobile ------------------------------
-.icon {
-  width: 8%;
-  transition: 0.5s;
-  // icon spacing from the right
-  margin-right: 10vw;
-}
-
-.icon-rotate {
-  transform: rotate(90deg);
-}
-
-.mobile-menu {
+.nav {
   width: 100%;
-  max-height: 94vh;
   position: fixed;
-  top: 6vh;
-  left: 0;
-  background: $apricot;
-  transition: 0.5s;
-  overflow: hidden;
-  @include flex-box(column, center, center);
+  top: 0;
   z-index: 1;
-}
+  @include flex-box(row, space-between);
 
-.mobile-menu li {
-  width: 100%;
-  height: auto;
-  margin-bottom: 8vw;
-}
-
-.mobile-menu a {
-  width: 100vw;
-  text-transform: uppercase;
-  font-size: 2rem;
-}
-
-.mobile-menu-hide {
-  height: 0;
-}
-
-.moblie-menu-show {
-  height: 100vh;
-}
-
-.desktop-menu {
-  display: none;
-}
-
-// desktop -----------------------------
-.desktop-menu {
-  width: 40vw;
-  margin: 0;
-  @include flex-box(row, center, center);
-}
-
-.desktop-menu a {
-  text-transform: uppercase;
-  margin-left: 2vw;
-}
-
-.desktop-menu a:hover {
-  @include link-hover($apricot);
-}
-
-// hide mobile menu show desktop menu
-@media (min-width: $breakpoint-lg) {
-  .icon,
-  .mobile-menu {
-    display: none;
+  .mobile-menu .active,
+  .desktop-menu .active {
+    @include link-hover($blue);
   }
-}
 
-// show mobile menu hide desktop menu
-@media (min-width: $breakpoint-xs) and (max-width: $breakpoint-lg) {
-  .desktop-menu {
-    display: none;
+  .nav-text {
+    color: $white;
+    margin: 0;
+    padding: 0;
+    // logo spacing from the left
+    margin-left: 4vw;
+    color: $black;
+    font-weight: 900;
   }
-}
 
-// tablets
-@media (min-width: $breakpoint-md) and (min-height: 501px) {
+  // Mobile ------------------------------
   .icon {
-    width: 4%;
+    transition: 0.5s;
+    // icon spacing from the right
+    margin-right: 10vw;
   }
-  .desktop-menu {
-    width: 50%;
-  }
-}
 
-// phones landscape
-@media (min-width: $breakpoint-xs) and (max-height: 500px) {
-  .nav-static,
-  .nav-scroll {
-    height: 10vh;
+  .icon-rotate {
+    transform: rotate(90deg);
   }
+
+  .mobile-menu {
+    width: 100%;
+    max-height: 94vh;
+    position: fixed;
+    top: 6vh;
+    left: 0;
+    background: $gray;
+    transition: 0.5s;
+    overflow: hidden;
+    @include flex-box(column, center, center);
+    z-index: 1;
+
+    li {
+      width: 100%;
+      height: auto;
+      margin-bottom: 8vw;
+    }
+
+    a {
+      width: 100vw;
+      text-transform: capitalize;
+      font-size: 2rem;
+      color: $black;
+    }
+    a:hover {
+      text-decoration: none;
+    }
+  }
+
+  .mobile-menu-hide {
+    height: 0;
+  }
+
+  .moblie-menu-show {
+    height: 100vh;
+  }
+
   .desktop-menu {
     display: none;
   }
-  .icon {
-    width: 4%;
+
+  // desktop -----------------------------
+  .desktop-menu {
+    width: 40vw;
+    margin: 0;
+    @include flex-box(row, center, center);
+
+    a {
+      text-transform: capitalize;
+      margin-left: 2vw;
+      color: $black;
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+
+    a:hover {
+      @include link-hover($blue);
+    }
   }
-  .mobile-menu {
-    max-height: 90vh;
-    top: 10vh;
+
+  // hide mobile menu show desktop menu
+  @media (min-width: $breakpoint-lg) {
+    .icon,
+    .mobile-menu {
+      display: none;
+    }
   }
-  .mobile-menu li {
-    margin-bottom: 1vw;
+
+  // show mobile menu hide desktop menu
+  @media (min-width: $breakpoint-xs) and (max-width: $breakpoint-lg) {
+    .desktop-menu {
+      display: none;
+    }
   }
-  .mobile-menu a {
-    font-size: 1.5rem;
+
+  // tablets
+  @media (min-width: $breakpoint-md) and (min-height: 501px) {
+    .icon {
+      width: 4%;
+    }
+    .desktop-menu {
+      width: 50%;
+    }
+  }
+
+  // phones landscape
+  @media (min-width: $breakpoint-xs) and (max-height: 500px) {
+    .nav-static,
+    .nav-scroll {
+      height: 10vh;
+    }
+    .desktop-menu {
+      display: none;
+    }
+    .mobile-menu {
+      max-height: 90vh;
+      top: 10vh;
+      li {
+        margin-bottom: 1vw;
+      }
+      a {
+        font-size: 1.5rem;
+      }
+    }
   }
 }
