@@ -1,21 +1,16 @@
 @import './sass/vars';
-// .app-text {
-//   line-height: 1.8rem;
-// }
 
 .App {
   width: 100%;
-  background-color: $gray;
-  @include flex-box(row, center, center);
+  min-height: 100vh;
   padding-top: 10vh;
-  padding-bottom: 10vh;
-  transition: 0.5s ease-in;
+  background-color: $gray;
+  @include flex-box();
   font-family: $main-font;
 
   @media (min-width: $breakpoint-xs) and (max-height: 500px) {
     .App {
       padding-top: 20vh;
-      padding-bottom: 20vh;
     }
   }
 }

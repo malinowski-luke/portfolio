@@ -5,6 +5,7 @@ import { Row, Col, Image } from 'react-bootstrap'
 import headshot from '../../assets/headshot.jpg'
 import animationCallback, { style } from '../../utils/animationCallback'
 import './Self.scss'
+import Contact from '../../components/Contact/Contact'
 
 export default function About() {
   const about = useRef()
@@ -12,10 +13,10 @@ export default function About() {
   useEffect(() => animationCallback(about), [])
 
   return (
-    <div ref={about} className={`${style} Self`}>
+    <div ref={about} className={`${style} Self mb-4`}>
       <Title>Self</Title>
       <Row className='align-items-center'>
-        <Col md={4} className='mb-4'>
+        <Col md={4} className='mb-4 text-center'>
           <Image src={headshot} fluid className='self-img' />
         </Col>
         <Col md={8}>
@@ -27,13 +28,16 @@ export default function About() {
           </p>
           <p className='text-justify'>
             Along the way, I found interest in web development that lead to the
-            pivot of my career path. I started with Javascript, jQuery and
-            Bootstrap. After the completion of personal apps and calculators, I
-            moved onto a personal project called{' '}
+            pivot of my career path. I started off Javascript, React, jQuery and
+            Bootstrap.
+          </p>
+          <p className='text-justify'>
+            After the completion of personal apps and calculators, I moved onto
+            a personal project called{' '}
             <Link url='http://www.jeepthingsapp.com/#/'>JeepThings</Link> - a
             culmination of my skills, JeepThings solved a problem that was close
-            to home - a site for car lovers and rebuilders to trade, sell, and
-            buy auto parts - something that my family often did.
+            to home - a web app for car lovers and rebuilders to trade, sell,
+            and buy auto parts - something that my family often did.
           </p>
           <p className='text-justify'>
             I am currently in <span className='big font-italic'>New York</span>{' '}
@@ -41,6 +45,7 @@ export default function About() {
           </p>
         </Col>
       </Row>
+      <Contact />
     </div>
   )
 }

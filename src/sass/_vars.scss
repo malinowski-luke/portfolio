@@ -17,8 +17,8 @@ $breakpoint-xl: 1200px;
 
 //mixin
 @mixin link-hover($color: $white) {
-  color: $color !important;
-  text-decoration: none !important;
+  color: $color;
+  text-decoration: none;
 }
 
 @mixin flex-box($dir: row, $just: space-evenly, $align: center) {

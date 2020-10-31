@@ -1,26 +1,14 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useRef } from 'react'
 import { NavLink } from 'react-router-dom'
-import {
-  navScrollAnimation,
-  showHideMobileMenu,
-} from '../../utils/navAnimations'
+import { showHideMobileMenu } from '../../utils/navAnimations'
 import './Nav.scss'
 
 export default function Nav() {
-  const navRef = useRef(),
-    mobileMenuRef = useRef(),
+  const mobileMenuRef = useRef(),
     iconRef = useRef()
 
-  useEffect(() => {
-    const navRefCleanUp = { ...navRef }
-    navScrollAnimation(navRefCleanUp.current)
-    return () => {
-      navScrollAnimation(navRefCleanUp.current)
-    }
-  }, [])
-
   return (
-    <nav ref={navRef} className='nav nav-static'>
+    <nav className='nav px-2  px-lg-0'>
       <h4 className='nav-text'>Luke Malinowski</h4>
       <svg
         viewBox='0 0 100 80'
@@ -38,43 +26,59 @@ export default function Nav() {
       </svg>
       <ul
         ref={mobileMenuRef}
-        className='mobile-menu mobile-menu-hide'
+        id='mobile-menu'
+        className='mobile-menu-hide text-center'
         onClick={() => {
           showHideMobileMenu(mobileMenuRef.current, iconRef.current)
         }}
       >
-        <NavLink to='/home'>
-          <li>home</li>
-        </NavLink>
-        <NavLink to='/self'>
-          <li>self</li>
-        </NavLink>
-        <NavLink to='/skills'>
-          <li>skills</li>
-        </NavLink>
-        <NavLink to='/work'>
-          <li>work</li>
-        </NavLink>
-        <a href='mailto:malinowski.luke123@gmail.com'>
-          <li>contact</li>
-        </a>
+        <li>
+          <NavLink to='/home'>home</NavLink>
+        </li>
+        <li>
+          <NavLink to='/self'>self</NavLink>
+        </li>
+        <li>
+          <NavLink to='/skills'>skills</NavLink>
+        </li>
+        <li>
+          <NavLink to='/work'>work</NavLink>
+        </li>
+        <li>
+          <a href='mailto:malinowski.luke123@gmail.com'>contact</a>
+        </li>
       </ul>
-      <ul id='desktop-menu' className='desktop-menu'>
-        <NavLink to='/home'>
-          <li>home</li>
-        </NavLink>
-        <NavLink to='/self'>
-          <li>self</li>
-        </NavLink>
-        <NavLink to='/skills'>
-          <li>skills</li>
-        </NavLink>
-        <NavLink to='/work'>
-          <li>work</li>
-        </NavLink>
-        <a href='mailto:malinowski.luke123@gmail.com'>
-          <li>contact</li>
-        </a>
+      <ul id='desktop-menu'>
+        <li>
+          <NavLink to='/home'>
+            home
+            <hr />
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to='/self'>
+            self
+            <hr />
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to='/skills'>
+            skills
+            <hr />
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to='/work'>
+            work
+            <hr />
+          </NavLink>
+        </li>
+        <li>
+          <a href='mailto:malinowski.luke123@gmail.com'>
+            contact
+            <hr />
+          </a>
+        </li>
       </ul>
     </nav>
   )

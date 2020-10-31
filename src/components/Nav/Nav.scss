@@ -1,53 +1,39 @@
 @import '../../sass/vars';
 
-// don't scope
-// show nav bar onscroll----------------
-.nav-static {
-  height: 6vh;
-  transition: 0.5s;
-  background: transparent;
-}
-
-.nav-scroll {
-  height: 6vh;
-  background: $gray;
-  transition: 0.5s;
-}
-
 .nav {
-  width: 100%;
+  width: 90%;
   position: fixed;
+  height: 6vh;
   top: 0;
+  background-color: $gray;
   z-index: 1;
-  @include flex-box(row, space-between);
+  @include flex-box(row, space-between, center);
 
-  .mobile-menu .active,
-  .desktop-menu .active {
-    @include link-hover($blue);
+  #mobile-menu .active,
+  #desktop-menu .active {
+    @include link-hover($orange);
+    pointer-events: none;
+    hr {
+      visibility: visible;
+    }
   }
 
   .nav-text {
-    color: $white;
     margin: 0;
-    padding: 0;
-    // logo spacing from the left
-    margin-left: 4vw;
     color: $black;
     font-weight: 900;
   }
 
-  // Mobile ------------------------------
   .icon {
-    transition: 0.5s;
-    // icon spacing from the right
-    margin-right: 10vw;
+    transition: 0.5s ease-in-out;
   }
 
   .icon-rotate {
     transform: rotate(90deg);
   }
 
-  .mobile-menu {
+  // Mobile ------------------------------
+  #mobile-menu {
     width: 100%;
     max-height: 94vh;
     position: fixed;
@@ -56,23 +42,23 @@
     background: $gray;
     transition: 0.5s;
     overflow: hidden;
-    @include flex-box(column, center, center);
+    @include flex-box(column, center, space-between);
     z-index: 1;
 
     li {
-      width: 100%;
+      width: inherit;
       height: auto;
-      margin-bottom: 8vw;
-    }
+      margin-bottom: 4vw;
 
-    a {
-      width: 100vw;
-      text-transform: capitalize;
-      font-size: 2rem;
-      color: $black;
-    }
-    a:hover {
-      text-decoration: none;
+      a {
+        width: inherit;
+        text-transform: capitalize;
+        font-size: 2rem;
+        color: $black;
+        &:hover {
+          text-decoration: none;
+        }
+      }
     }
   }
 
@@ -84,71 +70,83 @@
     height: 100vh;
   }
 
-  .desktop-menu {
+  #desktop-menu {
     display: none;
   }
 
   // desktop -----------------------------
-  .desktop-menu {
-    width: 40vw;
+  #desktop-menu {
+    width: 25%;
     margin: 0;
-    @include flex-box(row, center, center);
+    padding: 0;
+    @include flex-box(row, space-between, center);
 
-    a {
+    li a {
       text-transform: capitalize;
-      margin-left: 2vw;
       color: $black;
       font-weight: 700;
       font-size: 1.2rem;
-    }
+      transition: 0.5s;
 
-    a:hover {
-      @include link-hover($blue);
+      &:hover {
+        @include link-hover($blue);
+        hr {
+          visibility: visible;
+          transition: 0.5s ease-in;
+        }
+      }
+    }
+    li hr {
+      padding: 0;
+      margin: 0;
+      border-top: 2px solid $black;
+      visibility: hidden;
+      &:hover {
+        visibility: visible;
+      }
+    }
+  }
+
+  // show mobile menu hide desktop menu
+  @media (min-width: $breakpoint-lg) and (max-width: $breakpoint-xl) {
+    #desktop-menu {
+      width: 40%;
     }
   }
 
   // hide mobile menu show desktop menu
   @media (min-width: $breakpoint-lg) {
     .icon,
-    .mobile-menu {
+    #mobile-menu {
       display: none;
     }
   }
-
   // show mobile menu hide desktop menu
   @media (min-width: $breakpoint-xs) and (max-width: $breakpoint-lg) {
-    .desktop-menu {
+    & {
+      width: 100%;
+    }
+    #desktop-menu {
       display: none;
-    }
-  }
-
-  // tablets
-  @media (min-width: $breakpoint-md) and (min-height: 501px) {
-    .icon {
-      width: 4%;
-    }
-    .desktop-menu {
-      width: 50%;
     }
   }
 
   // phones landscape
   @media (min-width: $breakpoint-xs) and (max-height: 500px) {
-    .nav-static,
-    .nav-scroll {
+    & {
       height: 10vh;
     }
-    .desktop-menu {
+    #desktop-menu {
       display: none;
     }
-    .mobile-menu {
+    #mobile-menu {
       max-height: 90vh;
       top: 10vh;
       li {
         margin-bottom: 1vw;
-      }
-      a {
-        font-size: 1.5rem;
+        a {
+          font-size: 1.5rem;
+        }
       }
     }
   }

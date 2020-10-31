@@ -12,7 +12,7 @@ export default function Work() {
 
   const projectsJSX = projectsArr.map((elm, index) => {
     return (
-      <Col lg={3} className='mb-2' key={index}>
+      <Col md={3} className='mb-2' key={index}>
         <Link to={`/work/${index}`} className='work-item grow'>
           <Image src={elm.coverImage} fluid />
         </Link>
