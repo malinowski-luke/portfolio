@@ -1,21 +1,21 @@
-import React, { useEffect, useRef, useState, useContext } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Row, Col, Image, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import Title from '../Title/Title'
 import Table from '../Table/Table'
+import Text from '../Text/Text'
 import animationCallback, { style } from '../../utils/animationCallback'
 import './Project.scss'
 
-export default function Project({ location }) {
+export default function Project({ match }) {
   const projectRef = useRef()
 
-  const { projectIndex } = location
+  const projectTitle = match.params.project
 
   const [project, setProject] = useState({})
-  const [index, setIndex] = useState(0)
 
-  const getProject = async () => {
+  const getProject = async (index) => {
     try {
       const { data } = await axios.get(`/project/${index}`)
       setProject(data)
@@ -25,15 +25,9 @@ export default function Project({ location }) {
   }
 
   useEffect(() => {
-    if (projectIndex !== undefined) {
-      setIndex(projectIndex)
-      window.sessionStorage.setItem('index', projectIndex)
-    } else {
-      setIndex(+window.sessionStorage.getItem('index'))
-    }
-    getProject()
+    getProject(projectTitle)
     animationCallback(projectRef)
-  }, [])
+  }, [projectTitle])
 
   const { stack, image, github, link, title, text } = project
 
@@ -46,8 +40,8 @@ export default function Project({ location }) {
           <Image src={image} fluid />
         </Col>
         <Col lg={6} className='mt-4 mt-lg-0 px-lg-5'>
-          <p className='text-justify'>{text}</p>
-          <Link to='/work'>
+          <Text>{text}</Text>
+          <Link to='/work' className='mt-4'>
             <Button variant='outline-secondary' block>
               Back
             </Button>

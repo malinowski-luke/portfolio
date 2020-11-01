@@ -5,27 +5,47 @@
   @include flex-box(row, space-around, center);
 
   a {
+    h5 {
+      text-transform: capitalize;
+      color: $blue;
+    }
     svg {
       width: 20%;
       height: 20%;
       fill: $blue;
+    }
+
+    h5,
+    svg {
       transition: 0.5s;
     }
 
     @media (min-width: $breakpoint-lg) {
-      &:nth-child(1):hover {
-        svg {
-          fill: $black;
+      &:hover {
+        text-decoration: none;
+        &:nth-child(1) {
+          svg {
+            fill: $black;
+          }
+          h5 {
+            color: $black;
+          }
         }
-      }
-      &:nth-child(2):hover {
-        svg {
-          fill: #2473b1;
+        &:nth-child(2) {
+          svg {
+            fill: #2473b1;
+          }
+          h5 {
+            color: #2473b1;
+          }
         }
-      }
-      &:nth-child(3):hover {
-        svg {
-          fill: #ad1400;
+        &:nth-child(3) {
+          svg {
+            fill: #ad1400;
+          }
+          h5 {
+            color: #ad1400;
+          }
         }
       }
     }

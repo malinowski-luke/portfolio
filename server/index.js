@@ -12,12 +12,10 @@ app.get('/projects', (req, res) => {
   res.status(200).send(projects)
 })
 
-app.get('/project/:index', (req, res) => {
-  let { index } = req.params
-  index = +index
-  if (!projects[+index])
-    return res.status(400).send(`project with index:${index} doesn't exist`)
-  res.status(200).send(projects[+index])
+app.get('/project/:title', (req, res) => {
+  let { title } = req.params
+  const project = projects.find((project) => project.title === title)
+  res.status(200).send(project)
 })
 
 app.listen(PORT, () => console.log(`server running on: ${PORT}`))

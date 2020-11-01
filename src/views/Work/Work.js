@@ -20,20 +20,14 @@ export default function Work() {
   }
 
   useEffect(() => {
-    if (!projects.length) getProjects()
+    getProjects()
     animationCallback(work)
   }, [])
 
   const projectsJSX = projects.map((project, index) => {
     return (
       <Col md={3} className='mb-2' key={index}>
-        <Link
-          to={{
-            pathname: `/work/${project.title}`,
-            projectIndex: index,
-          }}
-          className='work-item grow'
-        >
+        <Link to={`/work/${project.title}`} className='work-item grow'>
           <Image src={project.coverImage} fluid />
         </Link>
       </Col>

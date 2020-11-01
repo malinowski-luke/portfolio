@@ -19,7 +19,7 @@ export default (
     <Route exact path='/home' component={Home} />
     <Route path='/self' component={Self} />
     <Route path='/skills' component={Skills} />
-    <Route path='/work/:index' component={Project} />
+    <Route path='/work/:project' component={Project} />
     <Route path='/work' component={Work} />
     <Route path='/not-found' render={(props) => <NotFound {...props} />} />
     <Redirect exact from='/' to='/home' />
