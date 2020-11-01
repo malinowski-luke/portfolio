@@ -1,20 +1,15 @@
-import React, { useEffect, useRef } from 'react'
+import React from 'react'
 import Title from '../../components/Title/Title'
 import Link from '../../components/Link/Link'
 import { Row, Col, Image } from 'react-bootstrap'
 import headshot from '../../assets/headshot.jpg'
-import animationCallback, { style } from '../../utils/animationCallback'
 import Contact from '../../components/Contact/Contact'
 import Text from '../../components/Text/Text'
 import './Self.scss'
 
 export default function About() {
-  const about = useRef()
-
-  useEffect(() => animationCallback(about), [])
-
   return (
-    <div ref={about} className={`${style} Self mb-4`}>
+    <div className='Self mb-4 slide-fade'>
       <Title>Self</Title>
       <Row className='align-items-center'>
         <Col md={4} className='mb-4 text-center'>

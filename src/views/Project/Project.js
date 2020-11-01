@@ -1,16 +1,13 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Row, Col, Image, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
-import Title from '../Title/Title'
-import Table from '../Table/Table'
-import Text from '../Text/Text'
-import animationCallback, { style } from '../../utils/animationCallback'
+import Title from '../../components/Title/Title'
+import Table from '../../components/Table/Table'
+import Text from '../../components/Text/Text'
 import './Project.scss'
 
 export default function Project({ match }) {
-  const projectRef = useRef()
-
   const projectTitle = match.params.project
 
   const [project, setProject] = useState({})
@@ -26,13 +23,12 @@ export default function Project({ match }) {
 
   useEffect(() => {
     getProject(projectTitle)
-    animationCallback(projectRef)
   }, [projectTitle])
 
   const { stack, image, github, link, title, text } = project
 
   return (
-    <div ref={projectRef} className={`Project ${style}`}>
+    <div className='Project slide-fade'>
       <Title>{title}</Title>
       <Table stack={stack} link={link} github={github} />
       <Row className='align-items-center mt-2'>

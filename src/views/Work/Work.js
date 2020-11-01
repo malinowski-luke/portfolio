@@ -1,13 +1,11 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import { Image, Col, Row } from 'react-bootstrap'
 import Title from '../../components/Title/Title'
-import animationCallback, { style } from '../../utils/animationCallback'
 import './Work.scss'
 
 export default function Work() {
-  const work = useRef()
   const [projects, setProjects] = useState([])
 
   const getProjects = async () => {
@@ -21,7 +19,6 @@ export default function Work() {
 
   useEffect(() => {
     getProjects()
-    animationCallback(work)
   }, [])
 
   const projectsJSX = projects.map((project, index) => {
@@ -35,7 +32,7 @@ export default function Work() {
   })
 
   return (
-    <div ref={work} className={`Work ${style}`}>
+    <div className='Work slide-fade'>
       <div style={{ width: '100%' }}>
         <Title>Work</Title>
         <Row>{projectsJSX}</Row>
