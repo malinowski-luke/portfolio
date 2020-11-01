@@ -1,49 +1,57 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState, useContext } from 'react'
 import { Row, Col, Image, Button } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
+import axios from 'axios'
 import Title from '../Title/Title'
-import githubLogo from '../../assets/icons/github.png'
-import www from '../../assets/icons/www.png'
-import projectsArr from '../../utils/projectsArr'
+import Table from '../Table/Table'
 import animationCallback, { style } from '../../utils/animationCallback'
 import './Project.scss'
 
-export default function Project({ match, history }) {
-  const project = useRef()
+export default function Project({ location }) {
+  const projectRef = useRef()
 
-  useEffect(() => animationCallback(project), [])
+  const { projectIndex } = location
 
-  const projectInfo = projectsArr[match.params.index],
-    { image, github, link, title, text } = projectInfo
+  const [project, setProject] = useState({})
+  const [index, setIndex] = useState(0)
+
+  const getProject = async () => {
+    try {
+      const { data } = await axios.get(`/project/${index}`)
+      setProject(data)
+    } catch (error) {
+      console.error('error fetching project: ' + error)
+    }
+  }
+
+  useEffect(() => {
+    if (projectIndex !== undefined) {
+      setIndex(projectIndex)
+      window.sessionStorage.setItem('index', projectIndex)
+    } else {
+      setIndex(+window.sessionStorage.getItem('index'))
+    }
+    getProject()
+    animationCallback(projectRef)
+  }, [])
+
+  const { stack, image, github, link, title, text } = project
 
   return (
-    <div ref={project} className={style}>
+    <div ref={projectRef} className={`Project ${style}`}>
       <Title>{title}</Title>
-      <Row className='align-items-center'>
-        <Col lg={6} className='mt-4 mt-lg-0'>
-          <p className='mt-2 text-justify'>{text}</p>
-          <div className='link-container mt-2'>
-            {link && (
-              <a href={link} target='_blank' rel='noopener noreferrer'>
-                <Image src={www} className='link-icon' fluid />
-                <br />
-                Live App
-              </a>
-            )}
-            <a href={github} target='_blank' rel='noopener noreferrer'>
-              <Image src={githubLogo} className='link-icon' fluid />
-              <br />
-              GitHub Repo
-            </a>
-            <Button
-              onClick={() => history.push('/work')}
-              variant='outline-light'
-            >
+      <Table stack={stack} link={link} github={github} />
+      <Row className='align-items-center mt-2'>
+        <Col lg={6} className='text-center'>
+          <Image src={image} fluid />
+        </Col>
+        <Col lg={6} className='mt-4 mt-lg-0 px-lg-5'>
+          <p className='text-justify'>{text}</p>
+          <Link to='/work'>
+            <Button variant='outline-secondary' block>
               Back
             </Button>
-          </div>
-        </Col>
-        <Col lg={6}>
-          <Image src={image} fluid />
+          </Link>
         </Col>
       </Row>
     </div>

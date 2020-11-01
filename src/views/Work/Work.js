@@ -1,20 +1,40 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
+import axios from 'axios'
 import { Link } from 'react-router-dom'
 import { Image, Col, Row } from 'react-bootstrap'
 import Title from '../../components/Title/Title'
 import animationCallback, { style } from '../../utils/animationCallback'
-import projectsArr from '../../utils/projectsArr'
 import './Work.scss'
 
 export default function Work() {
   const work = useRef()
-  useEffect(() => animationCallback(work), [])
+  const [projects, setProjects] = useState([])
 
-  const projectsJSX = projectsArr.map((elm, index) => {
+  const getProjects = async () => {
+    try {
+      const { data } = await axios.get('/projects')
+      setProjects(data)
+    } catch (error) {
+      console.error('error fetching projects: ' + error)
+    }
+  }
+
+  useEffect(() => {
+    if (!projects.length) getProjects()
+    animationCallback(work)
+  }, [])
+
+  const projectsJSX = projects.map((project, index) => {
     return (
       <Col md={3} className='mb-2' key={index}>
-        <Link to={`/work/${index}`} className='work-item grow'>
-          <Image src={elm.coverImage} fluid />
+        <Link
+          to={{
+            pathname: `/work/${project.title}`,
+            projectIndex: index,
+          }}
+          className='work-item grow'
+        >
+          <Image src={project.coverImage} fluid />
         </Link>
       </Col>
     )

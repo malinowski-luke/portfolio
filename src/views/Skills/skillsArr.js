@@ -1,29 +1,15 @@
-import node from '../../assets/icons/node.png'
-import postgres from '../../assets/icons/postgres.png'
-import mongoDb from '../../assets/icons/mongodb.png'
-import js from '../../assets/icons/js.png'
-import htmlCss from '../../assets/icons/htmlcss.png'
-// import scss from '../../assets/icons/scss.png'
-import express from '../../assets/icons/express.png'
-import bootstrap from '../../assets/icons/bootstrap.png'
-import react from '../../assets/icons/react.png'
-import redux from '../../assets/icons/redux.png'
-// import jquery from '../../assets/icons/jquery.gif'
-import typescript from '../../assets/icons/typescript.png'
-import vue from '../../assets/icons/vue.png'
-import redis from '../../assets/icons/redis.png'
-
+const imgPath = '/images/icons'
 export default [
-  { img: js, title: 'JavaScript es6+' },
-  { img: typescript, title: 'TypeScript' },
-  { img: htmlCss, title: 'HTML5/CSS3' },
-  { img: react, title: 'React' },
-  { img: redux, title: 'Redux' },
-  { img: vue, title: 'Vue/Vuex' },
-  { img: bootstrap, title: 'Bootsrap' },
-  { img: node, title: 'Node' },
-  { img: express, title: 'Express' },
-  { img: redis, title: 'Redis' },
-  { img: postgres, title: 'Postgres' },
-  { img: mongoDb, title: 'MongoDB' },
+  { 'img': imgPath+'/js.png', 'title': 'JavaScript es6+' },
+  { 'img': imgPath+'/typescript.png', 'title': 'TypeScript' },
+  { 'img': imgPath+'/htmlCss.png', 'title': 'HTML5/CSS3' },
+  { 'img': imgPath+'/react.png', 'title': 'React' },
+  { 'img': imgPath+'/redux.png', 'title': 'Redux' },
+  { 'img': imgPath+'/vue.png', 'title': 'Vue/Vuex' },
+  { 'img': imgPath+'/bootstrap.png', 'title': 'Bootsrap' },
+  { 'img': imgPath+'/node.png', 'title': 'Node' },
+  { 'img': imgPath+'/express.png', 'title': 'Express' },
+  { 'img': imgPath+'/redis.png', 'title': 'Redis' },
+  { 'img': imgPath+'/postgres.png', 'title': 'Postgres' },
+  { 'img': imgPath+'/mongoDb.png', 'title': 'MongoDB' }
 ]

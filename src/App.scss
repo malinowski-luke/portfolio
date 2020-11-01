@@ -1,12 +1,12 @@
 @import './sass/vars';
 
 .App {
+  font-family: $main-font;
   width: 100%;
   min-height: 100vh;
   padding-top: 10vh;
   background-color: $gray;
   @include flex-box();
-  font-family: $main-font;
 
   @media (min-width: $breakpoint-xs) and (max-height: 500px) {
     .App {

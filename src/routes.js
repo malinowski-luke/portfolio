@@ -8,7 +8,7 @@ import Work from './views/Work/Work'
 import Project from './components/Project/Project'
 
 const NotFound = () => (
-  <div>
+  <div className='text-center'>
     <h1>404 Not Found!</h1>
     <h4>Invalid Address</h4>
   </div>

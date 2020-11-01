@@ -10,6 +10,7 @@ export default function Skills() {
 
   useEffect(() => animationCallback(skills), [])
 
+  
   const logoArr = skilssArr.map((elm, index) => (
     <Logo key={index} img={elm.img} title={elm.title} />
   ))

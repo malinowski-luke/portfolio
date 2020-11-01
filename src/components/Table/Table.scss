@@ -1,0 +1,40 @@
+@import '../../sass/vars';
+.Project {
+  table {
+    width: 100%;
+    color: $black;
+    font-family: sans-serif;
+
+    th,
+    td {
+      padding-bottom: 15px;
+    }
+
+    thead tr th {
+      text-transform: uppercase;
+      font-weight: 900;
+    }
+    tbody tr td {
+      color: gray;
+      text-transform: capitalize;
+    }
+  }
+}
+
+// @media (min-width: $breakpoint-xs) and (max-width: $breakpoint-md) {
+//   .link-icon {
+//     width: 8vw;
+//   }
+// }
+
+// @media (min-width: $breakpoint-md + 1px) and (max-width: $breakpoint-xl) {
+//   .link-icon {
+//     width: 4vw;
+//   }
+// }
+
+// @media (min-width: $breakpoint-xs) and (max-height: 500px) {
+//   .link-icon {
+//     width: 10vw;
+//   }
+// }
