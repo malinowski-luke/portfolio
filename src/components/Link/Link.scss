@@ -8,10 +8,14 @@
   background-position: 0 88%;
   transition: background-size 0.25s ease-in;
   padding: 2px 2px 0 2px;
+
+  &:hover {
+    text-decoration: none;
+  }
+
   @media (min-width: $breakpoint-lg) {
     &:hover {
       color: $black;
-      text-decoration: none;
       background-size: 100% 88%;
     }
   }

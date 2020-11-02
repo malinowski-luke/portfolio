@@ -1,5 +1,7 @@
 import React from 'react'
 import { Switch, Route, Redirect } from 'react-router-dom'
+import { createBrowserHistory } from 'history'
+
 // views
 import Home from './views/Home/Home'
 import Self from './views/Self/Self'
@@ -7,6 +9,12 @@ import Skills from './views/Skills/Skills'
 import Work from './views/Work/Work'
 import Project from './views/Project/Project'
 import NotFound from './views/NotFound/NotFound'
+
+export const history = createBrowserHistory()
+
+history.listen((location, action) => {
+  window.scrollTo(0, 0)
+})
 
 export default (
   <Switch>

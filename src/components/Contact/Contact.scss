@@ -5,6 +5,10 @@
   @include flex-box(row, space-around, center);
 
   a {
+    &:hover {
+      text-decoration: none !important;
+    }
+
     h5 {
       text-transform: capitalize;
       color: $blue;
@@ -22,7 +26,6 @@
 
     @media (min-width: $breakpoint-lg) {
       &:hover {
-        text-decoration: none;
         &:nth-child(1) {
           svg {
             fill: $black;
