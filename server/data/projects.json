@@ -29,7 +29,6 @@
   {
     "image": "/images/projects/notepad.jpg",
     "coverImage": "/images/projects/notepadCover.jpg",
-    "link": "https://calculator-js-lm.herokuapp.com/",
     "github": "https://github.com/malinowskil123/calculator",
     "title": "notepad",
     "text": "A desktop notepad application developed using Java. Users are able to create, overwrite and save txt files locally on their computer. This app features a traditional edit section with copy, paste, cut, undo and redo actions. Entered text is proecessed to get word count and sentence count values along with a few other metrics which feed into a text complexity algorithm which outputs a Flesch text complexity score.",

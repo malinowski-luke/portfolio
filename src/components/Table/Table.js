@@ -17,12 +17,12 @@ export default function Table({ stack = [], link, github }) {
           <tr key={index}>
             <td>{elm}</td>
             <td>
-              {github && index === 0 ? (
+              {github && index === 0 &&
                 <Link url={github}>repository</Link>
-              ) : null}
+              }
             </td>
             <td>
-              {link && index === 0 ? <Link url={link}>live site</Link> : null}
+              {link !== undefined && index === 0 && <Link url={link}>live site</Link>}
             </td>
           </tr>
         ))}
