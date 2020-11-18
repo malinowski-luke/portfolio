@@ -27,7 +27,7 @@ export default function Contact() {
         <h5>linkedin</h5>
       </a>
       <a
-        href='https://docs.google.com/document/d/e/2PACX-1vRZsT9_8BUT_2ENiwVJ-FEfJlEo7b_G5U_ejDQMt6AKwJlnutHpVmlsImdyCtLKjAy9E61YpadcpDuB/pub'
+        href='https://drive.google.com/file/d/10PRJaZbjWdEaSf0D2TpyhaJUz1ubMaam/view?usp=sharing'
         target='_blank'
         rel='noopener noreferrer'
       >
