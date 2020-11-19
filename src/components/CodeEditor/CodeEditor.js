@@ -1,13 +1,13 @@
 import React, { useEffect, useRef } from 'react'
 import typewriter from '../../utils/typewriter'
-import homeStrCode from '../../utils/homeStrCode'
+import text from './text'
 import './CodeEditor.scss'
 
 export default function CodeEditor() {
   const code = useRef()
 
   useEffect(() => {
-    typewriter(homeStrCode, code.current, 50)
+    setTimeout(() => typewriter(text, code.current, 65), 700)
   }, [])
 
   return (
@@ -21,7 +21,9 @@ export default function CodeEditor() {
           </div>
           <p>index.js</p>
         </div>
-        <div className='code-editor'>
+        <div className='text-area'>
+          <span className='comment'>//{'  '}repeat every 24 hours</span>
+          <br />
           <span ref={code} className='code'></span>
           <span className='cursor'>_</span>
         </div>

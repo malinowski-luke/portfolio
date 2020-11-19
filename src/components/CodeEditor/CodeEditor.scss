@@ -57,7 +57,7 @@
   }
 
   /* code window */
-  .code-editor {
+  .text-area {
     width: 100%;
     min-height: 20vh;
     height: auto;
@@ -65,25 +65,29 @@
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     padding: 16px;
-  }
 
-  .code {
-    font-weight: bolder;
-    // this reads tabs \t from js str
-    white-space: pre;
-    color: $white;
-  }
+    .comment {
+      color: darkgreen;
+    }
+    .code {
+      font-weight: bolder;
+      // this reads tabs \t from js str
+      white-space: pre;
+      color: $white;
+    }
 
-  .code,
-  .cursor {
-    font-size: 1.5rem;
-    line-height: 1.8rem;
-  }
-  /* cursor code */
-  .cursor {
-    color: $white;
-    opacity: 0;
-    animation: blinking-cursor ease-in-out 1.2s infinite;
+    .code,
+    .comment,
+    .cursor {
+      font-size: 1.5rem;
+      line-height: 1.8rem;
+    }
+    /* cursor code */
+    .cursor {
+      color: $white;
+      opacity: 0;
+      animation: blinking-cursor ease-in-out 1.2s infinite;
+    }
   }
 
   @keyframes blinking-cursor {
@@ -108,12 +112,6 @@
     .nav-bar-icons {
       width: 12%;
     }
-
-    .code,
-    .cursor {
-      font-size: 1rem !important;
-      line-height: 1.2rem !important;
-    }
   }
 
   /* phones */
@@ -131,10 +129,13 @@
       height: 10px;
     }
 
-    .code,
-    .cursor {
-      font-size: 1rem;
-      line-height: 1.5rem;
+    .text-area {
+      .code,
+      .comment,
+      .cursor {
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
     }
   }
 
@@ -144,9 +145,12 @@
       width: 60%;
     }
 
-    #code,
-    .cursor {
-      font-size: 1.4rem;
+    .text-area {
+      .code,
+      .comment,
+      .cursor {
+        font-size: 1.4rem;
+      }
     }
   }
 
