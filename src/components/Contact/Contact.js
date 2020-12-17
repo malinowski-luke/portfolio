@@ -3,7 +3,7 @@ import './Contact.scss'
 
 export default function Contact() {
   return (
-    <div className='Contact text-center mt-4'>
+    <div className='Contact text-center mt-5'>
       <a
         href='https://github.com/malinowskil123'
         target='_blank'

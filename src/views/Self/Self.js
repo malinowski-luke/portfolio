@@ -1,21 +1,24 @@
 import React from 'react'
 import Title from '../../components/Title/Title'
 import Link from '../../components/Link/Link'
-import { Row, Col, Image } from 'react-bootstrap'
-import headshot from '../../assets/headshot.jpg'
+import { Row, Col } from 'react-bootstrap'
 import Contact from '../../components/Contact/Contact'
 import Text from '../../components/Text/Text'
+import Medal from '../../components/Medal/Medal'
 import './Self.scss'
+
+import headshot from '../../assets/headshot.jpg'
+import iceland from '../../assets/iceland.jpg'
 
 export default function About() {
   return (
     <div className='Self mb-4 slide-fade'>
       <Title>Self</Title>
       <Row className='align-items-center'>
-        <Col md={4} className='mb-4 text-center'>
-          <Image src={headshot} fluid className='self-img' />
+        <Col lg={5} className='mb-4 text-center'>
+          <Medal frontImg={headshot} backImg={iceland} />
         </Col>
-        <Col md={8}>
+        <Col lg={7}>
           <Text>
             Audio Engineer turned Fullstack Web Developer, I found my passion
             for programming in an unconventional way. In college, I pursued the

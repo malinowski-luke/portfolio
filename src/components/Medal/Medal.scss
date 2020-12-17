@@ -1,0 +1,123 @@
+@import '../../sass/vars';
+$medal-diameter: 300px;
+$medal-thickness: 15px;
+$medal-color: $blue;
+
+$edge-faces: 80;
+$edge-face-length: 3.14 * $medal-diameter/$edge-faces;
+
+$turn-time: 16s;
+
+.medal {
+  position: relative;
+  width: $medal-diameter;
+  height: $medal-diameter;
+  margin: 50px auto;
+
+  transform-style: preserve-3d;
+  transition: all $turn-time;
+  animation: rotate-yaxis $turn-time ease infinite;
+}
+
+.medal-front,
+.medal-back {
+  position: absolute;
+  width: $medal-diameter;
+  height: $medal-diameter;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: $medal-color;
+  background-size: cover;
+
+  // &::after {
+  //   content: '';
+  //   position: absolute;
+  //   left: -$medal-diameter/2;
+  //   bottom: 100%;
+  //   display: block;
+  //   height: $medal-diameter/1.5;
+  //   width: $medal-diameter * 2;
+  //   background: #fff;
+  //   opacity: 0.3;
+  //   animation: shine linear $turn-time / 4 infinite;
+  // }
+}
+
+.medal-front {
+  transform: translateZ($medal-thickness/2);
+}
+.medal-back {
+  transform: translateZ(-$medal-thickness/2);
+}
+
+.medal-edge-image {
+  background-image: url(https://placedog.net/540/205);
+}
+
+.medal-edge {
+  @for $i from 1 through $edge-faces {
+    div:nth-child(#{$i}) {
+      position: absolute;
+      height: $edge-face-length;
+      width: $medal-thickness;
+      background: darken(
+        $medal-color,
+        (($i - $edge-faces/2) * ($i - $edge-faces/2)) /
+          ($edge-faces * $edge-faces/4) *
+          100 *
+          0.7
+      );
+      transform: translateY(#{$medal-diameter/2-$edge-face-length/2})
+        translateX(#{$medal-diameter/2-$medal-thickness/2})
+        rotateZ(360deg / $edge-faces * $i + 90)
+        translateX(#{$medal-diameter/2})
+        rotateY(90deg);
+    }
+  }
+}
+
+.medal-shadow {
+  position: absolute;
+  width: $medal-diameter;
+  height: $medal-thickness;
+  border-radius: 50%;
+  background: #000;
+  box-shadow: 0 0 $medal-thickness * 5 $medal-thickness * 5 #000;
+  opacity: 0.125;
+  transform: rotateX(90deg) translateZ(-$medal-diameter * 1.1) scale(0.5);
+}
+
+@keyframes rotate-yaxis {
+  0% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+
+  20% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+
+  40% {
+    transform: perspective(1000px) rotateY(180deg);
+  }
+  60% {
+    transform: perspective(1000px) rotateY(180deg);
+  }
+
+  80% {
+    transform: perspective(1000px) rotateY(180deg);
+  }
+
+  100% {
+    transform: perspective(1000px) rotateY(360deg);
+  }
+}
+
+// @keyframes shine {
+//   0%,
+//   15% {
+//     transform: translateY($medal-diameter * 2) rotate(-40deg);
+//   }
+//   50% {
+//     transform: translateY(-$medal-diameter) rotate(-40deg);
+//   }
+// }
