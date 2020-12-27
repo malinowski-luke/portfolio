@@ -55,7 +55,6 @@ export default function Nav() {
             rel='noreferrer noopener'
           >
             blog
-            <hr />
           </a>
         </li>
 
