@@ -22,7 +22,7 @@ export default function CodeEditor() {
           <p>index.js</p>
         </div>
         <div className='text-area'>
-          <span className='comment'>//{'  '}repeat every 24 hours</span>
+          <span className='comment'>{'//  '}repeat every 24 hours</span>
           <br />
           <span ref={code} className='code'></span>
           <span className='cursor'>_</span>

@@ -35,15 +35,30 @@ export default function Nav() {
         <li>
           <NavLink to='/home'>home</NavLink>
         </li>
+
         <li>
           <NavLink to='/self'>self</NavLink>
         </li>
+
         <li>
           <NavLink to='/skills'>skills</NavLink>
         </li>
+
         <li>
           <NavLink to='/work'>work</NavLink>
         </li>
+
+        <li>
+          <a
+            href='https://malinowski-luke123.medium.com/'
+            target='_blank'
+            rel='noreferrer noopener'
+          >
+            blog
+            <hr />
+          </a>
+        </li>
+
         <li>
           <a href='mailto:malinowski.luke123@gmail.com'>contact</a>
         </li>
@@ -55,24 +70,39 @@ export default function Nav() {
             <hr />
           </NavLink>
         </li>
+
         <li>
           <NavLink to='/self'>
             self
             <hr />
           </NavLink>
         </li>
+
         <li>
           <NavLink to='/skills'>
             skills
             <hr />
           </NavLink>
         </li>
+
         <li>
           <NavLink to='/work'>
             work
             <hr />
           </NavLink>
         </li>
+
+        <li>
+          <a
+            href='https://malinowski-luke123.medium.com/'
+            target='_blank'
+            rel='noreferrer noopener'
+          >
+            blog
+            <hr />
+          </a>
+        </li>
+
         <li>
           <a href='mailto:malinowski.luke123@gmail.com'>
             contact
