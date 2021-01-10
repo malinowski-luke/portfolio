@@ -26,12 +26,12 @@ export default function About() {
             producing and mixing audio for a variety of uses.
           </Text>
           <Text>
-            Along the way, I found interest in web development that lead to the
-            pivot of my career path. I started off Javascript, React, jQuery and
+            Along the way, I found interest in software development that lead to the
+            pivot of my career path. I started off with Javascript, Node.js, React, and
             Bootstrap.
           </Text>
           <Text>
-            After the completion of personal apps and calculators, I moved onto
+            After the completion of several smaller web application, I moved onto
             a personal project called{' '}
             <Link url='http://www.jeepthingsapp.com/#/'>JeepThings</Link> - a
             culmination of my skills, JeepThings solved a problem that was close

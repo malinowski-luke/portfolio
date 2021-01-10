@@ -6,17 +6,32 @@ $medal-color: $blue;
 $edge-faces: 80;
 $edge-face-length: 3.14 * $medal-diameter/$edge-faces;
 
-$turn-time: 16s;
+$turn-time-intro: 1.5s;
+$delay: $turn-time-intro * 2;
+$turn-time-cont: 8s;
 
 .medal {
   position: relative;
   width: $medal-diameter;
   height: $medal-diameter;
   margin: 50px auto;
-
   transform-style: preserve-3d;
-  transition: all $turn-time;
-  animation: rotate-yaxis $turn-time ease infinite;
+
+  // transition: all $turn-time;
+  // animation: intro-spin $turn-time ease-in-out;
+  animation: intro-spin $turn-time-intro ease 0s forwards,
+    continuous-spin $turn-time-cont ease $delay infinite;
+
+  // crazy: Animation name
+  // 4s: Duration
+  // ease-in-out: Timing function
+  // 0.5s: Delay
+  // 12: Iteration count
+  // backwards: Fill mode
+
+  //  $turn-time,
+  //   continuous-spin 8s ease-in infinite;
+  // animation-iteration-count: 2;
 }
 
 .medal-front,
@@ -87,7 +102,17 @@ $turn-time: 16s;
   transform: rotateX(90deg) translateZ(-$medal-diameter * 1.1) scale(0.5);
 }
 
-@keyframes rotate-yaxis {
+@keyframes intro-spin {
+  0% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+
+  100% {
+    transform: perspective(1000px) rotateY(720deg);
+  }
+}
+
+@keyframes continuous-spin {
   0% {
     transform: perspective(1000px) rotateY(0deg);
   }
@@ -99,12 +124,13 @@ $turn-time: 16s;
   40% {
     transform: perspective(1000px) rotateY(180deg);
   }
+
   60% {
     transform: perspective(1000px) rotateY(180deg);
   }
 
   80% {
-    transform: perspective(1000px) rotateY(180deg);
+    transform: perspective(1000px) rotateY(360deg);
   }
 
   100% {

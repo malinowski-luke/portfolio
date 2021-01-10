@@ -1,5 +1,8 @@
+import shuffle from '../../utils/shuffle'
+
 const imgPath = '/images/icons'
-export default [
+
+const skillsArr = [
   { img: imgPath + '/js.png', title: 'JavaScript es6+' },
   { img: imgPath + '/typescript.png', title: 'TypeScript' },
   { img: imgPath + '/htmlcss.png', title: 'HTML5/CSS3' },
@@ -13,3 +16,7 @@ export default [
   { img: imgPath + '/postgres.png', title: 'Postgres' },
   { img: imgPath + '/mongodb.png', title: 'MongoDB' },
 ]
+
+const shuffledSkillsArr = shuffle(skillsArr)
+
+export default shuffledSkillsArr

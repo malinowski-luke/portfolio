@@ -3,17 +3,27 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 import { Image, Col, Row } from 'react-bootstrap'
 import Title from '../../components/Title/Title'
+import shuffle from '../../utils/shuffle'
 import './Work.scss'
 
 export default function Work() {
   const [projects, setProjects] = useState([])
 
   const getProjects = async () => {
-    try {
-      const { data } = await axios.get('/projects')
-      setProjects(data)
-    } catch (error) {
-      console.error('error fetching projects: ' + error)
+    const myStorage = window.sessionStorage
+    const cachedProjects = JSON.parse(myStorage.getItem('projects'))
+
+    if (cachedProjects) {
+      setProjects(cachedProjects)
+    } else {
+      try {
+        const { data } = await axios.get('/projects')
+        const shuffledProjects = shuffle(data)
+        myStorage.setItem('projects', JSON.stringify(shuffledProjects))
+        setProjects(shuffledProjects)
+      } catch (error) {
+        console.error('error fetching projects: ' + error)
+      }
     }
   }
 
