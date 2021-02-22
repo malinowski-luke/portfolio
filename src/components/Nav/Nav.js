@@ -41,7 +41,7 @@ export default function Nav() {
         </li>
 
         <li>
-          <NavLink to='/skills'>skills</NavLink>
+          <NavLink to='/stack'>stack</NavLink>
         </li>
 
         <li>
@@ -78,8 +78,8 @@ export default function Nav() {
         </li>
 
         <li>
-          <NavLink to='/skills'>
-            skills
+          <NavLink to='/stack'>
+            stack
             <hr />
           </NavLink>
         </li>

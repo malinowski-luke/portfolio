@@ -6,8 +6,14 @@
     "github": "https://github.com/malinowskil123/jeepthings",
     "title": "jeepthings",
     "text": "A web app for Jeep lovers and rebuilders to trade, sell, and buy auto parts. Contains a fully working CRUD operations. Users have the ability to filter parts by a keyword and sort them by price. Jeepthings integrates google maps api to show a part's location on a map. Users also receive welcome and update emails as well as emails from other users regarding the parts they posted.",
-    "stack": ["react / redux", "node / express", "postgres", "nodemailer"]
-  },  
+    "stack": [
+      "react(Hooks) / redux",
+      "node / express",
+      "postgres",
+      "sass",
+      "bootstrap"
+    ]
+  },
   {
     "image": "/images/projects/devQuiz.gif",
     "coverImage": "/images/projects/devQuizCover.jpg",
@@ -15,7 +21,7 @@
     "github": "https://github.com/malinowskil123/dev-quiz",
     "title": "devquiz",
     "text": "Test your JavaScript and Front-End knowledge with Dev Quiz: a web based quiz app, built to test your front-end skill. Users are able to pick a quiz from a variety of Front-End focused subjects. Users also have the ability to toggle styling from light mode to dark mode.",
-    "stack": ["react", "node / express"]
+    "stack": ["react (Hooks)", "node / express"]
   },
   {
     "image": "/images/projects/calculator.jpg",
@@ -24,7 +30,7 @@
     "github": "https://github.com/malinowskil123/calculator",
     "title": "calculator",
     "text": "A web-based alternative for a traditional calculator. Users are able to enter and calculate simple mathematical expressions. Entered values are validated and if an error is detected a syntax error pop-up is displayed.",
-    "stack": ["jQuery", "Bootstrap", "node / express"]
+    "stack": ["jQuery", "bootstrap", "node / express"]
   },
   {
     "image": "/images/projects/notepad.jpg",
@@ -33,5 +39,5 @@
     "title": "notepad",
     "text": "A desktop notepad application developed using Java. Users are able to create, overwrite and save txt files locally on their computer. This app features a traditional edit section with copy, paste, cut, undo and redo actions. Entered text is proecessed to get word count and sentence count values along with a few other metrics which feed into a text complexity algorithm which outputs a Flesch text complexity score.",
     "stack": ["java", "jswing"]
-  } 
+  }
 ]

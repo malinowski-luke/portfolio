@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Row, Col, Image, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import axios from 'axios'
 import Title from '../../components/Title/Title'
 import Table from '../../components/Table/Table'
 import Text from '../../components/Text/Text'
@@ -12,17 +11,15 @@ export default function Project({ match }) {
 
   const [project, setProject] = useState({})
 
-  const getProject = async (index) => {
-    try {
-      const { data } = await axios.get(`/project/${index}`)
-      setProject(data)
-    } catch (error) {
-      console.error('error fetching project: ' + error)
-    }
-  }
-
   useEffect(() => {
-    getProject(projectTitle)
+    const myStorage = window.sessionStorage
+    const cachedProjects = JSON.parse(myStorage.getItem('projects'))
+
+    const project = cachedProjects.find(
+      (project) => project.title === projectTitle
+    )
+
+    setProject(project)
   }, [projectTitle])
 
   const { stack, image, github, link, title, text } = project

@@ -14,13 +14,14 @@ export default function Work() {
     const cachedProjects = JSON.parse(myStorage.getItem('projects'))
 
     if (cachedProjects) {
-      setProjects(cachedProjects)
+      setProjects(shuffle(cachedProjects))
     } else {
       try {
         const { data } = await axios.get('/projects')
-        const shuffledProjects = shuffle(data)
-        myStorage.setItem('projects', JSON.stringify(shuffledProjects))
-        setProjects(shuffledProjects)
+
+        myStorage.setItem('projects', JSON.stringify(data))
+
+        setProjects(shuffle(data))
       } catch (error) {
         console.error('error fetching projects: ' + error)
       }
