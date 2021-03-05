@@ -20,18 +20,18 @@ export default function About() {
         </Col>
         <Col lg={7}>
           <Text>
-            Audio Engineer turned Fullstack Web Developer, I found my passion
-            for programming in an unconventional way. In college, I pursued the
+            Audio Engineer turned Software Engineer, I found my passion
+            for coding in an unconventional way. In college, I pursued the
             track of Audio Engineering - a musician at heart, I practiced
             producing and mixing audio for a variety of uses.
           </Text>
           <Text>
-            Along the way, I found interest in software development that lead to the
+            Along the way, I found interest in software engineering that lead to the
             pivot of my career path. I started off with Javascript, Node.js, React, and
             Bootstrap.
           </Text>
           <Text>
-            After the completion of several smaller web application, I moved onto
+            After the completion of many smaller web based applications, I moved onto
             a personal project called{' '}
             <Link url='http://www.jeepthingsapp.com/#/'>JeepThings</Link> - a
             culmination of my skills, JeepThings solved a problem that was close
@@ -40,7 +40,7 @@ export default function About() {
           </Text>
           <Text>
             I am currently in <span className='big font-italic'>New York</span>{' '}
-            seeking my next endeavor in web development.
+            seeking my next endeavor...
           </Text>
         </Col>
       </Row>
