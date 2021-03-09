@@ -13,6 +13,18 @@ app.get('/projects', (req, res) => {
   res.status(200).send(projects)
 })
 
+app.get('/projects/:project_title', (req, res) => {
+  const projectTitle = req.params.project_title
+
+  const projectData = projects.find((project) => project.title === projectTitle )
+
+  if(!projectData){
+    return res.status(404).send(`Project ${projectTitle} not found.`)
+  }
+
+  res.status(200).send(projectData)
+})
+
 app.get('/stack', (req, res) => {
   const capitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1)
   let icons = fs.readdirSync(__dirname + '/assets/icons')

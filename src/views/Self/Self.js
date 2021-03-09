@@ -1,6 +1,5 @@
 import React from 'react'
 import Title from '../../components/Title/Title'
-import Link from '../../components/Link/Link'
 import { Row, Col } from 'react-bootstrap'
 import Contact from '../../components/Contact/Contact'
 import Text from '../../components/Text/Text'
@@ -33,7 +32,7 @@ export default function About() {
           <Text>
             After the completion of many smaller web based applications, I moved onto
             a personal project called{' '}
-            <Link url='http://www.jeepthingsapp.com/#/'>JeepThings</Link> - a
+            JeepThings - a
             culmination of my skills, JeepThings solved a problem that was close
             to home - a web app for car lovers and rebuilders to trade, sell,
             and buy auto parts - something that my family often did.
