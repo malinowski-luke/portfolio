@@ -1,55 +1,44 @@
-const express = require('express')
-const projects = require('./data/projects.json')
-const fs = require('fs')
+import dotenv from 'dotenv'
+import express from 'express'
+import router from './router'
+import bodyParser from 'body-parser'
+import morgan from 'morgan'
+import responseTime from 'response-time'
+import cors from 'cors'
 
-const app = express()
-const PORT = process.env.PORT || 9000
+dotenv.config({})
 
-app.use(express.static(`${__dirname}/../build`))
+const application = express()
+const PORT = process.env.PORT
 
-app.use('/images', express.static(`${__dirname}/assets`))
+// react build
+application.use(express.static(`${__dirname}/../build`))
+// assets
+application.use('/assets', express.static(`${__dirname}/assets`))
 
-app.get('/projects', (req, res) => {
-  res.status(200).send(projects)
+// Logging
+application.use(morgan('short'))
+// Response time Logging
+application.use(responseTime())
+
+// Post Request Body Parsing
+application.use(bodyParser.json())
+application.use(bodyParser.urlencoded({ extended: true }))
+
+// Cross Origin
+application.use(
+	cors({
+		credentials: true,
+		origin: [process.env.BACKEND_URI],
+		methods: ['POST', 'GET'],
+		maxAge: 84600,
+	})
+)
+
+application.use(router)
+
+application.listen(PORT, () => {
+	console.log('=====================================')
+	console.log(`server listening on: ${PORT}`)
+	console.log('=====================================')
 })
-
-app.get('/projects/:project_title', (req, res) => {
-  const projectTitle = req.params.project_title
-
-  const projectData = projects.find((project) => project.title === projectTitle )
-
-  if(!projectData){
-    return res.status(404).send(`Project ${projectTitle} not found.`)
-  }
-
-  res.status(200).send(projectData)
-})
-
-app.get('/stack', (req, res) => {
-  const capitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1)
-  let icons = fs.readdirSync(__dirname + '/assets/icons')
-
-  if (icons.length >= 1) {
-    icons = icons.map((icon) => {
-      let title = icon.replace('.png', '')
-
-      if (title.split(' | ').length > 1) {
-        title = title
-          .split(' | ')
-          .map((word) => capitalize(word))
-          .join(' | ')
-      } else {
-        title = capitalize(title)
-      }
-
-      return {
-        img: `/images/icons/${icon}`,
-        title,
-      }
-    })
-  }
-
-  res.status(200).send(icons)
-})
-
-app.listen(PORT, () => console.log(`server running on: ${PORT}`))
