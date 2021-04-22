@@ -1,7 +1,6 @@
 import dotenv from 'dotenv'
 import express from 'express'
 import router from './router'
-import bodyParser from 'body-parser'
 import morgan from 'morgan'
 import responseTime from 'response-time'
 import cors from 'cors'
@@ -9,10 +8,11 @@ import cors from 'cors'
 dotenv.config({})
 
 const application = express()
-const PORT = process.env.PORT
 
 // react build
-application.use(express.static(`${__dirname}/../build`))
+if (process.env.ENVIRONMENT === 'production') {
+  application.use(express.static(`${__dirname}/../build`))
+}
 // assets
 application.use('/assets', express.static(`${__dirname}/assets`))
 
@@ -22,23 +22,23 @@ application.use(morgan('short'))
 application.use(responseTime())
 
 // Post Request Body Parsing
-application.use(bodyParser.json())
-application.use(bodyParser.urlencoded({ extended: true }))
+application.use(express.urlencoded({ extended: true }))
+application.use(express.json())
 
 // Cross Origin
 application.use(
-	cors({
-		credentials: true,
-		origin: [process.env.BACKEND_URI],
-		methods: ['POST', 'GET'],
-		maxAge: 84600,
-	})
+  cors({
+    credentials: true,
+    origin: [process.env.BACKEND_URI],
+    methods: ['POST', 'GET'],
+    maxAge: 84600,
+  })
 )
 
 application.use(router)
 
-application.listen(PORT, () => {
-	console.log('=====================================')
-	console.log(`server listening on: ${PORT}`)
-	console.log('=====================================')
+application.listen(process.env.PORT, () => {
+  console.log('=====================================')
+  console.log(`server listening on: ${process.env.PORT}`)
+  console.log('=====================================')
 })
