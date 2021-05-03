@@ -1,18 +1,16 @@
-import dotenv from 'dotenv'
 import express from 'express'
 import router from './router'
 import morgan from 'morgan'
 import responseTime from 'response-time'
 import cors from 'cors'
 
-dotenv.config({})
-
 const application = express()
 
 // react build
-if (process.env.ENVIRONMENT === 'production') {
+if (process.env.NODE_ENV === 'production') {
   application.use(express.static(`${__dirname}/../build`))
 }
+
 // assets
 application.use('/assets', express.static(`${__dirname}/assets`))
 
@@ -30,15 +28,17 @@ application.use(
   cors({
     credentials: true,
     origin: [process.env.BACKEND_URI],
-    methods: ['POST', 'GET'],
+    methods: ['GET'],
     maxAge: 84600,
   })
 )
 
 application.use(router)
 
-application.listen(process.env.PORT, () => {
+const PORT = process.env.PORT || 3000
+
+application.listen(PORT, () => {
   console.log('=====================================')
-  console.log(`server listening on: ${process.env.PORT}`)
+  console.log(`server listening on: ${PORT}`)
   console.log('=====================================')
 })
