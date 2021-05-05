@@ -1,11 +1,17 @@
 import React from 'react'
-import Title from '../../components/Title/Title'
+
 import { Row, Col } from 'react-bootstrap'
+
+import Title from '../../components/Title/Title'
 import Contact from '../../components/Contact/Contact'
 import Text from '../../components/Text/Text'
 import Medal from '../../components/Medal/Medal'
 import Link from '../../components/Link/Link'
 import Emoji from '../../components/Emoji/Emoji'
+
+import headshotImg from '../../assets/images/headshot.jpg'
+import icelandImg from '../../assets/images/iceland.jpg'
+
 import './Self.scss'
 
 export default function Self() {
@@ -14,10 +20,7 @@ export default function Self() {
       <Title>Self</Title>
       <Row className='align-items-center'>
         <Col lg={5} className='mb-4 text-center'>
-          <Medal
-            frontImg='/assets/images/headshot.jpg'
-            backImg='/assets/images/iceland.jpg'
-          />
+          <Medal frontImg={headshotImg} backImg={icelandImg} />
         </Col>
         <Col lg={7}>
           <Text>

@@ -10,27 +10,23 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
-    "axios": "^0.21.0",
-    "body-parser": "^1.19.0",
     "bootstrap": "^4.5.0",
     "cors": "^2.8.5",
     "esm": "^3.2.25",
     "express": "^4.17.1",
-    "morgan": "^1.10.0",
     "react": "^16.13.1",
     "react-bootstrap": "^1.2.2",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
-    "response-time": "^2.3.2",
     "sass": "^1.26.3"
   },
   "scripts": {
     "build": "react-scripts build",
-    "start": "NODE_ENV=production node -r esm server/index.js",
-    "client:dev": "PORT=5000 react-scripts start",
-    "dev": "concurrently \"NODE_ENV=development nodemon -r esm server/index.js\" \"npm run client:dev\"",
-    "heroku-postbuild": "npm i && npm run build"
+    "start": "NODE_ENV=production node -r esm index.js",
+    "dev": "react-scripts start",
+    "dev:build": "NODE_ENV=development nodemon -r esm index.js",
+    "heroku-postbuild": "npm install && npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -48,11 +44,8 @@
     ]
   },
   "display": "standalone",
-  "main": "server/index.js",
-  "proxy": "http://localhost:3000",
-  "homepage": ".",
+  "main": "index.js",
   "devDependencies": {
-    "concurrently": "^6.0.2",
     "nodemon": "^2.0.7"
   }
 }

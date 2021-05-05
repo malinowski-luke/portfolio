@@ -1,6 +1,6 @@
 # Introduction
 
-My personal portfolio web app to showcase projects and skills (node required!!!!).
+My personal portfolio web app to showcase my projects and skills (node required!!!!).
 
 ## To Run This App </>
 
@@ -24,10 +24,6 @@ My personal portfolio web app to showcase projects and skills (node required!!!!
 
    ###### Copy and Paste into Terminal
 
-   `node server/index.js`
+   `npm start`
 
-   ###### If you have nodemon installed run this command
-
-   `nodemon`
-
-6. Open your browser and navigate to [localhost:9000](http://localhost:9000) to view app
+6. Open your browser and navigate to [localhost:9000](http://localhost:3000) to view app

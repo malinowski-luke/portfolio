@@ -1,45 +1,23 @@
-import React, { useEffect, useState } from 'react'
-import axios from 'axios'
+import React from 'react'
+
 import { Row, Col, Image, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import Title from '../../components/Title/Title'
 import Table from '../../components/Table/Table'
 import Text from '../../components/Text/Text'
+
+import useAllProjects from '../../hooks/useAllProjects'
+
 import './Project.scss'
 
 export default function Project({ match }) {
-  const projectTitle = match.params.project
+  const projects = useAllProjects()
 
-  const [project, setProject] = useState({})
+  const currentProjectTitle = match.params.project
 
-
-
-  useEffect(() => {
-
-    const myStorage = window.sessionStorage
-    const cachedProjects = JSON.parse(myStorage.getItem('projects'))
-
-
-    const fetchProject = async () =>{
-      try {
-        const { data:project } = await axios.get(`/projects/${projectTitle}`)
-        setProject(project)
-      }catch (err){
-        console.log(err)
-      }
-    }
-    let project
-
-    if(cachedProjects){
-      project = cachedProjects.find(
-        (project) => project.title === projectTitle
-      )
-      setProject(project)
-
-    } else {
-      project = fetchProject()
-    }
-  }, [projectTitle])
+  const project = projects.find(
+    (project) => project.title === currentProjectTitle
+  )
 
   const { stack, image, github, link, title, text } = project
 
