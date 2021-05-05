@@ -1,6 +1,7 @@
 import React from 'react'
-import { Switch, Route, Redirect } from 'react-router-dom'
+import { Switch, Route, Redirect, useParams } from 'react-router-dom'
 import { createBrowserHistory } from 'history'
+import useAllProjects from './hooks/useAllProjects'
 
 // views
 import Home from './views/Home/Home'
@@ -21,7 +22,23 @@ export default (
     <Route exact path='/home' component={Home} />
     <Route path='/self' component={Self} />
     <Route path='/stack' component={Stack} />
-    <Route path='/work/:project' component={Project} />
+    <Route
+      path='/work/:project'
+      component={() => {
+        const allProjects = useAllProjects()
+        const { project: projectTitle } = useParams()
+
+        const projectItem = allProjects.find(
+          (project) => project.title === projectTitle
+        )
+
+        return projectItem ? (
+          <Project project={projectItem} />
+        ) : (
+          <Redirect from='*' to='/not-found' />
+        )
+      }}
+    />
     <Route path='/work' component={Work} />
     <Route path='/not-found' component={NotFound} />
     <Redirect exact from='/' to='/home' />

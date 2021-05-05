@@ -6,19 +6,9 @@ import Title from '../../components/Title/Title'
 import Table from '../../components/Table/Table'
 import Text from '../../components/Text/Text'
 
-import useAllProjects from '../../hooks/useAllProjects'
-
 import './Project.scss'
 
-export default function Project({ match }) {
-  const projects = useAllProjects()
-
-  const currentProjectTitle = match.params.project
-
-  const project = projects.find(
-    (project) => project.title === currentProjectTitle
-  )
-
+export default function Project({ project }) {
   const { stack, image, github, link, title, text } = project
 
   return (
