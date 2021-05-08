@@ -29,6 +29,7 @@ export default function Project({ project }) {
           <Text>{text}</Text>
           <Button
             variant='outline-secondary'
+            style={{ width: '100%' }}
             className='mt-4'
             onClick={handleBack}
           >
