@@ -67,8 +67,9 @@
     padding: 16px;
 
     .comment {
-      color: darkgreen;
+      color: $blue;
     }
+
     .code {
       font-weight: bolder;
       // this reads tabs \t from js str
@@ -76,13 +77,6 @@
       color: $white;
     }
 
-    .code,
-    .comment,
-    .cursor {
-      font-size: 1.5rem;
-      line-height: 1.8rem;
-    }
-    /* cursor code */
     .cursor {
       color: $white;
       opacity: 0;
@@ -128,29 +122,12 @@
       width: 10px;
       height: 10px;
     }
-
-    .text-area {
-      .code,
-      .comment,
-      .cursor {
-        font-size: 1rem;
-        line-height: 1.5rem;
-      }
-    }
   }
 
   /* tablet */
   @media (min-width: 577px) and (max-width: 1025px) {
     .window {
       width: 60%;
-    }
-
-    .text-area {
-      .code,
-      .comment,
-      .cursor {
-        font-size: 1.4rem;
-      }
     }
   }
 

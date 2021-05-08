@@ -24,7 +24,7 @@ export default function Nav() {
         <rect y='30' width='100' height='20' rx='8'></rect>
         <rect y='60' width='100' height='20' rx='8'></rect>
       </svg>
-      <ul
+      <div
         ref={mobileMenuRef}
         id='mobile-menu'
         className='mobile-menu-hide text-center'
@@ -32,83 +32,59 @@ export default function Nav() {
           showHideMobileMenu(mobileMenuRef.current, iconRef.current)
         }}
       >
-        <li>
-          <NavLink to='/home'>home</NavLink>
-        </li>
+        <NavLink to='/home'>home</NavLink>
 
-        <li>
-          <NavLink to='/self'>self</NavLink>
-        </li>
+        <NavLink to='/self'>self</NavLink>
 
-        <li>
-          <NavLink to='/stack'>stack</NavLink>
-        </li>
+        <NavLink to='/stack'>stack</NavLink>
 
-        <li>
-          <NavLink to='/work'>work</NavLink>
-        </li>
+        <NavLink to='/work'>work</NavLink>
 
-        <li>
-          <a
-            href='https://malinowski-luke123.medium.com/'
-            target='_blank'
-            rel='noreferrer noopener'
-          >
-            blog
-          </a>
-        </li>
+        <a
+          href='https://malinowski-luke123.medium.com/'
+          target='_blank'
+          rel='noreferrer noopener'
+        >
+          blog
+        </a>
 
-        <li>
-          <a href='mailto:malinowski.luke123@gmail.com'>contact</a>
-        </li>
-      </ul>
-      <ul id='desktop-menu'>
-        <li>
-          <NavLink to='/home'>
-            home
-            <hr />
-          </NavLink>
-        </li>
+        <a href='mailto:malinowski.luke123@gmail.com'>contact</a>
+      </div>
+      <div id='desktop-menu'>
+        <NavLink to='/home'>
+          home
+          <hr />
+        </NavLink>
 
-        <li>
-          <NavLink to='/self'>
-            self
-            <hr />
-          </NavLink>
-        </li>
+        <NavLink to='/self'>
+          self
+          <hr />
+        </NavLink>
 
-        <li>
-          <NavLink to='/stack'>
-            stack
-            <hr />
-          </NavLink>
-        </li>
+        <NavLink to='/stack'>
+          stack
+          <hr />
+        </NavLink>
 
-        <li>
-          <NavLink to='/work'>
-            work
-            <hr />
-          </NavLink>
-        </li>
+        <NavLink to='/work'>
+          work
+          <hr />
+        </NavLink>
 
-        <li>
-          <a
-            href='https://malinowski-luke123.medium.com/'
-            target='_blank'
-            rel='noreferrer noopener'
-          >
-            blog
-            <hr />
-          </a>
-        </li>
+        <a
+          href='https://malinowski-luke123.medium.com/'
+          target='_blank'
+          rel='noreferrer noopener'
+        >
+          blog
+          <hr />
+        </a>
 
-        <li>
-          <a href='mailto:malinowski.luke123@gmail.com'>
-            contact
-            <hr />
-          </a>
-        </li>
-      </ul>
+        <a href='mailto:malinowski.luke123@gmail.com'>
+          contact
+          <hr />
+        </a>
+      </div>
     </nav>
   )
 }

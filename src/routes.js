@@ -40,6 +40,7 @@ export default (
       }}
     />
     <Route path='/work' component={Work} />
+    <Route path='/linktree' component={Work} />
     <Route path='/not-found' component={NotFound} />
     <Redirect exact from='/' to='/home' />
     <Redirect from='*' to='/not-found' />

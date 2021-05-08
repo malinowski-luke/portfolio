@@ -24,6 +24,7 @@
   "scripts": {
     "build": "react-scripts build",
     "start": "NODE_ENV=production node -r esm index.js",
+    "test": "react-scripts test",
     "dev": "react-scripts start",
     "dev:build": "NODE_ENV=development nodemon -r esm index.js",
     "heroku-postbuild": "npm install && npm run build"
