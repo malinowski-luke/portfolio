@@ -11,7 +11,7 @@ import './Work.scss'
 export default function Work() {
   const projects = useAllProjects()
   return (
-    <div className='Work slide-fade'>
+    <div className='Work slide-fade' data-testid='work'>
       <div style={{ width: '100%' }}>
         <Title>Work</Title>
         <Row>

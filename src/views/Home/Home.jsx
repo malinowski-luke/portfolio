@@ -4,7 +4,7 @@ import './Home.scss'
 
 export default function Home() {
   return (
-    <div className='slide-fade Home'>
+    <div className='slide-fade Home' data-testid='home'>
       <CodeEditor />
     </div>
   )

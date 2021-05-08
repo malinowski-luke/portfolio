@@ -11,7 +11,7 @@ export default function Stack() {
   const stack = useStack()
 
   return (
-    <div className='Stack slide-fade'>
+    <div className='Stack slide-fade' data-testid='stack'>
       <Title>Stack</Title>
       <div className='grid'>
         {stack.map((elm, index) => (

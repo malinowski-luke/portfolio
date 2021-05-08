@@ -16,7 +16,7 @@ import './Self.scss'
 
 export default function Self() {
   return (
-    <div className='Self mb-4 slide-fade'>
+    <div className='Self mb-4 slide-fade' data-testid='self'>
       <Title>Self</Title>
       <Row className='align-items-center'>
         <Col lg={5} className='mb-4 text-center'>
