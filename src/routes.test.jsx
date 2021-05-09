@@ -10,7 +10,7 @@ test('Router routes to home view by default', () => {
   expect(screen.getByTestId('home'))
 })
 
-test('Router render to self view', () => {
+test('Router routes to self view', () => {
   render(<MemoryRouter initialEntries={['/self']}>{routes}</MemoryRouter>)
   expect(screen.getByTestId('self'))
 })
