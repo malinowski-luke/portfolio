@@ -26,7 +26,7 @@ application.use((request, response, next) => {
   if (process.env.NODE_ENV === 'production') {
     response.setHeader(
       'Strict-Transport-Security',
-      'max-age=63072000; includeSubdomains;'
+      'max-age=63072000; includeSubdomains; preload'
     )
   }
   next()
