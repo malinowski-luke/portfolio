@@ -82,6 +82,12 @@
       opacity: 0;
       animation: blinking-cursor ease-in-out 1.2s infinite;
     }
+
+    .comment,
+    .code,
+    .cursor {
+      line-height: 10px;
+    }
   }
 
   @keyframes blinking-cursor {
