@@ -1,11 +1,12 @@
 @import '../../sass/vars';
+$nav-height: 60px;
 
 .nav {
   width: 90%;
+  height: $nav-height;
   position: fixed;
   top: 0;
   background-color: $gray;
-  padding: 5px 0;
   z-index: 1;
   @include flex-box(row, space-between, center);
 
@@ -31,7 +32,7 @@
     width: 100%;
     max-height: 94vh;
     position: fixed;
-    top: 6vh;
+    top: $nav-height;
     left: 0;
     background: $gray;
     transition: all 0.3s ease;
