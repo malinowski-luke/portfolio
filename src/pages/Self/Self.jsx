@@ -2,7 +2,6 @@ import React from 'react'
 
 import { Row, Col } from 'react-bootstrap'
 
-import Title from '../../components/Title/Title'
 import Contact from '../../components/Contact/Contact'
 import Text from '../../components/Text/Text'
 import Medal from '../../components/Medal/Medal'
@@ -17,7 +16,6 @@ import './Self.scss'
 export default function Self() {
   return (
     <div className='Self mb-4 slide-fade' data-testid='self'>
-      <Title>Self</Title>
       <Row className='align-items-center'>
         <Col lg={5} className='mb-4 text-center'>
           <Medal frontImg={headshotImg} backImg={icelandImg} />

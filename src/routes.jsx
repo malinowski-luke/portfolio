@@ -4,12 +4,12 @@ import { createBrowserHistory } from 'history'
 import useAllProjects from './hooks/useAllProjects'
 
 // views
-import Home from './views/Home/Home'
-import Self from './views/Self/Self'
-import Stack from './views/Stack/Stack'
-import Work from './views/Work/Work'
-import Project from './views/Project/Project'
-import NotFound from './views/NotFound/NotFound'
+import Home from './pages/Home/Home'
+import Self from './pages/Self/Self'
+import Stack from './pages/Stack/Stack'
+import Work from './pages/Work/Work'
+import Project from './pages/Project/Project'
+import NotFound from './pages/NotFound/NotFound'
 
 export const history = createBrowserHistory()
 
@@ -24,7 +24,7 @@ export default (
     <Route path='/stack' component={Stack} />
     <Route
       path='/work/:project'
-      component={() => {
+      component={(props) => {
         const allProjects = useAllProjects()
         const { project: projectTitle } = useParams()
 
@@ -33,7 +33,7 @@ export default (
         )
 
         return projectItem ? (
-          <Project project={projectItem} />
+          <Project {...props} project={projectItem} />
         ) : (
           <Redirect from='*' to='/not-found' />
         )

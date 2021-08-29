@@ -3,9 +3,9 @@
 .nav {
   width: 90%;
   position: fixed;
-  height: 6vh;
   top: 0;
   background-color: $gray;
+  padding: 5px 0;
   z-index: 1;
   @include flex-box(row, space-between, center);
 
@@ -16,12 +16,6 @@
     hr {
       visibility: visible;
     }
-  }
-
-  .nav-text {
-    margin: 0;
-    color: $black;
-    font-weight: 900;
   }
 
   .icon {

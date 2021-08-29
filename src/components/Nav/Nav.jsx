@@ -1,15 +1,20 @@
 import React, { useRef } from 'react'
 import { NavLink } from 'react-router-dom'
+
+import { Image } from 'react-bootstrap'
 import { showHideMobileMenu } from '../../utils/navAnimations'
+
+import codeLogo from '../../assets/logo192.png'
+
 import './Nav.scss'
 
 export default function Nav() {
-  const mobileMenuRef = useRef(),
-    iconRef = useRef()
+  const mobileMenuRef = useRef()
+  const iconRef = useRef()
 
   return (
     <nav className='nav px-2  px-lg-0'>
-      <h4 className='nav-text'>Luke Malinowski</h4>
+      <Image src={codeLogo} fluid width={'50px'} />
       <svg
         viewBox='0 0 100 80'
         width='30'

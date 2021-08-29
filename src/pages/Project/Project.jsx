@@ -9,7 +9,7 @@ import Text from '../../components/Text/Text'
 
 import './Project.scss'
 
-export default function Project({ project }) {
+export default function Project({ project = null }) {
   const history = useHistory()
   const { stack, image = '', github, link, title, text } = project
 

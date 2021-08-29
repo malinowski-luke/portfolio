@@ -1,6 +1,5 @@
 import React from 'react'
 
-import Title from '../../components/Title/Title'
 import Logo from '../../components/Logo/Logo'
 
 import useStack from '../../hooks/useStack'
@@ -12,7 +11,6 @@ export default function Stack() {
 
   return (
     <div className='Stack slide-fade' data-testid='stack'>
-      <Title>Stack</Title>
       <div className='grid'>
         {stack.map((elm, index) => (
           <Logo key={index} img={elm.img} title={elm.title} />
