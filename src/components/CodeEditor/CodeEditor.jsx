@@ -7,7 +7,7 @@ export default function CodeEditor() {
   const code = useRef()
 
   useEffect(() => {
-    setTimeout(() => typewriter(text, code.current, 50), 700)
+    setTimeout(() => typewriter(text, code.current, 50), 500)
   }, [])
 
   return (

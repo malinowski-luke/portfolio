@@ -1,33 +1,33 @@
 @import '../../sass/vars';
 .Work {
   @include flex-box();
+}
 
+.work-item {
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  display: inline-block;
+
+  &:hover {
+    background-color: $white;
+    z-index: 1;
+    opacity: 0.8;
+  }
+}
+
+@media (min-width: $breakpoint-lg) {
+  .grow {
+    transition: all 0.3s ease;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+@media (min-width: $breakpoint-xs) and (max-width: $breakpoint-sm) {
   .work-item {
     width: 100%;
-    max-width: 400px;
-    position: relative;
-    display: inline-block;
-
-    &:hover {
-      background-color: $white;
-      z-index: 1;
-      opacity: 0.8;
-    }
-  }
-
-  @media (min-width: $breakpoint-lg) {
-    .grow {
-      transition: all 0.3s ease-in-out;
-      &:hover {
-        transform: scale(1.1);
-      }
-    }
-  }
-
-  @media (min-width: $breakpoint-xs) and (max-width: $breakpoint-sm) {
-    .work-item {
-      width: 100%;
-      height: fit-content;
-    }
+    height: fit-content;
   }
 }

@@ -1,8 +1,9 @@
 import React from 'react'
 
-import Logo from '../../components/Logo/Logo'
-
 import useStack from '../../hooks/useStack'
+
+import BaseLayout from '../../components/BaseLayout/BaseLayout'
+import Logo from '../../components/Logo/Logo'
 
 import './Stack.scss'
 
@@ -10,12 +11,12 @@ export default function Stack() {
   const stack = useStack()
 
   return (
-    <div className='Stack slide-fade' data-testid='stack'>
+    <BaseLayout dataTestID='stack'>
       <div className='grid'>
         {stack.map((elm, index) => (
           <Logo key={index} img={elm.img} title={elm.title} />
         ))}
       </div>
-    </div>
+    </BaseLayout>
   )
 }

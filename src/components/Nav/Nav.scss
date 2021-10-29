@@ -78,7 +78,6 @@ $nav-height: 60px;
       color: $black;
       font-weight: 700;
       font-size: 1.2rem;
-      transition: all 0.3s ease;
 
       &:hover {
         @include link-hover($blue);

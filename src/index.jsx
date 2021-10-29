@@ -5,7 +5,6 @@ import App from './App'
 
 import './reset.css'
 import 'bootstrap/scss/bootstrap.scss'
-import './utils/animations.css'
 import * as serviceWorker from './serviceWorker'
 
 ReactDOM.render(

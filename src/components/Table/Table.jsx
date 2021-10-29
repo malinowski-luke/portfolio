@@ -4,7 +4,7 @@ import './Table.scss'
 
 export default function Table({ stack = [], link, github }) {
   return (
-    <table>
+    <table className='project-stack-table'>
       <thead>
         <tr>
           <th>stack</th>
@@ -17,12 +17,12 @@ export default function Table({ stack = [], link, github }) {
           <tr key={index}>
             <td>{elm}</td>
             <td>
-              {github && index === 0 &&
-                <Link url={github}>repository</Link>
-              }
+              {github && index === 0 && <Link url={github}>repository</Link>}
             </td>
             <td>
-              {link !== undefined && index === 0 && <Link url={link}>live site</Link>}
+              {link !== undefined && index === 0 && (
+                <Link url={link}>live site</Link>
+              )}
             </td>
           </tr>
         ))}

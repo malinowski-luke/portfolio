@@ -1,11 +1,14 @@
 import React from 'react'
+
+import BaseLayout from '../../components/BaseLayout/BaseLayout'
 import CodeEditor from '../../components/CodeEditor/CodeEditor'
+
 import './Home.scss'
 
 export default function Home() {
   return (
-    <div className='slide-fade Home' data-testid='home'>
+    <BaseLayout className='Home' dataTestID='home'>
       <CodeEditor />
-    </div>
+    </BaseLayout>
   )
 }

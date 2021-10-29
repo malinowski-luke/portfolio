@@ -3,6 +3,8 @@ import React from 'react'
 import { useHistory } from 'react-router-dom'
 
 import { Row, Col, Image, Button } from 'react-bootstrap'
+
+import BaseLayout from '../../components/BaseLayout/BaseLayout'
 import Title from '../../components/Title/Title'
 import Table from '../../components/Table/Table'
 import Text from '../../components/Text/Text'
@@ -18,7 +20,7 @@ export default function Project({ project = null }) {
   }
 
   return (
-    <div className='Project slide-fade' data-testid={title}>
+    <BaseLayout className='Project' dataTestID={title}>
       <Title>{title}</Title>
       <Table stack={stack} link={link} github={github} />
       <Row className='align-items-center mt-2'>
@@ -37,6 +39,6 @@ export default function Project({ project = null }) {
           </Button>
         </Col>
       </Row>
-    </div>
+    </BaseLayout>
   )
 }

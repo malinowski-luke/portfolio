@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 
 import { Image } from 'react-bootstrap'
 import { showHideMobileMenu } from '../../utils/navAnimations'
@@ -14,7 +14,9 @@ export default function Nav() {
 
   return (
     <nav className='nav px-2  px-lg-0'>
-      <Image src={codeLogo} fluid width={'50px'} />
+      <Link to='/home'>
+        <Image src={codeLogo} fluid width={'50px'} />
+      </Link>
       <svg
         viewBox='0 0 100 80'
         width='30'
