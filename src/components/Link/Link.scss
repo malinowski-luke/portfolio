@@ -13,6 +13,10 @@
     text-decoration: none;
   }
 
+  &:focus {
+    color:$black;
+  }
+
   @media (min-width: $breakpoint-lg) {
     &:hover {
       color: $black;
