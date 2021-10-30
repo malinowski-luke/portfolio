@@ -14,7 +14,7 @@ import './Self.scss'
 export default function Self() {
   return (
     <BaseLayout className='mb-4' dataTestID='self'>
-      <Row className='align-items-center text-center'>
+      <Row className='align-items-center'>
         <Col lg={5} className='mb-4 text-center'>
           <Image
             className='self-img'

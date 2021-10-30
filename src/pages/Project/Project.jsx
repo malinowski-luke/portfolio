@@ -34,14 +34,6 @@ export default function Project({ project = null }) {
         <Col lg={6} className='mt-4 mt-lg-0 px-lg-5'>
           <Table stack={stack} link={link} github={github} />
           <Text>{text}</Text>
-          {/* <Button
-            variant='outline-secondary'
-            style={{ width: '150px' }}
-            className='px-2'
-            onClick={handleBack}
-          >
-            BACK
-          </Button> */}
         </Col>
       </Row>
     </BaseLayout>
