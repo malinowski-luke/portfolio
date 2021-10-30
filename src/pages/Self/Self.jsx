@@ -28,7 +28,7 @@ export default function Self() {
             <span className='big'>New York City</span>, currently working @
             <Link url='https://www.tropicapp.io/'>Tropic</Link>
             <Emoji code='&#127796;' />
-            inovating <span className='big'>SasS</span> procurment.
+            inovating <span className='big'>SaaS</span> procurment.
           </Text>
           <Text>
             Before that, I was working @{' '}
