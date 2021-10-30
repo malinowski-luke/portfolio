@@ -1,10 +1,10 @@
 import React from 'react'
 import './Title.scss'
 
-export default function Title({ children }) {
+export default function Title({ className, children, onClick }) {
   return (
-    <div className='Title mb-4'>
-      <h2>{children}</h2>
+    <div {...(onClick && { onClick })}>
+      <h2 className={`Title mb-4 ${className}`}>{children}</h2>
     </div>
   )
 }

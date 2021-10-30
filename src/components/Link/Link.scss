@@ -2,9 +2,9 @@
 .Link {
   color: $black;
   font-weight: 900;
-  background: linear-gradient(120deg, $blue 35%, $orange 100%);
+  background: linear-gradient(120deg, $blue 25%, $orange 100%);
   background-repeat: no-repeat;
-  background-size: 100% 0.2em;
+  background-size: 100% 2px;
   background-position: 0 88%;
   transition: background-size 0.3s ease;
   padding: 2px 2px 0 2px;
@@ -14,7 +14,7 @@
   }
 
   &:focus {
-    color:$black;
+    color: $black;
   }
 
   @media (min-width: $breakpoint-lg) {

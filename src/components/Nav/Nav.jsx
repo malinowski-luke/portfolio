@@ -40,13 +40,9 @@ export default function Nav() {
         }}
       >
         <NavLink to='/home'>home</NavLink>
-
         <NavLink to='/self'>self</NavLink>
-
         <NavLink to='/stack'>stack</NavLink>
-
         <NavLink to='/work'>work</NavLink>
-
         <a
           href='https://malinowski-luke123.medium.com/'
           target='_blank'
@@ -54,42 +50,18 @@ export default function Nav() {
         >
           blog
         </a>
-
-        <a href='mailto:malinowski.luke123@gmail.com'>contact</a>
       </div>
       <div id='desktop-menu'>
-        <NavLink to='/home'>
-          home
-          <hr />
-        </NavLink>
-
-        <NavLink to='/self'>
-          self
-          <hr />
-        </NavLink>
-
-        <NavLink to='/stack'>
-          stack
-          <hr />
-        </NavLink>
-
-        <NavLink to='/work'>
-          work
-          <hr />
-        </NavLink>
-
+        <NavLink to='/home'>home</NavLink>
+        <NavLink to='/self'>self</NavLink>
+        <NavLink to='/stack'>stack</NavLink>
+        <NavLink to='/work'>work</NavLink>
         <a
           href='https://malinowski-luke123.medium.com/'
           target='_blank'
           rel='noreferrer noopener'
         >
           blog
-          <hr />
-        </a>
-
-        <a href='mailto:malinowski.luke123@gmail.com'>
-          contact
-          <hr />
         </a>
       </div>
     </nav>

@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import typewriter from '../../utils/typewriter'
 import text from './text'
 import './CodeEditor.scss'
+import Emoji from '../Emoji/Emoji'
 
 export default function CodeEditor() {
   const code = useRef()
@@ -22,7 +23,9 @@ export default function CodeEditor() {
           <p>index.js</p>
         </div>
         <div className='text-area'>
-          <span className='comment'>{'//  '}repeat every 24 hours</span>
+          <span className='comment'>
+            {'//  '}repeat every 24 hours <Emoji code='&#128640;' />
+          </span>
           <br />
           <span ref={code} className='code'></span>
           <span className='cursor'>_</span>

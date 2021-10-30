@@ -1,4 +1,6 @@
+@import '../../sass/vars';
+
 .Text {
-  color: gray;
+  color: $text;
   line-height: 1.6rem;
 }

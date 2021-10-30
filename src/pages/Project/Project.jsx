@@ -2,7 +2,7 @@ import React from 'react'
 
 import { useHistory } from 'react-router-dom'
 
-import { Row, Col, Image, Button } from 'react-bootstrap'
+import { Row, Col, Image } from 'react-bootstrap'
 
 import BaseLayout from '../../components/BaseLayout/BaseLayout'
 import Title from '../../components/Title/Title'
@@ -20,23 +20,28 @@ export default function Project({ project = null }) {
   }
 
   return (
-    <BaseLayout className='Project' dataTestID={title}>
-      <Title>{title}</Title>
-      <Table stack={stack} link={link} github={github} />
+    <BaseLayout dataTestID={title}>
+      <div className='d-flex justify-content-between'>
+        <Title>{title}</Title>
+        <Title className='close-icon' onClick={handleBack}>
+          X
+        </Title>
+      </div>
       <Row className='align-items-center mt-2'>
         <Col lg={6} className='text-center'>
           <Image src={image} fluid />
         </Col>
         <Col lg={6} className='mt-4 mt-lg-0 px-lg-5'>
+          <Table stack={stack} link={link} github={github} />
           <Text>{text}</Text>
-          <Button
+          {/* <Button
             variant='outline-secondary'
-            style={{ width: '100%' }}
-            className='mt-4'
+            style={{ width: '150px' }}
+            className='px-2'
             onClick={handleBack}
           >
-            Back
-          </Button>
+            BACK
+          </Button> */}
         </Col>
       </Row>
     </BaseLayout>

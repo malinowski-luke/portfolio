@@ -1,13 +1,15 @@
 import React from 'react'
 import { Image } from 'react-bootstrap'
+
+import Text from '../Text/Text'
+
 import './Logo.scss'
 
-export default function Logo(props) {
-  const { title, img } = props
+export default function Logo({ title, img }) {
   return (
-    <div className='Logo text-center'>
+    <div className='text-center'>
       <Image src={img} className='logo-img' fluid />
-      <p className='mt-2 logo-title'>{title}</p>
+      <Text className='mt-2'>{title}</Text>
     </div>
   )
 }

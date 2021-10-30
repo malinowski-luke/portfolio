@@ -6,7 +6,7 @@ $nav-height: 60px;
   height: $nav-height;
   position: fixed;
   top: 0;
-  background-color: $gray;
+  background-color: $white;
   z-index: 1;
   @include flex-box(row, space-between, center);
 
@@ -14,9 +14,6 @@ $nav-height: 60px;
   #desktop-menu .active {
     @include link-hover($orange);
     pointer-events: none;
-    hr {
-      visibility: visible;
-    }
   }
 
   .icon {
@@ -34,7 +31,7 @@ $nav-height: 60px;
     position: fixed;
     top: $nav-height;
     left: 0;
-    background: $gray;
+    background: $white;
     transition: all 0.3s ease;
     overflow: hidden;
     @include flex-box(column, center, space-between);
@@ -81,15 +78,6 @@ $nav-height: 60px;
 
       &:hover {
         @include link-hover($blue);
-      }
-    }
-    hr {
-      padding: 0;
-      margin: 0;
-      border-top: 2px solid $black;
-      visibility: hidden;
-      &:hover {
-        visibility: visible;
       }
     }
   }

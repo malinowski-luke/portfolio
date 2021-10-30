@@ -1,12 +1,6 @@
 @import '../../sass/vars';
 
-.Project {
-  width: 100%;
-
-  p {
-    color: gray;
-  }
-  a:hover {
-    text-decoration: none !important;
-  }
+.close-icon:hover {
+  color: $text;
+  cursor: pointer;
 }
