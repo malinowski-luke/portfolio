@@ -13,7 +13,6 @@ import headshotImg from '../../assets/images/headshot.jpg'
 import './Self.scss'
 
 export default function Self() {
-
   return (
     <BaseLayout className='mb-4' dataTestID='self'>
       <Row className='align-items-center'>
@@ -21,17 +20,24 @@ export default function Self() {
           <Image className='self-img' src={headshotImg} fluid />
         </Col>
         <Col lg={7}>
-          <h1 className='text-center'><Emoji code='&#128075;'/> Hi I'm Luke</h1>
+          <h1 className='text-center'>
+            <Emoji code='&#128075;' /> Hi I'm Luke
+          </h1>
           <Text>
-            I am a full-stack software engineer based in <span className='big'>New York City</span>, currently working @
+            I am a full-stack software engineer based in{' '}
+            <span className='big'>New York City</span>, currently working @
             <Link url='https://www.tropicapp.io/'>Tropic</Link>
             <Emoji code='&#127796;' />
-            inovating <span className='big'>SasS</span> procurment <Emoji code='&#128640;' />.
+            inovating <span className='big'>SasS</span> procurment.
           </Text>
           <Text>
-            Before that, I was working @ <Link url='https://streamforge.com/'>Streamforge</Link>  providing the gaming community with twitch analytics and marketing.
+            Before that, I was working @{' '}
+            <Link url='https://streamforge.com/'>Streamforge</Link> providing
+            the gaming community with twitch analytics and marketing.
           </Text>
-          <Text>Feel free to reach out and chat (or nerd out on JavaScript).</Text>
+          <Text>
+            Feel free to reach out and chat (or nerd out on JavaScript).
+          </Text>
         </Col>
       </Row>
       <Contact />
