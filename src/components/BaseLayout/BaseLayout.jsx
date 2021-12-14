@@ -2,12 +2,8 @@ import React from 'react'
 
 import './BaseLayout.scss'
 
-const BaseLayout = ({ dataTestID, children }) => {
-  return (
-    <div className='slide-fade' data-testid={dataTestID}>
-      {children}
-    </div>
-  )
+const BaseLayout = ({ children }) => {
+  return <div className='base-layout'>{children}</div>
 }
 
 export default BaseLayout

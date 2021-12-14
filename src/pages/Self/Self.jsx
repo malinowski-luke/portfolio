@@ -9,18 +9,16 @@ import Emoji from '../../components/Emoji/Emoji'
 
 import headshotImg from '../../assets/images/headshot.jpg'
 
-import './Self.scss'
-
-export default function Self() {
+const Self = () => {
   return (
-    <BaseLayout className='mb-4' dataTestID='self'>
+    <BaseLayout>
       <Row className='align-items-center'>
         <Col lg={5} className='mb-4 text-center'>
           <Image
             className='self-img'
             src={headshotImg}
             fluid
-            style={{ width: '275px' }}
+            style={{ width: '275px', borderRadius: '50%' }}
           />
         </Col>
         <Col lg={7}>
@@ -56,3 +54,5 @@ export default function Self() {
     </BaseLayout>
   )
 }
+
+export default Self
