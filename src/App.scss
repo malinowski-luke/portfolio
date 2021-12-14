@@ -1,16 +1,11 @@
 @import './sass/vars';
 
+html {
+  scroll-snap-type: y mandatory;
+}
+
 .App {
   font-family: $main-font;
   width: 100%;
   min-height: 100vh;
-  padding-top: 10vh;
-  background-color: $white;
-  @include flex-box();
-
-  @media (min-width: $breakpoint-xs) and (max-height: 500px) {
-    .App {
-      padding-top: 20vh;
-    }
-  }
 }

@@ -1,15 +1,18 @@
-import React from 'react'
-import Nav from './components/Nav/Nav'
-
-import routes from './routes'
+import React, { useEffect } from 'react'
+import Home from './pages/Home/Home'
+import Self from './pages/Self/Self'
 
 import './App.scss'
 
-function App() {
+const App = () => {
+  useEffect(() => {
+    window.history.scrollRestoration = 'manual'
+  }, [])
+
   return (
-    <div id='app' className='App'>
-      <Nav />
-      <div className='container pb-4'>{routes}</div>
+    <div id='app' className='App container'>
+      <Home />
+      <Self />
     </div>
   )
 }
