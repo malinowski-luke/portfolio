@@ -13,14 +13,6 @@ const Self = () => {
   return (
     <BaseLayout>
       <Row className='align-items-center'>
-        <Col lg={5} className='mb-4 text-center'>
-          <Image
-            className='self-img'
-            src={headshotImg}
-            fluid
-            style={{ width: '275px', borderRadius: '50%' }}
-          />
-        </Col>
         <Col lg={7}>
           <h1 className='mb-3'>
             <Emoji code='&#128075;' /> Hi I'm Luke
@@ -49,6 +41,14 @@ const Self = () => {
               Get in touch...
             </Link>
           </Text>
+        </Col>
+        <Col lg={5} className='mb-4 text-center'>
+          <Image
+            className='self-img'
+            src={headshotImg}
+            fluid
+            style={{ width: '275px', borderRadius: '50%' }}
+          />
         </Col>
       </Row>
     </BaseLayout>

@@ -1,4 +1,4 @@
-export default (text, domElm, speed) => {
+const typewriter = (text, domElm, speed) => {
   // count var
   let index = 0
   // closure function
@@ -10,3 +10,5 @@ export default (text, domElm, speed) => {
   }
   displayText()
 }
+
+export default typewriter
