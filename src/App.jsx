@@ -7,6 +7,12 @@ import './App.scss'
 const App = () => {
   useEffect(() => {
     window.history.scrollRestoration = 'manual'
+
+    setTimeout(() => {
+      if (window.scrollY === 0) {
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })
+      }
+    }, 9000)
   }, [])
 
   return (

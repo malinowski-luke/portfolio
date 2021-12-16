@@ -13,7 +13,12 @@ const Self = () => {
   return (
     <BaseLayout>
       <Row className='align-items-center'>
-        <Col lg={7}>
+        <Col
+          xs={{ order: 2 }}
+          lg={{ span: 7, order: 1 }}
+          xl={{ order: 1 }}
+          xxl={{ order: 1 }}
+        >
           <h1 className='mb-3'>
             <Emoji code='&#128075;' /> Hi I'm Luke
           </h1>
@@ -42,7 +47,13 @@ const Self = () => {
             </Link>
           </Text>
         </Col>
-        <Col lg={5} className='mb-4 text-center'>
+        <Col
+          xs={{ order: 1 }}
+          lg={{ span: 5, order: 2 }}
+          xl={{ order: 2 }}
+          xxl={{ order: 2 }}
+          className='mb-4 text-center'
+        >
           <Image
             className='self-img'
             src={headshotImg}
