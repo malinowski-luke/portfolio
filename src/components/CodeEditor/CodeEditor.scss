@@ -73,7 +73,7 @@ $code: #48a01c;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     padding: 16px;
-    overflow: auto;
+    overflow-x: auto;
     &::-webkit-scrollbar {
       display: none; // Safari and Chrome
     }
