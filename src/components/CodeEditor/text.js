@@ -1,4 +1,7 @@
-const codeRawText =
-  'const wakeUp = () => {\n  if ( tired() ) {\n    drinkCoffee()\n  }\n  keepCoding()\n})\n\nsetInterval( () => {\n  wakeUp()\n}, 24 * 60 * 60 * 1000)'
+const text = `// 👋 Hi I'm Luke\n
+// I am a full-stack software engineer based in NYC,
+// currently working @ Tropic 🌴 inovating SaaS procurment.
 
-export default codeRawText
+// Feel free to reach out & say hello...\n`
+
+export default text

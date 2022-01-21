@@ -1,4 +1,3 @@
-// colors
 $black: #000000;
 $gray: #f3f3f3;
 $white: #ffffff;
@@ -6,25 +5,14 @@ $blue: #73cde8;
 $orange: #ffa27a;
 $text: #8798ad;
 
-// code editor colors
-$nav-bar: #181b1d;
-$file-name: #818488;
-$window: #212730;
-$red-btn: #a60d03;
-$yellow-btn: #a67905;
-$green-btn: #558121;
-
-// important to affect any bootstrap defaults
 $main-font: 'Nunito', sans-serif !important;
 
-// breakpoints
 $breakpoint-xs: 0px;
 $breakpoint-sm: 576px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;
 
-//mixin
 @mixin link-hover($color: $white) {
   color: $color;
   text-decoration: none;

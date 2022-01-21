@@ -1,11 +1,20 @@
 @import '../../sass/vars';
 
+// code editor colors
+$nav-bar: #333333;
+$file-name: #818488;
+$window: #252526;
+$red-btn: #a60d03;
+$yellow-btn: #a67905;
+$green-btn: #558121;
+$code: #48a01c;
+
 .CodeEditor {
   width: 100%;
   @include flex-box();
 
   .window {
-    width: 50%;
+    width: 60%;
     border-radius: 10px;
     box-shadow: 2px 2px 10px $black;
     font-family: monospace;
@@ -64,16 +73,17 @@
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     padding: 16px;
-
-    .comment {
-      color: $blue;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      display: none; // Safari and Chrome
     }
 
     .code {
+      width: 100%;
       font-weight: bolder;
       // this reads tabs \t from js str
       white-space: pre;
-      color: $white;
+      color: $code;
     }
 
     .cursor {
@@ -132,7 +142,7 @@
   /* tablet */
   @media (min-width: 577px) and (max-width: 1025px) {
     .window {
-      width: 60%;
+      width: 70%;
     }
   }
 

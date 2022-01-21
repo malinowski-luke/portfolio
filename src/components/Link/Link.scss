@@ -1,26 +1,10 @@
 @import '../../sass/vars';
+
 .Link {
-  color: $black;
+  color: $text;
   font-weight: 900;
-  background: linear-gradient(120deg, $blue 25%, $orange 100%);
-  background-repeat: no-repeat;
-  background-size: 100% 2px;
-  background-position: 0 88%;
-  transition: background-size 0.3s ease;
-  padding: 2px 2px 0 2px;
 
   &:hover {
     text-decoration: none;
-  }
-
-  &:focus {
-    color: $black;
-  }
-
-  @media (min-width: $breakpoint-lg) {
-    &:hover {
-      color: $black;
-      background-size: 100% 88%;
-    }
   }
 }

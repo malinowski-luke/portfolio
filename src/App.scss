@@ -1,11 +1,8 @@
 @import './sass/vars';
 
-html {
-  scroll-snap-type: y mandatory;
-}
-
 .App {
   font-family: $main-font;
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
+  position: relative;
 }
