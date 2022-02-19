@@ -4,13 +4,13 @@ import Link from '../Link/Link'
 
 import './Footer.scss'
 
-const Footer = (props) => {
+const Footer = () => {
   return (
-    <div className='Footer'>
+    <div className="Footer">
       <Text>
-        Luke Malinowski © {new Date().getFullYear()} |{' '}
-        <Link url='mailto:malinowski.luke123@gmail.com'>Contact</Link> |{' '}
-        <Link url='https://github.com/malinowskil123'>Github</Link>
+        <Link url="mailto:malinowski.luke123@gmail.com">Contact</Link> |{' '}
+        <Link url="https://github.com/malinowskil123">Github</Link> |{' '}
+        <Link url="https://www.linkedin.com/in/luke-malinowski-50328/">LinkedIn</Link>
       </Text>
     </div>
   )

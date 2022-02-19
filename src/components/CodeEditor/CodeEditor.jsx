@@ -3,7 +3,7 @@ import typewriter from '../../utils/typewriter'
 import text from './text'
 import './CodeEditor.scss'
 
-export default function CodeEditor() {
+const CodeEditor = () => {
   const code = useRef()
 
   useEffect(() => {
@@ -11,21 +11,23 @@ export default function CodeEditor() {
   }, [])
 
   return (
-    <div className='CodeEditor'>
-      <div className='window text-left'>
-        <div className='nav-bar'>
-          <div className='nav-bar-icons'>
+    <div className="CodeEditor">
+      <div className="window text-left">
+        <div className="nav-bar">
+          <div className="nav-bar-icons">
             <div></div>
             <div></div>
             <div></div>
           </div>
           <p>index.js</p>
         </div>
-        <div className='text-area'>
-          <span ref={code} className='code'></span>
-          <span className='cursor'>_</span>
+        <div className="text-area">
+          <span ref={code} className="code"></span>
+          <span className="cursor">_</span>
         </div>
       </div>
     </div>
   )
 }
+
+export default CodeEditor
