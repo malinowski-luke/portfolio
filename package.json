@@ -13,12 +13,8 @@
   },
   "scripts": {
     "build": "react-scripts build",
-<<<<<<< HEAD
     "start": "react-scripts start",
     "heroku-postbuild": "npm install && npm run build"
-=======
-    "start": "react-scripts start"
->>>>>>> c8c10209a22bdfdbdd3606022a8ddd4e89a7f51c
   },
   "eslintConfig": {
     "extends": "react-app"
