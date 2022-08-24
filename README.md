@@ -14,16 +14,10 @@ My personal portfolio web app to showcase my projects and skills (node required!
 
    `npm install`
 
-4. Create a build of the front-end
-
-   ###### Copy and Paste into Terminal
-
-   `npm run build`
-
-5. Start the server to run app
+4. Start the server to run app
 
    ###### Copy and Paste into Terminal
 
    `npm start`
 
-6. Open your browser and navigate to [localhost:9000](http://localhost:3000) to view app
+5. Open your browser and navigate to [localhost:3000](http://localhost:3000) to view app

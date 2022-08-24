@@ -7,9 +7,6 @@
   },
   "dependencies": {
     "bootstrap": "^4.5.0",
-    "cors": "^2.8.5",
-    "esm": "^3.2.25",
-    "express": "^4.17.1",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.3",
     "react-dom": "^17.0.2",
@@ -19,9 +16,7 @@
   },
   "scripts": {
     "build": "react-scripts build",
-    "start": "NODE_ENV=production node -r esm index.js",
-    "dev": "react-scripts start",
-    "dev:build": "NODE_ENV=development nodemon -r esm index.js",
+    "start": "react-scripts start",
     "heroku-postbuild": "npm install && npm run build"
   },
   "eslintConfig": {
@@ -39,9 +34,5 @@
       "last 1 safari version"
     ]
   },
-  "display": "standalone",
-  "main": "index.js",
-  "devDependencies": {
-    "nodemon": "^2.0.7"
-  }
+  "display": "standalone"
 }
