@@ -1,8 +1,8 @@
 # Introduction
 
-My personal portfolio web app to showcase my projects and skills (node required!!!!).
+My personal portfolio acts as business card.
 
-## To Run This App </>
+## To Run </>
 
 1. Clone this repo
 

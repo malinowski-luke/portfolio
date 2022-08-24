@@ -2,22 +2,23 @@
   "name": "portfolio",
   "version": "1.0.0",
   "private": true,
-  "engines": {
-    "node": "^12.x"
-  },
   "dependencies": {
     "bootstrap": "^4.5.0",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.3",
     "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
+    "react-scripts": "5.0.0",
     "sass": "^1.26.3",
-    "web-vitals": "^1.0.1"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "build": "react-scripts build",
+<<<<<<< HEAD
     "start": "react-scripts start",
     "heroku-postbuild": "npm install && npm run build"
+=======
+    "start": "react-scripts start"
+>>>>>>> c8c10209a22bdfdbdd3606022a8ddd4e89a7f51c
   },
   "eslintConfig": {
     "extends": "react-app"

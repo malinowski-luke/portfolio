@@ -4,9 +4,9 @@ import Link from '../Link/Link'
 
 import './Footer.scss'
 
-const Footer = (props) => {
+const Footer = () => {
   return (
-    <div className='Footer'>
+    <div className="Footer">
       <Text>
         <Link url='https://github.com/malinowskil123'>Github</Link> |{' '}
         <Link url='https://www.linkedin.com/in/luke-malinowski-50328/'>
