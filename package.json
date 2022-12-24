@@ -22,7 +22,7 @@
     "dev": "react-scripts start",
     "start": "NODE_ENV=production node -r esm index.js",
     "dev:static": "NODE_ENV=development nodemon -r esm index.js",
-    "heroku-postbuild": "npm install && npm run build"
+    "heroku-postbuild": "npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
