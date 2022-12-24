@@ -2,3 +2,4 @@
 /build
 /.pnp
 .pnp.js
+.env*
