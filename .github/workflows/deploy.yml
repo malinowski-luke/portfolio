@@ -4,24 +4,25 @@ on:
     branches:
       - master
 
-deploy-to-heroku:
-  runs-on: ubuntu-latest
-  env:
-    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  steps:
-    - uses: actions/checkout@v3
-    - name: Publish Release
-      id: release
-      uses: rymndhng/release-on-push-action@v0.27.0
-      with:
-        bump_version_scheme: minor
-        tag_prefix: v
-    - name: Deploy to production
-      uses: akhileshns/heroku-deploy@v3.12.12
-      with:
-        heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-        heroku_app_name: tropic-rails
-        heroku_email: 'malinowski.luke123@gmail.com'
-        branch: ${GITHUB_REF_NAME}
-      env: # Env vars prefixed with HD_ will have the "HD_" stripped automatically by heroku-deploy
-        HD_DD_VERSION: ${{steps.release.outputs.tag_name}}
+jobs:
+  deploy-to-heroku:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Publish Release
+        id: release
+        uses: rymndhng/release-on-push-action@v0.27.0
+        with:
+          bump_version_scheme: minor
+          tag_prefix: v
+      - name: Deploy to production
+        uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: tropic-rails
+          heroku_email: 'malinowski.luke123@gmail.com'
+          branch: ${GITHUB_REF_NAME}
+        env: # Env vars prefixed with HD_ will have the "HD_" stripped automatically by heroku-deploy
+          HD_DD_VERSION: ${{steps.release.outputs.tag_name}}
