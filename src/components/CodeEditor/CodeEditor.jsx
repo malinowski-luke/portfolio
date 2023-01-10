@@ -23,7 +23,7 @@ const CodeEditor = () => {
         </div>
         <div className="text-area">
           <span ref={code} className="code"></span>
-          <span className="cursor">_</span>
+          <div className="cursor"></div>
         </div>
       </div>
     </div>
