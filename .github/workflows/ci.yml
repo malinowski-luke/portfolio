@@ -16,7 +16,7 @@ jobs:
         uses: creyD/prettier_action@v4.2
         with:
           prettier_options: --write **/*.{js,ts,jsx,tsx,css,md}
-  test:
+  jest-test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2.3.4
