@@ -6,6 +6,9 @@
     "node": "^12.x"
   },
   "dependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.2.0",
     "cors": "^2.8.5",
     "esm": "^3.2.25",
@@ -21,10 +24,14 @@
   "scripts": {
     "build": "react-scripts build",
     "dev": "react-scripts start",
-    "start": "node -r esm index.js"
+    "start": "node -r esm index.js",
+    "test": "react-scripts test"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
   "browserslist": {
     "production": [
