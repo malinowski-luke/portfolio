@@ -11,6 +11,7 @@ $code: #48a01c;
 
 .CodeEditor {
   width: 100%;
+  max-width: 1150px;
   @include flex-box();
 
   .window {
@@ -163,7 +164,7 @@ $code: #48a01c;
   // lg desktop landscape
   @media (orientation: landscape) and (min-height: 1200px) {
     .nav-bar {
-      height: 3vh;
+      height: 2.5vh;
     }
   }
 }
