@@ -10,20 +10,31 @@ const CodeEditor = () => {
     setTimeout(() => typewriter(text, code.current, 50), 500)
   }, [])
 
+  const codeLineNumbers = Array.from({ length: 8 }, (_, i) => i + 1)
+
   return (
-    <div className="CodeEditor">
-      <div className="window text-left">
+    <div className="CodeEditor fade-in">
+      <div className="window">
         <div className="nav-bar">
           <div className="nav-bar-icons">
-            <div></div>
-            <div></div>
-            <div></div>
+            <div>x</div>
+            <div>-</div>
+            <div>+</div>
           </div>
           <p>index.js</p>
         </div>
         <div className="text-area">
-          <span ref={code} className="code"></span>
-          <div className="cursor"></div>
+          <div>
+            {codeLineNumbers.map((num) => (
+              <p key={`line-num-${num}`} className="line-number">
+                {num}
+              </p>
+            ))}
+          </div>
+          <div>
+            <span ref={code} className="code"></span>
+            <div className="cursor"></div>
+          </div>
         </div>
       </div>
     </div>
