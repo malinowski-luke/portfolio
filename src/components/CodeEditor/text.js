@@ -1,7 +1,6 @@
-const TEXT = `1 // 👋 Hi I'm Luke\n2 
-3 // I am a full-stack software engineer based in NYC,
-4 // currently working @ Tropic 🌴 inovating SaaS procurment.
-5 
-6 // Feel free to reach out & say hello...\n7 `
+const TEXT = `// 👋 Hi I'm Luke\n
+// I am a full-stack software engineer based in NYC,\n
+// currently working @ Tropic 🌴 inovating SaaS procurment.\n
+// Feel free to reach out & say hello...`
 
 export default TEXT

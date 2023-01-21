@@ -4,7 +4,5 @@
   color: $text;
   font-weight: 900;
 
-  &:hover {
-    text-decoration: none;
-  }
+  @include link-hover();
 }

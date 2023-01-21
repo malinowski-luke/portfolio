@@ -1,14 +1,8 @@
 $black: #000000;
 $white: #ffffff;
-$text: #8798ad;
 
-$mint: #c7ddcc;
-
-// $light-Lime: #abd699;
-// Fresh Lemon: #ffe26a
-// Teal: #75c9b7
-// Mint: #c7ddcc
-// Navy: #16123f
+$text: $white;
+$text-hover: #8798ad;
 
 $main-font: 'Nunito', sans-serif !important;
 
@@ -18,10 +12,12 @@ $breakpoint-md: 768px;
 $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;
 
-// TODO implement on links
-@mixin link-hover($color: $white) {
-  color: $color;
+@mixin link-hover($color: $text-hover) {
   text-decoration: none;
+
+  &:hover {
+    color: $color;
+  }
 }
 
 @mixin flex-box($dir: row, $just: space-evenly, $align: center) {

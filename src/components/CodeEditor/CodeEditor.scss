@@ -9,9 +9,24 @@ $yellow-btn: #a67905;
 $green-btn: #558121;
 $code: #48a01c;
 
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .CodeEditor {
   width: 100%;
   max-width: 1150px;
+  min-height: 350px;
   @include flex-box();
 
   .window {
@@ -52,6 +67,13 @@ $code: #48a01c;
     width: 12px;
     height: 12px;
     border-radius: 50%;
+    @include flex-box();
+    font-size: x-small;
+    color: $nav-bar;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   .nav-bar-icons div:nth-child(1) {
@@ -68,7 +90,6 @@ $code: #48a01c;
 
   /* code window */
   .text-area {
-    width: 100%;
     min-height: 20vh;
     height: auto;
     background-color: $window;
@@ -76,6 +97,7 @@ $code: #48a01c;
     border-bottom-right-radius: 10px;
     padding: 16px;
     overflow: auto;
+    display: flex;
     &::-webkit-scrollbar {
       display: none; // Safari and Chrome
     }
@@ -99,10 +121,16 @@ $code: #48a01c;
       animation: blinking-cursor ease 1.2s infinite;
     }
 
-    .comment,
+    .line-number {
+      color: $file-name;
+      padding-right: 10px;
+    }
+
     .code,
-    .cursor {
-      line-height: 1.2rem;
+    .cursor,
+    .line-number {
+      font-size: large;
+      line-height: 1.5rem;
     }
   }
 
@@ -144,6 +172,13 @@ $code: #48a01c;
     .nav-bar-icons div {
       width: 10px;
       height: 10px;
+    }
+
+    .code,
+    .cursor,
+    .line-number {
+      font-size: x-small;
+      line-height: 1rem;
     }
   }
 
