@@ -20,6 +20,13 @@
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(65, 65, 65, 1);
 
+  div {
+    width: 1px;
+    background-color: gray;
+    height: 100%;
+    opacity: 0.8;
+  }
+
   .dock-item {
     img {
       width: 50px;

@@ -27,6 +27,7 @@ const Dock = () => {
       >
         <img src={LinkedinLogo} alt="linkedin link icon" />
       </a>
+      <div></div>
       <a
         data-testid="trash-link"
         href="https://www.php.net/"
