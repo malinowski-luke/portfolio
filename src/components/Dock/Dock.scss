@@ -1,12 +1,10 @@
+@import '../../sass/vars';
+
 .dock {
   position: absolute;
   bottom: 10px;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flex-box(space-between, center);
   gap: 10px;
-
   border-radius: 10px;
   width: fit-content;
   height: 75px;
