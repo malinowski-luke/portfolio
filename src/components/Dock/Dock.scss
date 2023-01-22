@@ -1,0 +1,34 @@
+.dock {
+  position: absolute;
+  bottom: 10px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+
+  border-radius: 10px;
+  width: fit-content;
+  height: 75px;
+  padding: 10px;
+
+  /* From https://css.glass */
+  background: rgba(65, 65, 65, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(65, 65, 65, 1);
+
+  .dock-item {
+    img {
+      width: 50px;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        transform: scale(1.1);
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+    }
+  }
+}

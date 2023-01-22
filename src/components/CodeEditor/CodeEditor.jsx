@@ -10,10 +10,10 @@ const CodeEditor = () => {
     setTimeout(() => typewriter(text, code.current, 50), 500)
   }, [])
 
-  const codeLineNumbers = Array.from({ length: 8 }, (_, i) => i + 1)
+  const codeLineNumbers = Array.from({ length: 10 }, (_, i) => i + 1)
 
   return (
-    <div className="CodeEditor fade-in">
+    <div data-testid="code-editor" className="CodeEditor">
       <div className="window">
         <div className="nav-bar">
           <div className="nav-bar-icons">
