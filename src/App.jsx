@@ -2,12 +2,12 @@ import React from 'react'
 
 import BaseLayout from './components/BaseLayout/BaseLayout'
 import CodeEditor from './components/CodeEditor/CodeEditor'
-import Footer from './components/Footer/Footer'
+import Dock from './components/Dock/Dock'
 
 const App = () => (
   <BaseLayout>
     <CodeEditor />
-    <Footer />
+    <Dock />
   </BaseLayout>
 )
 

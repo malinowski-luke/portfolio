@@ -1,8 +1,0 @@
-@import '../../sass/vars';
-
-.Link {
-  color: $text;
-  font-weight: 900;
-
-  @include link-hover();
-}

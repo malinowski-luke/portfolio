@@ -16,7 +16,7 @@ body {
   // vh-check
   height: calc(100vh - var(--vh-offset, 0px));
 
-  background-image: url('../../../public/monterey_background_dark.jpeg');
+  background-image: url('../../../public/monterey_background_dark.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   @include flex-box();
