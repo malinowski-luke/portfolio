@@ -1,12 +1,10 @@
+@import '../../sass/vars';
+
 .dock {
   position: absolute;
   bottom: 10px;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flex-box(space-between, center);
   gap: 10px;
-
   border-radius: 10px;
   width: fit-content;
   height: 75px;
@@ -19,6 +17,13 @@
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(65, 65, 65, 1);
+
+  div {
+    width: 1px;
+    background-color: gray;
+    height: 100%;
+    opacity: 0.8;
+  }
 
   .dock-item {
     img {
