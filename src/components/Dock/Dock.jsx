@@ -23,7 +23,6 @@ const Dock = () => {
       >
         <img src={LinkedinLogo} alt="linkedin link icon" />
       </a>
-      <div></div>
       <a
         data-testid="soundcloud-link"
         href={links.soundcloud}
