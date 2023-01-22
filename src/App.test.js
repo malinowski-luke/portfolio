@@ -2,6 +2,8 @@ import { render, screen, within } from '@testing-library/react'
 import codeText from './components/CodeEditor/text'
 import App from './App'
 
+import links from './components/Dock/links'
+
 describe('<App/> component tests', () => {
   describe('CodeEditor', () => {
     test('renders with the correct text', () => {
@@ -26,16 +28,20 @@ describe('<App/> component tests', () => {
 
       const githubLink = within(dockContainer).getByTestId('github-link')
       const linkedinLink = within(dockContainer).getByTestId('linkedin-link')
+      const soundcloudLink = within(dockContainer).getByTestId('soundcloud-link')
       const trashLink = within(dockContainer).getByTestId('trash-link')
 
       expect(githubLink).toBeInTheDocument()
-      expect(githubLink.href).toBe('https://github.com/malinowskil123')
+      expect(githubLink.href).toBe(links.github)
 
       expect(linkedinLink).toBeInTheDocument()
-      expect(linkedinLink.href).toBe('https://www.linkedin.com/in/luke-malinowski-50328/')
+      expect(linkedinLink.href).toBe(links.linkedin)
+
+      expect(soundcloudLink).toBeInTheDocument()
+      expect(soundcloudLink.href).toBe(links.soundcloud)
 
       expect(trashLink).toBeInTheDocument()
-      expect(trashLink.href).toBe('https://www.php.net/')
+      expect(trashLink.href).toBe(links.trash)
     })
   })
 })
