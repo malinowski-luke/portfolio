@@ -3,6 +3,7 @@ import React from 'react'
 import GithubLogo from '../../assets/github.png'
 import LinkedinLogo from '../../assets/linkedin.png'
 import SoundcloudLogo from '../../assets/soundcloud.png'
+import Mail from '../../assets/mail.png'
 import Trash from '../../assets/trash.png'
 
 import './Dock.scss'
@@ -31,6 +32,9 @@ const Dock = () => {
         className="dock-item"
       >
         <img src={SoundcloudLogo} alt="soundcloud link icon" />
+      </a>
+      <a data-testid="mail-link" href={links.mail} target="_blank" rel="noopener noreferrer" className="dock-item">
+        <img src={Mail} alt="mail link icon" />
       </a>
       {/* vertical break */}
       <div></div>
