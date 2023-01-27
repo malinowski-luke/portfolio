@@ -29,6 +29,7 @@ describe('<App/> component tests', () => {
       const githubLink = within(dockContainer).getByTestId('github-link')
       const linkedinLink = within(dockContainer).getByTestId('linkedin-link')
       const soundcloudLink = within(dockContainer).getByTestId('soundcloud-link')
+      const mailLink = within(dockContainer).getByTestId('mail-link')
       const trashLink = within(dockContainer).getByTestId('trash-link')
 
       expect(githubLink).toBeInTheDocument()
@@ -39,6 +40,9 @@ describe('<App/> component tests', () => {
 
       expect(soundcloudLink).toBeInTheDocument()
       expect(soundcloudLink.href).toBe(links.soundcloud)
+
+      expect(mailLink).toBeInTheDocument()
+      expect(mailLink.href).toBe(links.mail)
 
       expect(trashLink).toBeInTheDocument()
       expect(trashLink.href).toBe(links.trash)
