@@ -28,3 +28,9 @@ body {
   background-size: cover;
   @include flex-box();
 }
+
+@media (orientation: landscape) and (min-width: 1440px) {
+  .base-layout {
+    background-image: url('../../../public/monterey_background_dark_lg.jpg');
+  }
+}
