@@ -24,7 +24,9 @@
     "build": "react-scripts build",
     "dev": "react-scripts start",
     "start": "node -r esm index.js",
-    "test": "react-scripts test"
+    "test:staged": "npm run test --bail --findRelatedTests",
+    "test": "react-scripts test",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -47,6 +49,17 @@
   "display": "standalone",
   "main": "index.js",
   "devDependencies": {
-    "nodemon": "^2.0.7"
+    "husky": "^8.0.0",
+    "nodemon": "^2.0.7",
+    "lint-staged": "^13.1.2",
+    "prettier": "^2.8.4"
+  },
+  "lint-staged": {
+    "**/**.{js,jsx,scss,css,json}": [
+      "prettier --write"
+    ],
+    "**/*.{js,jsx}": [
+      "npm run test:staged"
+    ]
   }
 }
