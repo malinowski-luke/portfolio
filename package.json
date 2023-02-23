@@ -24,7 +24,7 @@
     "build": "react-scripts build",
     "dev": "react-scripts start",
     "start": "node -r esm index.js",
-    "test:staged": "npm run test --bail --findRelatedTests",
+    "test:staged": "CI=true npm run test -- App.test.js",
     "test": "react-scripts test",
     "prepare": "husky install"
   },
