@@ -8,6 +8,7 @@ import text from '../../utils/text'
 import './Desktop.scss'
 
 const Desktop = ({ children }) => {
+  // app teste
   return (
     <>
       <div className="desktop">
