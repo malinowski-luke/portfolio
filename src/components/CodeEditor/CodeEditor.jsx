@@ -1,14 +1,14 @@
 import React, { useEffect, useRef } from 'react'
 import typewriter from '../../utils/typewriter'
-import text from './text'
+
 import './CodeEditor.scss'
 
-const CodeEditor = () => {
+const CodeEditor = ({ delayAnimation = 500, text = '' }) => {
   const code = useRef()
 
   useEffect(() => {
-    setTimeout(() => typewriter(text, code.current, 50), 500)
-  }, [])
+    setTimeout(() => typewriter(text, code.current, 50), delayAnimation)
+  }, [text, delayAnimation])
 
   const codeLineNumbers = Array.from({ length: 10 }, (_, i) => i + 1)
 

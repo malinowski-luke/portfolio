@@ -1,14 +1,21 @@
 import React from 'react'
 
-import BaseLayout from './components/BaseLayout/BaseLayout'
-import CodeEditor from './components/CodeEditor/CodeEditor'
-import Dock from './components/Dock/Dock'
+import LoadingScreen from './components/LoadingScreen/LoadingScreen'
+import Desktop from './components/Desktop/Desktop'
 
-const App = () => (
-  <BaseLayout>
-    <CodeEditor />
-    <Dock />
-  </BaseLayout>
-)
+import vhCheck from 'vh-check'
+
+import './App.scss'
+
+const App = () => {
+  // eslint-disable-next-line no-unused-vars
+  const checkVh = vhCheck()
+  return (
+    <>
+      <LoadingScreen />
+      <Desktop />
+    </>
+  )
+}
 
 export default App
