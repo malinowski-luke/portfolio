@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4.1.1
         with:
           ref: ${{ github.head_ref }}
       - name: Prettify code
@@ -19,11 +19,11 @@ jobs:
   jest-test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2.3.4
+      - uses: actions/checkout@v4.1.1
       - name: Use Node.js
-        uses: actions/setup-node@v2.4.0
+        uses: actions/setup-node@v4.0.2
         with:
-          node-version: '14.17.5'
+          node-version: '18.12.0'
       - name: Test - install dependencies
         run: npm install
       - name: Test - build
