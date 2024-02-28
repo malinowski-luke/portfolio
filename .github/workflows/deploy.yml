@@ -40,7 +40,7 @@ jobs:
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: portfolio-luke-malinowski
-          heroku_email: 'malinowski.luke123@gmail.com'
+          heroku_email: 'malinowski.luke@icloud.com'
           branch: ${GITHUB_REF_NAME}
         env: # Env vars prefixed with HD_ will have the "HD_" stripped automatically by heroku-deploy
           HD_DD_VERSION: ${{steps.release.outputs.tag_name}}
