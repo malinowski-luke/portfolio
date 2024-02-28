@@ -1,8 +1,8 @@
 const links = {
-  github: 'https://github.com/malinowskil123',
+  github: 'https://github.com/malinowski-luke',
   linkedin: 'https://www.linkedin.com/in/luke-malinowski-50328/',
   soundcloud: 'https://soundcloud.com/luke-malinowski-940214889',
-  mail: 'mailto: malinowski.luke123@gmail.com',
+  mail: 'mailto: malinowski.luke@icloud.com',
   trash: 'https://www.php.net/',
 }
 
