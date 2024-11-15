@@ -3,27 +3,24 @@
   "version": "1.0.0",
   "private": true,
   "engines": {
-    "node": "^12.x"
+    "node": "^18.x"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "cors": "^2.8.5",
-    "esm": "^3.2.25",
-    "express": "^4.21.1",
-    "morgan": "^1.10.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "^5.0.1",
     "sass": "^1.54.5",
+    "serve": "^14.2.4",
     "vh-check": "^2.0.5",
     "web-vitals": "^3.0.0"
   },
   "scripts": {
     "build": "react-scripts build",
     "dev": "react-scripts start",
-    "start": "node -r esm index.js",
+    "start": "serve -s build",
     "test:staged": "CI=true npm run test -- App.test.js",
     "test": "react-scripts test",
     "prepare": "husky install"
@@ -50,7 +47,6 @@
   "main": "index.js",
   "devDependencies": {
     "husky": "^8.0.0",
-    "nodemon": "^2.0.7",
     "lint-staged": "^13.1.2",
     "prettier": "^2.8.4"
   },
