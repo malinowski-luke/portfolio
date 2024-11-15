@@ -3,7 +3,7 @@
 .desktop {
   width: 100%;
   height: calc(100vh - var(--vh-offset, 0px)); // vh-check
-  background-image: url('../../../public/sequoia-dark.png');
+  background-image: url('../../../public/sequoia-dark-min.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   @include flex-box();
