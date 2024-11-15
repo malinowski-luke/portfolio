@@ -1,6 +1,9 @@
-const TEXT = `// 👋 Hey There, I'm Luke.\n
-// I am a full-stack software engineer based in NYC,\n
-// currently working @ Tropic 🌴 inovating 🚀 SaaS procurment.\n
-// Feel free to reach out & say hello...`
+const TEXT = `// 👋 Hey there, I’m Luke!  
+// 💻 A software engineer based out of NYC 🗽,  
+// currently crafting magic ✨ at Tropic 🌴,  
+// where we’re revolutionizing 🚀 the world of SaaS procurement.  
+// 
+// Got a cool idea, a question, or just want to chat?
+// Drop me a line — I’d love to connect! 🙌 `
 
 export default TEXT
