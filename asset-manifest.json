@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.6e199613.css",
+    "main.js": "/portfolio/static/js/main.6135ba3a.js",
+    "static/media/trash.png": "/portfolio/static/media/trash.adc91f4b3e1294119362.png",
+    "static/media/sequoia-dark-min.jpg": "/portfolio/static/media/sequoia-dark-min.e08809db56613e07c7bc.jpg",
+    "static/media/mail.png": "/portfolio/static/media/mail.b8e879ee4012335da8b2.png",
+    "static/media/soundcloud.png": "/portfolio/static/media/soundcloud.4ce07e752fed33316681.png",
+    "static/media/github.png": "/portfolio/static/media/github.65a029dd14ae5c405656.png",
+    "index.html": "/portfolio/index.html",
+    "main.6e199613.css.map": "/portfolio/static/css/main.6e199613.css.map",
+    "main.6135ba3a.js.map": "/portfolio/static/js/main.6135ba3a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6e199613.css",
+    "static/js/main.6135ba3a.js"
+  ]
+}
