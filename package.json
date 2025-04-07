@@ -23,9 +23,7 @@
     "build": "react-scripts build",
     "dev": "react-scripts start",
     "start": "serve -s build",
-    "test:staged": "CI=true npm run test -- App.test.js",
     "test": "react-scripts test",
-    "prepare": "husky install",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
@@ -50,16 +48,6 @@
   "display": "standalone",
   "main": "index.js",
   "devDependencies": {
-    "husky": "^8.0.0",
-    "lint-staged": "^13.1.2",
     "prettier": "^2.8.4"
-  },
-  "lint-staged": {
-    "**/**.{js,jsx,scss,css,json}": [
-      "prettier --write"
-    ],
-    "**/*.{js,jsx}": [
-      "npm run test:staged"
-    ]
   }
 }
